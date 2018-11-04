@@ -1,0 +1,11 @@
+# Why R / RMarkdown
+
+## Overview
+
+## Questions
+
+## Objectives
+
+## Why are we here? {.exercise}
+
+1. Form small groups of 2-4 with your neighbours and discuss how you expect learning rmarkdown might benefit you.

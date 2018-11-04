@@ -1,0 +1,19 @@
+book_filename: "rmd4sci"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+rmd_files: [
+  "about-this.Rmd",
+  "getting-oriented.Rmd",
+  "why-rmd.Rmd",
+  "getting-started.Rmd",
+  "figures-and-tables.Rmd",
+  "pdf-html-word.Rmd",
+  "citations.Rmd",
+  "changing-figures.Rmd",
+  "creating-captions.Rmd",
+  "common-problems.Rmd",
+  "learning-more.Rmd",
+  "references.Rmd"
+]

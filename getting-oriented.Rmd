@@ -1,0 +1,31 @@
+# Getting oriented
+
+## Overview
+
+### Questions
+
+## Software Setup
+
+## R
+
+### Windows
+
+### MacOS
+
+## RStudio
+
+### Windows
+
+### MacOS
+
+## RMarkdown
+
+### Windows
+
+### MacOS
+
+## TeX (and TinyTeX)
+
+### Windows
+
+### MacOS
