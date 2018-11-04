@@ -5,6 +5,7 @@ language:
   ui:
     chapter_name: "Chapter "
 rmd_files: [
+  "index.Rmd",
   "about-this.Rmd",
   "getting-oriented.Rmd",
   "why-rmd.Rmd",

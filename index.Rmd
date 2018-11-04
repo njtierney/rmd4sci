@@ -9,3 +9,5 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 ---
+
+# RMarkdown for Scientists
