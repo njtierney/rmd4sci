@@ -2,10 +2,10 @@
 title: "RMarkdown for Scientists"
 author: "Nicholas Tierney"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
+description: "A book created for a 3 hour workshop on rmarkdown"
 documentclass: book
+site: bookdown::bookdown_site
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "A book created for a 3 hour workshop on rmarkdown"
 ---

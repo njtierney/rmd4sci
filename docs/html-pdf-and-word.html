@@ -1,44 +1,15 @@
 <!DOCTYPE html>
-<html >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>rmd4sci.utf8.md</title>
-  <meta name="description" content="">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
-
-  <meta property="og:title" content="rmd4sci.utf8.md" />
-  <meta property="og:type" content="book" />
-  
-  
-  
-  
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="rmd4sci.utf8.md" />
-  
-  
-  
-
-
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  
-  
-<link rel="prev" href="figures-and-tables.html">
-<link rel="next" href="citations.html">
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="rmd4sci.utf8.md" />
+<meta property="og:type" content="book" />
 
 
 
@@ -47,112 +18,122 @@
 
 
 
+<meta name="description" content="rmd4sci.utf8.md">
+
+<title>rmd4sci.utf8.md</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
 </head>
 
 <body>
 
+<div class="container-fluid main-container">
 
 
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Rmarkdown for Science</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="1" data-path="about-this.html"><a href="about-this.html"><i class="fa fa-check"></i><b>1</b> About this</a></li>
-<li class="chapter" data-level="2" data-path="getting-oriented.html"><a href="getting-oriented.html"><i class="fa fa-check"></i><b>2</b> Getting oriented</a><ul>
-<li class="chapter" data-level="2.1" data-path="getting-oriented.html"><a href="getting-oriented.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="getting-oriented.html"><a href="getting-oriented.html#questions"><i class="fa fa-check"></i><b>2.1.1</b> Questions</a></li>
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="about-this.html#about-this"><span class="toc-section-number">1</span> About this</a></li>
+<li class="has-sub"><a href="getting-oriented.html#getting-oriented"><span class="toc-section-number">2</span> Getting oriented</a><ul>
+<li class="has-sub"><a href="getting-oriented.html#overview"><span class="toc-section-number">2.1</span> Overview</a><ul>
+<li><a href="getting-oriented.html#questions"><span class="toc-section-number">2.1.1</span> Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="getting-oriented.html"><a href="getting-oriented.html#software-setup"><i class="fa fa-check"></i><b>2.2</b> Software Setup</a></li>
-<li class="chapter" data-level="2.3" data-path="getting-oriented.html"><a href="getting-oriented.html#r"><i class="fa fa-check"></i><b>2.3</b> R</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="getting-oriented.html"><a href="getting-oriented.html#windows"><i class="fa fa-check"></i><b>2.3.1</b> Windows</a></li>
-<li class="chapter" data-level="2.3.2" data-path="getting-oriented.html"><a href="getting-oriented.html#macos"><i class="fa fa-check"></i><b>2.3.2</b> MacOS</a></li>
+<li><a href="getting-oriented.html#software-setup"><span class="toc-section-number">2.2</span> Software Setup</a></li>
+<li class="has-sub"><a href="getting-oriented.html#r"><span class="toc-section-number">2.3</span> R</a><ul>
+<li><a href="getting-oriented.html#windows"><span class="toc-section-number">2.3.1</span> Windows</a></li>
+<li><a href="getting-oriented.html#macos"><span class="toc-section-number">2.3.2</span> MacOS</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="getting-oriented.html"><a href="getting-oriented.html#rstudio"><i class="fa fa-check"></i><b>2.4</b> RStudio</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="getting-oriented.html"><a href="getting-oriented.html#windows-1"><i class="fa fa-check"></i><b>2.4.1</b> Windows</a></li>
-<li class="chapter" data-level="2.4.2" data-path="getting-oriented.html"><a href="getting-oriented.html#macos-1"><i class="fa fa-check"></i><b>2.4.2</b> MacOS</a></li>
+<li class="has-sub"><a href="getting-oriented.html#rstudio"><span class="toc-section-number">2.4</span> RStudio</a><ul>
+<li><a href="getting-oriented.html#windows-1"><span class="toc-section-number">2.4.1</span> Windows</a></li>
+<li><a href="getting-oriented.html#macos-1"><span class="toc-section-number">2.4.2</span> MacOS</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="getting-oriented.html"><a href="getting-oriented.html#rmarkdown"><i class="fa fa-check"></i><b>2.5</b> RMarkdown</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="getting-oriented.html"><a href="getting-oriented.html#windows-2"><i class="fa fa-check"></i><b>2.5.1</b> Windows</a></li>
-<li class="chapter" data-level="2.5.2" data-path="getting-oriented.html"><a href="getting-oriented.html#macos-2"><i class="fa fa-check"></i><b>2.5.2</b> MacOS</a></li>
+<li class="has-sub"><a href="getting-oriented.html#rmarkdown"><span class="toc-section-number">2.5</span> RMarkdown</a><ul>
+<li><a href="getting-oriented.html#windows-2"><span class="toc-section-number">2.5.1</span> Windows</a></li>
+<li><a href="getting-oriented.html#macos-2"><span class="toc-section-number">2.5.2</span> MacOS</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="getting-oriented.html"><a href="getting-oriented.html#tex-and-tinytex"><i class="fa fa-check"></i><b>2.6</b> TeX (and TinyTeX)</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="getting-oriented.html"><a href="getting-oriented.html#windows-3"><i class="fa fa-check"></i><b>2.6.1</b> Windows</a></li>
-<li class="chapter" data-level="2.6.2" data-path="getting-oriented.html"><a href="getting-oriented.html#macos-3"><i class="fa fa-check"></i><b>2.6.2</b> MacOS</a></li>
+<li class="has-sub"><a href="getting-oriented.html#tex-and-tinytex"><span class="toc-section-number">2.6</span> TeX (and TinyTeX)</a><ul>
+<li><a href="getting-oriented.html#windows-3"><span class="toc-section-number">2.6.1</span> Windows</a></li>
+<li><a href="getting-oriented.html#macos-3"><span class="toc-section-number">2.6.2</span> MacOS</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="why-r-rmarkdown.html"><a href="why-r-rmarkdown.html"><i class="fa fa-check"></i><b>3</b> Why R / RMarkdown</a><ul>
-<li class="chapter" data-level="3.1" data-path="why-r-rmarkdown.html"><a href="why-r-rmarkdown.html#overview-1"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
-<li class="chapter" data-level="3.2" data-path="why-r-rmarkdown.html"><a href="why-r-rmarkdown.html#questions-1"><i class="fa fa-check"></i><b>3.2</b> Questions</a></li>
-<li class="chapter" data-level="3.3" data-path="why-r-rmarkdown.html"><a href="why-r-rmarkdown.html#objectives"><i class="fa fa-check"></i><b>3.3</b> Objectives</a></li>
-<li class="chapter" data-level="3.4" data-path="why-r-rmarkdown.html"><a href="why-r-rmarkdown.html#why-are-we-here"><i class="fa fa-check"></i><b>3.4</b> Why are we here?</a></li>
+<li class="has-sub"><a href="why-r-rmarkdown.html#why-r-rmarkdown"><span class="toc-section-number">3</span> Why R / RMarkdown</a><ul>
+<li><a href="why-r-rmarkdown.html#overview-1"><span class="toc-section-number">3.1</span> Overview</a></li>
+<li><a href="why-r-rmarkdown.html#questions-1"><span class="toc-section-number">3.2</span> Questions</a></li>
+<li><a href="why-r-rmarkdown.html#objectives"><span class="toc-section-number">3.3</span> Objectives</a></li>
+<li><a href="why-r-rmarkdown.html#why-are-we-here"><span class="toc-section-number">3.4</span> Why are we here?</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>4</b> Getting Started</a><ul>
-<li class="chapter" data-level="4.1" data-path="getting-started.html"><a href="getting-started.html#overview-2"><i class="fa fa-check"></i><b>4.1</b> Overview</a></li>
-<li class="chapter" data-level="4.2" data-path="getting-started.html"><a href="getting-started.html#questions-2"><i class="fa fa-check"></i><b>4.2</b> Questions</a></li>
-<li class="chapter" data-level="4.3" data-path="getting-started.html"><a href="getting-started.html#objectives-1"><i class="fa fa-check"></i><b>4.3</b> Objectives</a></li>
-<li class="chapter" data-level="4.4" data-path="getting-started.html"><a href="getting-started.html#exercise"><i class="fa fa-check"></i><b>4.4</b> Exercise</a></li>
+<li class="has-sub"><a href="getting-started.html#getting-started"><span class="toc-section-number">4</span> Getting Started</a><ul>
+<li><a href="getting-started.html#overview-2"><span class="toc-section-number">4.1</span> Overview</a></li>
+<li><a href="getting-started.html#questions-2"><span class="toc-section-number">4.2</span> Questions</a></li>
+<li><a href="getting-started.html#objectives-1"><span class="toc-section-number">4.3</span> Objectives</a></li>
+<li><a href="getting-started.html#exercise"><span class="toc-section-number">4.4</span> Exercise</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="figures-and-tables.html"><a href="figures-and-tables.html"><i class="fa fa-check"></i><b>5</b> Figures and Tables</a><ul>
-<li class="chapter" data-level="5.1" data-path="figures-and-tables.html"><a href="figures-and-tables.html#overview-3"><i class="fa fa-check"></i><b>5.1</b> Overview</a></li>
-<li class="chapter" data-level="5.2" data-path="figures-and-tables.html"><a href="figures-and-tables.html#questions-3"><i class="fa fa-check"></i><b>5.2</b> Questions</a></li>
-<li class="chapter" data-level="5.3" data-path="figures-and-tables.html"><a href="figures-and-tables.html#objectives-2"><i class="fa fa-check"></i><b>5.3</b> Objectives</a></li>
-<li class="chapter" data-level="5.4" data-path="figures-and-tables.html"><a href="figures-and-tables.html#exercise-1"><i class="fa fa-check"></i><b>5.4</b> Exercise</a></li>
+<li class="has-sub"><a href="figures-and-tables.html#figures-and-tables"><span class="toc-section-number">5</span> Figures and Tables</a><ul>
+<li><a href="figures-and-tables.html#overview-3"><span class="toc-section-number">5.1</span> Overview</a></li>
+<li><a href="figures-and-tables.html#questions-3"><span class="toc-section-number">5.2</span> Questions</a></li>
+<li><a href="figures-and-tables.html#objectives-2"><span class="toc-section-number">5.3</span> Objectives</a></li>
+<li><a href="figures-and-tables.html#exercise-1"><span class="toc-section-number">5.4</span> Exercise</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="html-pdf-and-word.html"><a href="html-pdf-and-word.html"><i class="fa fa-check"></i><b>6</b> HTML, PDF, and Word</a><ul>
-<li class="chapter" data-level="6.1" data-path="html-pdf-and-word.html"><a href="html-pdf-and-word.html#overview-4"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
-<li class="chapter" data-level="6.2" data-path="html-pdf-and-word.html"><a href="html-pdf-and-word.html#questions-4"><i class="fa fa-check"></i><b>6.2</b> Questions</a></li>
-<li class="chapter" data-level="6.3" data-path="html-pdf-and-word.html"><a href="html-pdf-and-word.html#objectives-3"><i class="fa fa-check"></i><b>6.3</b> Objectives</a></li>
-<li class="chapter" data-level="6.4" data-path="html-pdf-and-word.html"><a href="html-pdf-and-word.html#exercise-2"><i class="fa fa-check"></i><b>6.4</b> Exercise</a></li>
+<li class="has-sub"><a href="html-pdf-and-word.html#html-pdf-and-word"><span class="toc-section-number">6</span> HTML, PDF, and Word</a><ul>
+<li><a href="html-pdf-and-word.html#overview-4"><span class="toc-section-number">6.1</span> Overview</a></li>
+<li><a href="html-pdf-and-word.html#questions-4"><span class="toc-section-number">6.2</span> Questions</a></li>
+<li><a href="html-pdf-and-word.html#objectives-3"><span class="toc-section-number">6.3</span> Objectives</a></li>
+<li><a href="html-pdf-and-word.html#exercise-2"><span class="toc-section-number">6.4</span> Exercise</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="citations.html"><a href="citations.html"><i class="fa fa-check"></i><b>7</b> Citations</a><ul>
-<li class="chapter" data-level="7.1" data-path="citations.html"><a href="citations.html#overview-5"><i class="fa fa-check"></i><b>7.1</b> Overview</a></li>
-<li class="chapter" data-level="7.2" data-path="citations.html"><a href="citations.html#questions-5"><i class="fa fa-check"></i><b>7.2</b> Questions</a></li>
-<li class="chapter" data-level="7.3" data-path="citations.html"><a href="citations.html#objectives-4"><i class="fa fa-check"></i><b>7.3</b> Objectives</a></li>
-<li class="chapter" data-level="7.4" data-path="citations.html"><a href="citations.html#exercise-3"><i class="fa fa-check"></i><b>7.4</b> Exercise</a></li>
+<li class="has-sub"><a href="citations.html#citations"><span class="toc-section-number">7</span> Citations</a><ul>
+<li><a href="citations.html#overview-5"><span class="toc-section-number">7.1</span> Overview</a></li>
+<li><a href="citations.html#questions-5"><span class="toc-section-number">7.2</span> Questions</a></li>
+<li><a href="citations.html#objectives-4"><span class="toc-section-number">7.3</span> Objectives</a></li>
+<li><a href="citations.html#exercise-3"><span class="toc-section-number">7.4</span> Exercise</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="changing-the-size-and-type-of-your-figures.html"><a href="changing-the-size-and-type-of-your-figures.html"><i class="fa fa-check"></i><b>8</b> Changing the size and type of your figures</a><ul>
-<li class="chapter" data-level="8.1" data-path="changing-the-size-and-type-of-your-figures.html"><a href="changing-the-size-and-type-of-your-figures.html#overview-6"><i class="fa fa-check"></i><b>8.1</b> Overview</a></li>
-<li class="chapter" data-level="8.2" data-path="changing-the-size-and-type-of-your-figures.html"><a href="changing-the-size-and-type-of-your-figures.html#questions-6"><i class="fa fa-check"></i><b>8.2</b> Questions</a></li>
-<li class="chapter" data-level="8.3" data-path="changing-the-size-and-type-of-your-figures.html"><a href="changing-the-size-and-type-of-your-figures.html#objectives-5"><i class="fa fa-check"></i><b>8.3</b> Objectives</a></li>
-<li class="chapter" data-level="8.4" data-path="changing-the-size-and-type-of-your-figures.html"><a href="changing-the-size-and-type-of-your-figures.html#exercise-4"><i class="fa fa-check"></i><b>8.4</b> Exercise</a></li>
+<li class="has-sub"><a href="changing-the-size-and-type-of-your-figures.html#changing-the-size-and-type-of-your-figures"><span class="toc-section-number">8</span> Changing the size and type of your figures</a><ul>
+<li><a href="changing-the-size-and-type-of-your-figures.html#overview-6"><span class="toc-section-number">8.1</span> Overview</a></li>
+<li><a href="changing-the-size-and-type-of-your-figures.html#questions-6"><span class="toc-section-number">8.2</span> Questions</a></li>
+<li><a href="changing-the-size-and-type-of-your-figures.html#objectives-5"><span class="toc-section-number">8.3</span> Objectives</a></li>
+<li><a href="changing-the-size-and-type-of-your-figures.html#exercise-4"><span class="toc-section-number">8.4</span> Exercise</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="creating-captions.html"><a href="creating-captions.html"><i class="fa fa-check"></i><b>9</b> Creating Captions</a></li>
-<li class="chapter" data-level="10" data-path="common-problems.html"><a href="common-problems.html"><i class="fa fa-check"></i><b>10</b> Common Problems</a><ul>
-<li class="chapter" data-level="10.1" data-path="common-problems.html"><a href="common-problems.html#overview-7"><i class="fa fa-check"></i><b>10.1</b> Overview</a></li>
-<li class="chapter" data-level="10.2" data-path="common-problems.html"><a href="common-problems.html#questions-7"><i class="fa fa-check"></i><b>10.2</b> Questions</a></li>
-<li class="chapter" data-level="10.3" data-path="common-problems.html"><a href="common-problems.html#objectives-6"><i class="fa fa-check"></i><b>10.3</b> Objectives</a></li>
-<li class="chapter" data-level="10.4" data-path="common-problems.html"><a href="common-problems.html#exercise-5"><i class="fa fa-check"></i><b>10.4</b> Exercise</a></li>
+<li><a href="creating-captions.html#creating-captions"><span class="toc-section-number">9</span> Creating Captions</a></li>
+<li class="has-sub"><a href="common-problems.html#common-problems"><span class="toc-section-number">10</span> Common Problems</a><ul>
+<li><a href="common-problems.html#overview-7"><span class="toc-section-number">10.1</span> Overview</a></li>
+<li><a href="common-problems.html#questions-7"><span class="toc-section-number">10.2</span> Questions</a></li>
+<li><a href="common-problems.html#objectives-6"><span class="toc-section-number">10.3</span> Objectives</a></li>
+<li><a href="common-problems.html#exercise-5"><span class="toc-section-number">10.4</span> Exercise</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="learning-more.html"><a href="learning-more.html"><i class="fa fa-check"></i><b>11</b> Learning More</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/njtierney/rmd4sci" target="blank">Published with bookdown</a></li>
-
+<li><a href="learning-more.html#learning-more"><span class="toc-section-number">11</span> Learning More</a></li>
+<li><a href="references.html#references">References</a></li>
 </ul>
-
-      </nav>
-    </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
-          </h1>
-        </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
 <div id="html-pdf-and-word" class="section level1">
 <h1><span class="header-section-number">Chapter 6</span> HTML, PDF, and Word</h1>
 <div id="overview-4" class="section level2">
@@ -172,53 +153,24 @@
 
 </div>
 </div>
-            </section>
+<p style="text-align: center;">
+<a href="figures-and-tables.html"><button class="btn btn-default">Previous</button></a>
+<a href="citations.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
 
-          </div>
-        </div>
-      </div>
-<a href="figures-and-tables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="citations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
-  </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+
+</div>
+
 <script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"google": false,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"download": ["rmd4sci.pdf", "rmd4sci.epub"],
-"toc": {
-"collapse": "subsection"
-}
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
-});
+
 </script>
 
 </body>
-
 </html>
