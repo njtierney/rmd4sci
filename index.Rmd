@@ -8,6 +8,7 @@ site: bookdown::bookdown_site
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
+url: 'https\://rmd4sci.njtierney.com/'
 ---
 
 # About this

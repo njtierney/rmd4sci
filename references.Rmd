@@ -1,5 +1,5 @@
 # References
 
-https://bookdown.org/yihui/rmarkdown/
+[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
 
-https://bookdown.org/yihui/bookdown/
+[Bookdown](https://bookdown.org/yihui/bookdown/)
