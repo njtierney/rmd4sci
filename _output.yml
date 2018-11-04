@@ -1,12 +1,15 @@
 bookdown::gitbook:
-  css: style.css
   config:
     toc:
       collapse: section
-      scroll_highlight: yes
       before: |
-        <li><a href="./">Rmarkdown for Science</a></li>
+        <li><a href="./">R Markdown for Scientists</a></li>
       after: |
-        <li><a href="https://github.com/njtierney/rmd4sci" target="blank">Published with bookdown</a></li>
-bookdown::html_book:
-  split_by: chapter
+        <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
+    download: [pdf, epub, mobi]
+    edit: https://github.com/njtierney/rmd4sci/edit/master/%s
+    sharing:
+      github: yes
+      facebook: no
+bookdown::html_chapters:
+  css: style.css

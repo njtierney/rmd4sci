@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="RMarkdown for Scientists" />
+<meta property="og:type" content="book" />
+
+
+<meta property="og:description" content="A book created for a 3 hour workshop on rmarkdown" />
+
+
+<meta name="author" content="Nicholas Tierney" />
+
+<meta name="date" content="2018-11-05" />
+
+
+<meta name="description" content="A book created for a 3 hour workshop on rmarkdown">
+
+<title>RMarkdown for Scientists</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#about-this"><span class="toc-section-number">1</span> About this</a></li>
+<li><a href="about-this-1.html#about-this-1"><span class="toc-section-number">2</span> About this</a></li>
+<li class="has-sub"><a href="getting-oriented.html#getting-oriented"><span class="toc-section-number">3</span> Getting oriented</a><ul>
+<li class="has-sub"><a href="getting-oriented.html#overview"><span class="toc-section-number">3.1</span> Overview</a><ul>
+<li><a href="getting-oriented.html#questions"><span class="toc-section-number">3.1.1</span> Questions</a></li>
+</ul></li>
+<li><a href="getting-oriented.html#software-setup"><span class="toc-section-number">3.2</span> Software Setup</a></li>
+<li class="has-sub"><a href="getting-oriented.html#r"><span class="toc-section-number">3.3</span> R</a><ul>
+<li><a href="getting-oriented.html#windows"><span class="toc-section-number">3.3.1</span> Windows</a></li>
+<li><a href="getting-oriented.html#macos"><span class="toc-section-number">3.3.2</span> MacOS</a></li>
+</ul></li>
+<li class="has-sub"><a href="getting-oriented.html#rstudio"><span class="toc-section-number">3.4</span> RStudio</a><ul>
+<li><a href="getting-oriented.html#windows-1"><span class="toc-section-number">3.4.1</span> Windows</a></li>
+<li><a href="getting-oriented.html#macos-1"><span class="toc-section-number">3.4.2</span> MacOS</a></li>
+</ul></li>
+<li class="has-sub"><a href="getting-oriented.html#rmarkdown"><span class="toc-section-number">3.5</span> RMarkdown</a><ul>
+<li><a href="getting-oriented.html#windows-2"><span class="toc-section-number">3.5.1</span> Windows</a></li>
+<li><a href="getting-oriented.html#macos-2"><span class="toc-section-number">3.5.2</span> MacOS</a></li>
+</ul></li>
+<li class="has-sub"><a href="getting-oriented.html#tex-and-tinytex"><span class="toc-section-number">3.6</span> TeX (and TinyTeX)</a><ul>
+<li><a href="getting-oriented.html#windows-3"><span class="toc-section-number">3.6.1</span> Windows</a></li>
+<li><a href="getting-oriented.html#macos-3"><span class="toc-section-number">3.6.2</span> MacOS</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="why-r-rmarkdown.html#why-r-rmarkdown"><span class="toc-section-number">4</span> Why R / RMarkdown</a><ul>
+<li><a href="why-r-rmarkdown.html#overview-1"><span class="toc-section-number">4.1</span> Overview</a></li>
+<li><a href="why-r-rmarkdown.html#questions-1"><span class="toc-section-number">4.2</span> Questions</a></li>
+<li><a href="why-r-rmarkdown.html#objectives"><span class="toc-section-number">4.3</span> Objectives</a></li>
+<li><a href="why-r-rmarkdown.html#why-are-we-here"><span class="toc-section-number">4.4</span> Why are we here?</a></li>
+</ul></li>
+<li class="has-sub"><a href="getting-started.html#getting-started"><span class="toc-section-number">5</span> Getting Started</a><ul>
+<li><a href="getting-started.html#overview-2"><span class="toc-section-number">5.1</span> Overview</a></li>
+<li><a href="getting-started.html#questions-2"><span class="toc-section-number">5.2</span> Questions</a></li>
+<li><a href="getting-started.html#objectives-1"><span class="toc-section-number">5.3</span> Objectives</a></li>
+<li><a href="getting-started.html#exercise"><span class="toc-section-number">5.4</span> Exercise</a></li>
+</ul></li>
+<li class="has-sub"><a href="figures-and-tables.html#figures-and-tables"><span class="toc-section-number">6</span> Figures and Tables</a><ul>
+<li><a href="figures-and-tables.html#overview-3"><span class="toc-section-number">6.1</span> Overview</a></li>
+<li><a href="figures-and-tables.html#questions-3"><span class="toc-section-number">6.2</span> Questions</a></li>
+<li><a href="figures-and-tables.html#objectives-2"><span class="toc-section-number">6.3</span> Objectives</a></li>
+<li><a href="figures-and-tables.html#exercise-1"><span class="toc-section-number">6.4</span> Exercise</a></li>
+</ul></li>
+<li class="has-sub"><a href="html-pdf-and-word.html#html-pdf-and-word"><span class="toc-section-number">7</span> HTML, PDF, and Word</a><ul>
+<li><a href="html-pdf-and-word.html#overview-4"><span class="toc-section-number">7.1</span> Overview</a></li>
+<li><a href="html-pdf-and-word.html#questions-4"><span class="toc-section-number">7.2</span> Questions</a></li>
+<li><a href="html-pdf-and-word.html#objectives-3"><span class="toc-section-number">7.3</span> Objectives</a></li>
+<li><a href="html-pdf-and-word.html#exercise-2"><span class="toc-section-number">7.4</span> Exercise</a></li>
+</ul></li>
+<li class="has-sub"><a href="citations.html#citations"><span class="toc-section-number">8</span> Citations</a><ul>
+<li><a href="citations.html#overview-5"><span class="toc-section-number">8.1</span> Overview</a></li>
+<li><a href="citations.html#questions-5"><span class="toc-section-number">8.2</span> Questions</a></li>
+<li><a href="citations.html#objectives-4"><span class="toc-section-number">8.3</span> Objectives</a></li>
+<li><a href="citations.html#exercise-3"><span class="toc-section-number">8.4</span> Exercise</a></li>
+</ul></li>
+<li class="has-sub"><a href="changing-the-size-and-type-of-your-figures.html#changing-the-size-and-type-of-your-figures"><span class="toc-section-number">9</span> Changing the size and type of your figures</a><ul>
+<li><a href="changing-the-size-and-type-of-your-figures.html#overview-6"><span class="toc-section-number">9.1</span> Overview</a></li>
+<li><a href="changing-the-size-and-type-of-your-figures.html#questions-6"><span class="toc-section-number">9.2</span> Questions</a></li>
+<li><a href="changing-the-size-and-type-of-your-figures.html#objectives-5"><span class="toc-section-number">9.3</span> Objectives</a></li>
+<li><a href="changing-the-size-and-type-of-your-figures.html#exercise-4"><span class="toc-section-number">9.4</span> Exercise</a></li>
+</ul></li>
+<li><a href="creating-captions.html#creating-captions"><span class="toc-section-number">10</span> Creating Captions</a></li>
+<li class="has-sub"><a href="common-problems.html#common-problems"><span class="toc-section-number">11</span> Common Problems</a><ul>
+<li><a href="common-problems.html#overview-7"><span class="toc-section-number">11.1</span> Overview</a></li>
+<li><a href="common-problems.html#questions-7"><span class="toc-section-number">11.2</span> Questions</a></li>
+<li><a href="common-problems.html#objectives-6"><span class="toc-section-number">11.3</span> Objectives</a></li>
+<li><a href="common-problems.html#exercise-5"><span class="toc-section-number">11.4</span> Exercise</a></li>
+</ul></li>
+<li><a href="learning-more.html#learning-more"><span class="toc-section-number">12</span> Learning More</a></li>
+<li><a href="references.html#references"><span class="toc-section-number">13</span> References</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="about-this-1" class="section level1">
+<h1><span class="header-section-number">2</span> About this</h1>
+<p>This is a 3 hour workshop initially designed for the SSA Vic and MIG meeting on November 13, 2018.</p>
+<p>After completing this course, you will know how to:</p>
+<ul>
+<li>Create your own R Markdown document</li>
+<li>Create figures and tables that you can reference in text, and update with - your data</li>
+<li>Export your R Markdown document to PDF, HTML, and Microsoft Word</li>
+<li>Use keyboard shortcuts to improve workflow</li>
+<li>Cite research articles and generate a bibliography</li>
+</ul>
+<p>We may, depending on time, also cover the following areas:</p>
+<ul>
+<li>Change the size and type of your figures</li>
+<li>Create captions for your figures, and reference them in text</li>
+<li>Cite research articles and generate a bibliography</li>
+<li>Debug and handle common errors</li>
+</ul>
+
+</div>
+<p style="text-align: center;">
+<a href="index.html"><button class="btn btn-default">Previous</button></a>
+<a href="getting-oriented.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

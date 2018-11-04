@@ -1,12 +1,8 @@
 book_filename: "rmd4sci"
 output_dir: "docs"
 delete_merged_file: true
-language:
-  ui:
-    chapter_name: "Chapter "
 rmd_files: [
   "index.Rmd",
-  "about-this.Rmd",
   "getting-oriented.Rmd",
   "why-rmd.Rmd",
   "getting-started.Rmd",
