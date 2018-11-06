@@ -4,6 +4,8 @@
 
 ## Questions
 
+* I got error message "", what do I do?
+
 ## Objectives
 
 ## Exercise {.exercise}

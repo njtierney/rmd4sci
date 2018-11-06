@@ -4,6 +4,8 @@
 
 ## Questions
 
+* How should I start an rmarkdown document?
+
 ## Objectives
 
 ## Exercise {.exercise}

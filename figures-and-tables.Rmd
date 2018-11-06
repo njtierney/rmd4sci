@@ -4,6 +4,9 @@
 
 ## Questions
 
+* How do I create a figure in rmarkdown?
+* How do I create a table in rmarkdown?
+
 ## Objectives
 
 ## Exercise {.exercise}

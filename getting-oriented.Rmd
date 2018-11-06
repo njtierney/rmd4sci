@@ -4,6 +4,10 @@
 
 ### Questions
 
+* How do I install R?
+* How do I install rmarkdown?
+* How do I install LaTeX in a sane way?
+
 ## Software Setup
 
 ## R
