@@ -1,5 +1,6 @@
 book_filename: "rmd4sci"
 output_dir: "docs"
+css: style.css
 delete_merged_file: true
 rmd_files: [
   "index.Rmd",

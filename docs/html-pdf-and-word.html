@@ -25,7 +25,7 @@
 <meta name="author" content="Nicholas Tierney">
 
 
-<meta name="date" content="2018-11-05">
+<meta name="date" content="2018-11-06">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -51,6 +51,7 @@
 
 
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -198,8 +199,8 @@
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": true,
-"facebook": false,
+"github": false,
+"facebook": true,
 "twitter": true,
 "google": false,
 "linkedin": false,
@@ -217,9 +218,9 @@ gitbook.start({
 "link": "https://github.com/njtierney/rmd4sci/edit/master/pdf-html-word.Rmd",
 "text": "Edit"
 },
-"download": ["rmd4sci.pdf", "rmd4sci.epub", "rmd4sci.mobi"],
+"download": ["rmd4sci.pdf", "rmd4sci.epub"],
 "toc": {
-"collapse": "none"
+"collapse": "section"
 }
 });
 });
