@@ -18,7 +18,7 @@ if (Sys.getenv("id_rsa") != "") {
   # - `Sys.getenv("TRAVIS_EVENT_TYPE") == "cron"`: Only for Travis cron jobs
   get_stage("before_deploy") %>%
     add_step(step_setup_ssh())
-  
+
   get_stage("deploy") %>%
-    add_step(step_push_deploy(path = "docs", branch = "gh-pages"))
+    add_step(step_push_deploy(path = "_book", branch = "gh-pages"))
 }

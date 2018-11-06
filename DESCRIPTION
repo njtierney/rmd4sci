@@ -1,6 +1,11 @@
 Package: rmd4sci
 Title: A Book On Rmarkdown For Scientists
 Version: 0.0.0.9000
+Description: RMarkdown is a powerful tool to create reproducible reports. 
+    However it can be difficult for scientists to know how and where to start 
+    when writing their own reports. Rmarkdown for scientists is a short book 
+    created for the purpose of a workshop to help for scientists get started
+    with rmarkdown.
 Authors@R: 
     person(given = "Nicholas",
            family = "Tierney",
