@@ -1,4 +1,5 @@
 bookdown::gitbook:
+  css: style.css
   config:
     toc:
       collapse: section
@@ -6,10 +7,6 @@ bookdown::gitbook:
         <li><a href="./">R Markdown for Scientists</a></li>
       after: |
         <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
-    download: [pdf, epub, mobi]
     edit: https://github.com/njtierney/rmd4sci/edit/master/%s
-    sharing:
-      github: yes
-      facebook: no
 bookdown::html_chapters:
   css: style.css

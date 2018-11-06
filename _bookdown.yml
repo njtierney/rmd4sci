@@ -1,5 +1,7 @@
-book_filename: "rmd4sci"
+book_filename: "_rmd4sci.md"
 output_dir: "docs"
+css: style.css
+new_session: yes # this knits each chapter separately in a new session
 delete_merged_file: true
 rmd_files: [
   "index.Rmd",
