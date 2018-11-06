@@ -1,19 +1,18 @@
 book_filename: "_rmd4sci.md"
-output_dir: "docs"
+output_dir: _book
+repo: https://github.com/njtierney/rmd4sci
 css: style.css
 new_session: yes # this knits each chapter separately in a new session
 delete_merged_file: true
-rmd_files: [
-  "index.Rmd",
-  "getting-oriented.Rmd",
-  "why-rmd.Rmd",
-  "getting-started.Rmd",
-  "figures-and-tables.Rmd",
-  "pdf-html-word.Rmd",
-  "citations.Rmd",
-  "changing-figures.Rmd",
-  "creating-captions.Rmd",
-  "common-problems.Rmd",
-  "learning-more.Rmd",
-  "references.Rmd"
-]
+rmd_files: [ "index.Rmd",
+             "getting-oriented.Rmd",
+             "why-rmd.Rmd",
+             "getting-started.Rmd",
+             "figures-and-tables.Rmd",
+             "pdf-html-word.Rmd",
+             "citations.Rmd",
+             "changing-figures.Rmd",
+             "creating-captions.Rmd",
+             "common-problems.Rmd",
+             "learning-more.Rmd",
+             "references.Rmd"]
