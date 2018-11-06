@@ -1,0 +1,9 @@
+Package: rmd4sci
+Title: A Book On Rmarkdown For Scientists
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Nicholas",
+           family = "Tierney",
+           role = c("aut", "cre"),
+           email = "nicholas.tierney@gmail.com")
+Imports: bookdown
