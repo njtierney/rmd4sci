@@ -1,35 +1,54 @@
 # Getting oriented
 
+In this section, the aim is to have everyone setup with R, RStudio, and RMarkdown.
+
 ## Overview
 
-### Questions
+* **Duration** 15 minutes
+
+## Questions
 
 * How do I install R?
 * How do I install rmarkdown?
 * How do I install LaTeX in a sane way?
 
-## Software Setup
+# Software Setup
 
 ## R
 
 ### Windows
 
+https://cloud.r-project.org/bin/windows/
+
 ### MacOS
+
+https://cloud.r-project.org/bin/macosx/
+
+### Linux
+
+https://cloud.r-project.org/bin/linux/
 
 ## RStudio
 
-### Windows
-
-### MacOS
+https://www.rstudio.com/products/rstudio/download/#download
 
 ## RMarkdown
 
-### Windows
+```{r install-rmd, eval = FALSE}
+install.packages("rmarkdown")
+install.packages("knitr")
+install.packages("tinytex")
+install.packages('tidyverse')
+```
 
-### MacOS
+## Test Script
 
-## TeX (and TinyTeX)
+You should be able to fun the following code on your machine
 
-### Windows
+```{r library-test}
+library(rmarkdown)
+library(knitr)
+library(tinytex)
+library(tidyverse)
+```
 
-### MacOS
