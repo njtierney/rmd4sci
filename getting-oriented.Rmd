@@ -45,7 +45,7 @@ install.packages('tidyverse')
 
 You should be able to fun the following code on your machine
 
-```{r library-test}
+```{r library-test, eval = FALSE}
 library(rmarkdown)
 library(knitr)
 library(tinytex)
