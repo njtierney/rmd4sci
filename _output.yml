@@ -8,5 +8,9 @@ bookdown::gitbook:
       after: |
         <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
     edit: https://github.com/njtierney/rmd4sci/edit/master/%s
+    sharing:
+      github: yes
+      facebook: no
+      twitter: yes
 bookdown::html_chapters:
   css: style.css
