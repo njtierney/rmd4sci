@@ -12,23 +12,23 @@ In this section, the aim is to have everyone setup with R, RStudio, and RMarkdow
 * How do I install rmarkdown?
 * How do I install LaTeX in a sane way?
 
-# Software Setup
+## Software Setup
 
-## R
+### R
 
-### Windows
+#### Windows
 
 https://cloud.r-project.org/bin/windows/
 
-### MacOS
+#### MacOS
 
 https://cloud.r-project.org/bin/macosx/
 
-### Linux
+#### Linux
 
 https://cloud.r-project.org/bin/linux/
 
-## RStudio
+### RStudio
 
 https://www.rstudio.com/products/rstudio/download/#download
 

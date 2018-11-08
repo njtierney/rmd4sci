@@ -1,4 +1,4 @@
-# Changing the size and type of your figures
+# Customising your figures
 
 ## Overview
 
