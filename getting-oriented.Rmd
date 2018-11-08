@@ -35,10 +35,17 @@ https://www.rstudio.com/products/rstudio/download/#download
 ## RMarkdown
 
 ```{r install-rmd, eval = FALSE}
-install.packages("rmarkdown")
-install.packages("knitr")
-install.packages("tinytex")
+install.packages("rmarkdown", 
+                 dependencies = c("Imports", "Suggests"))
+
+install.packages("knitr", 
+                 dependencies = c("Imports", "Suggests")) 
+
+install.packages("tinytex",
+                 dependencies = c("Imports", "Suggests"))
+
 install.packages('tidyverse')
+tinytex::install_tinytex()
 ```
 
 ## Test Script
