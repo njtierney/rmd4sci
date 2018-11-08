@@ -1,0 +1,88 @@
+---
+title: "05-rmd-bib-polish"
+output: html_document
+---
+
+```{r setup}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      fig.height = 3,
+                      fig.width = 4,
+                      dev = "png")
+```
+
+
+# Tasks
+
+- Cite the packages you use when you use them
+  - hint: http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
+  - hint: look at the names in packages.bib
+- Tidy up the structure, provide some more words around the introduction and results
+
+# Introduction
+
+This is a simple analysis of the New York Air Quality Measurements using the R statistical programming language (CITATION PLEASE!). As stated in the helpfile `?airquality`, this dataset contains:
+
+> Daily air quality measurements in New York, May to September 1973.
+
+And the dataset is sourced from:
+
+> ... the New York State Department of Conservation (ozone data) and the National Weather Service (meteorological data).
+
+It contains the following variables
+
+- Ozone: Mean ozone in parts per billion from 1300 to 1500 hours at Roosevelt Island.
+- Solar.R: Solar radiation in Langleys in the frequency band 4000–7700 Angstroms from 0800 to 1200 hours at Central Park.
+- Wind: Average wind speed in miles per hour at 0700 and 1000 hours at LaGuardia Airport.
+- Temp: Maximum daily temperature in degrees Fahrenheit at La Guardia Airport.
+- Month: Month (1--12)
+- Day: Day of month (1--31)
+
+We are going to explore the relationship between solar radiation and other selected variables, solar radiation, wind, and temperature.
+
+# Method
+
+```{r lm-fit}
+
+lm_fit <- lm(Ozone ~ Solar.R + Temp + Wind, 
+             data = airquality)
+
+```
+
+$$
+Ozone \sim \beta_0 + \beta_1Solar.R + \beta_2 Wind + \beta_3Temp + \epsilon
+$$
+
+# Results
+
+We can see that there is an interesting relationship between ozone and solar radiation in figure 1 below, plotted using ggplot2.
+
+```{r figure-1, fig.height = 2, fig.width = 2, echo = TRUE}
+library(ggplot2)
+ggplot(airquality,
+       aes(x = Ozone,
+           y = Solar.R)) + 
+  geom_point()
+
+```
+
+We can also see that there is an interesting relationship between Ozone and temperature.
+
+```{r figure-2, fig.height = 2, fig.width = 2, echo = FALSE}
+
+ggplot(airquality,
+       aes(x = Ozone,
+           y = Temp)) + 
+  geom_point()
+
+```
+
+We use the knitr package to make a table - CITATION NEEDED!
+
+```{r print-coef-table}
+
+knitr::kable(coef(lm_fit))
+
+```
+
+# References
