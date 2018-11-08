@@ -1,0 +1,28 @@
+---
+title: "01-rmd-example"
+author: "YOUR NAME"
+date: "yyyy/mm/dd"
+output:
+  word_document: default
+  html_document: default
+---
+
+# Tasks
+
+- Make a report with an introduction heading
+- Add your name and date to the YAML header
+
+Describe the data from the airquality dataset using blockquotes (hint: `?airquality`)
+
+Provide:
+
+- a bulleted list describing the variables used in the data
+- A direct quote from the ?data set describing the data
+- Make a code chunk
+- Make a library call in the code chunk
+- Make a plot of ozone and solar radiation
+
+Extra: 
+
+- Make a plot of ozone and temperature
+
