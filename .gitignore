@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+*_files
+*_cache
+*.tex
+*.pdf
+.DS_Store

@@ -1,0 +1,64 @@
+---
+title: "03-rmd-lm-tables-inline-eqn"
+author: "Your Name"
+date: 2017/06/27
+output: 
+  html_document:
+    keep_md: true
+---
+
+# Tasks
+
+  - fit a linear model of Ozone ~ Temp + Wind + Solar.R 
+    - (hint: use `lm`)
+  - Make a table of the coefficients from the linear model 
+    - (hint: use `coef` and `knitr::kable`)
+  - Make some inline code chunks that describe the single values of the R-squared or a coefficient
+  - Make an equation describing the relationship
+
+
+# Introduction
+
+This is a simple analysis of the New York Air Quality Measurements using the R statistical programming language. As stated in the helpfile `?airquality`, this dataset contains:
+
+> Daily air quality measurements in New York, May to September 1973.
+
+And the dataset is sourced from:
+
+> ... the New York State Department of Conservation (ozone data) and the National Weather Service (meteorological data).
+
+It contains the following variables
+
+- Ozone: Mean ozone in parts per billion from 1300 to 1500 hours at Roosevelt Island.
+- Solar.R: Solar radiation in Langleys in the frequency band 4000–7700 Angstroms from 0800 to 1200 hours at Central Park.
+- Wind: Average wind speed in miles per hour at 0700 and 1000 hours at LaGuardia Airport.
+- Temp: Maximum daily temperature in degrees Fahrenheit at La Guardia Airport.
+- Month: Month (1--12)
+- Day: Day of month (1--31)
+
+We are going to explore the relationship between solar radiation and other selected variables, solar radiation, wind, and temperature.
+
+# Results
+
+We can see that there is an interesting relationship between ozone and solar radiation in figure 1 below, plotted using ggplot2.
+
+```{r figure-1, fig.height = 2, fig.width = 2, echo = TRUE}
+library(ggplot2)
+ggplot(airquality,
+       aes(x = Ozone,
+           y = Solar.R)) + 
+  geom_point()
+
+```
+
+We can also see that there is an interesting relationship between Ozone and temperature.
+
+```{r figure-2, fig.height = 2, fig.width = 2, echo = FALSE}
+
+ggplot(airquality,
+       aes(x = Ozone,
+           y = Temp)) + 
+  geom_point()
+
+```
+

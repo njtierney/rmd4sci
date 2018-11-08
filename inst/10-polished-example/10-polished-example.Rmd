@@ -1,0 +1,158 @@
+---
+title: "Rmarkdown example"
+author: "Nicholas Tierney"
+bibliography: packages.bib
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
+  word_document:
+    toc: yes
+csl: bmj.csl
+Date: 2017/06/27
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      dev = "png")
+```
+
+```{r library}
+
+library(tidyverse)
+
+```
+
+I want to have a quick look at the data, to see what I'm dealing with:
+
+```{r}
+library(visdat)
+
+vis_dat(airquality)
+
+```
+
+
+# Introduction
+
+This is a simple analysis of the New York Air Quality Measurements using the R statistical programming language [@base]. As stated in the helpfile `?airquality`, this dataset contains:
+
+
+> Daily air quality measurements in New York, May to September 1973.
+
+And the dataset is sourced from:
+
+> ... the New York State Department of Conservation (ozone data) and the National Weather Service (meteorological data).
+
+It contains the following variables
+
+- Ozone: Mean ozone in parts per billion from 1300 to 1500 hours at Roosevelt Island.
+- Solar.R: Solar radiation in Langleys in the frequency band 4000–7700 Angstroms from 0800 to 1200 hours at Central Park.
+- Wind: Average wind speed in miles per hour at 0700 and 1000 hours at LaGuardia Airport.
+- Temp: Maximum daily temperature in degrees Fahrenheit at La Guardia Airport.
+- Month: Month (1--12)
+- Day: Day of month (1--31)
+
+We are going to explore the relationship between solar radiation and other selected variables, solar radiation, wind, and temperature.
+
+# Method
+
+First, we tidy the names of the dataset, to provide information about the units of measurement for Ozone, Solar Radiation, Wind, and Temperature. We do this by renaming the variables and adding a suffix at the end to describe the units. To do this we use the `rename` function from the `dplyr` package[@dplyr].
+
+```{r tidy-data}
+
+tidy_aq <-rename(.data = airquality,
+                 ozone_ppb = Ozone,
+                 solar_rad_lang = Solar.R,
+                 wind_mph = Wind,
+                 temp_fah = Temp,
+                 month = Month,
+                 day = Day)
+
+```
+
+We can see that there is an interesting relationship between ozone and solar radiation in figure 1 below, plotted using ggplot2 [@ggplot2]
+
+```{r figure-1, fig.height = 4, fig.width=4}
+
+ggplot(tidy_aq,
+       aes(x = ozone_ppb,
+           y = solar_rad_lang)) + 
+  geom_point()
+
+```
+
+We can also see that there is an interesting relationship between Ozone and temperature.
+
+```{r figure-2}
+
+ggplot(tidy_aq,
+       aes(x = ozone_ppb,
+           y = temp_fah)) + 
+  geom_point()
+
+```
+
+To explore the relationships between Ozone and all of the variables in the dataset, we can fit a basic linear model, with Ozone as the outcome, and all other variables as the predictors. We can express this as:
+
+**perhaps this sentence...**
+
+$$
+Ozone \sim \beta_0 + \beta_1Solar + \beta_2 Wind + \beta_3Temp + \epsilon
+$$
+
+
+And we can fit this model using the code below.
+
+```{r data-model}
+lm_aq <- lm(ozone_ppb ~ solar_rad_lang + wind_mph + temp_fah,
+            data = tidy_aq)
+
+```
+
+# Results
+
+The key results are given below, using the `tidy` function from the `broom` package [@broom] to clean up the data.
+
+```{r broom-tidy}
+
+library(broom)
+
+tidy_lm_aq <- tidy(lm_aq)
+
+tidy_lm_aq
+```
+
+We can present this result in a nice table using the `kable` function from the knitr package [@knitr]
+
+```{r lm-kable}
+
+knitr::kable(tidy_lm_aq,
+             digits = 3,
+             caption = "Table of results from the linear model")
+
+```
+
+We can also refer to individual results of the model inside the text. For example, we can say that the estimated coefficient of Wind miles per hour is `r round(tidy_lm_aq$estimate[3],3)`,  and the P value of this is `r round(tidy_lm_aq$p.value[3],3)`.
+
+# Conclusion
+
+We have explored the relationship of Ozone with other variables in the airquality dataset
+
+# References
+
+```{r write-references, include = FALSE}
+knitr::write_bib(c(
+  .packages(), 
+  "knitr", 
+  "rmarkdown",
+  "ggplot2",
+  "broom",
+  "dplyr"
+), "packages.bib",
+prefix = getOption("knitr.bib.prefix", ""))
+```
+
