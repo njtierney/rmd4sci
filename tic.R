@@ -4,6 +4,9 @@ get_stage("before_install") %>%
 get_stage("install") %>%
   add_code_step(remotes::install_deps(dependencies = TRUE))
 
+get_stage("script") %>%
+  add_code_step('- echo "rmd4sci.njtierney.com" > CNAME')
+
 get_stage("deploy") %>%
   add_code_step(
     bookdown::render_book('index.Rmd', 'bookdown::gitbook'),
