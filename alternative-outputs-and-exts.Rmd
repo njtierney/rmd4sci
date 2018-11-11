@@ -18,6 +18,10 @@
 - [generate learning exercises with `learnr`](https://bookdown.org/yihui/rmarkdown/learnr.html#learnr)
 - [generate multiple reports with parameterised reports](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html#parameterized-reports)
 
+## Tufte
+
+- [tufte](https://github.com/rstudio/tufte)
+
 ### For Journals
 
 - [rticles](https://cran.r-project.org/web/packages/rticles/index.html)
@@ -29,3 +33,5 @@
 ### Misc HTML
 
 - [rmdformats](https://github.com/juba/rmdformats)
+- [Bob Rudis' markdown templates](https://github.com/hrbrmstr/markdowntemplates)
+- [prettydoc by Yixuan Qiu](http://yixuan.cos.name/prettydoc/themes.html)

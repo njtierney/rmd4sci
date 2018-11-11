@@ -3,3 +3,11 @@
 * `_files/`
 * `_cache/`
 * compile order
+
+## Unanswered questions
+
+> Why should I use Rmarkdown? I already use <insert> (scientific word, Microsoft Word, LaTeX, Word Perfect), and this works fine for me.
+
+> Should I write my whole paper in Rmarkdown?
+
+Yes, you should. It might look weird, and not the same as a word doc, but being able to go from start to finish and reproduce this 6 months down the track is a big deal.
