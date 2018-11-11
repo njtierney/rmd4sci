@@ -6,8 +6,8 @@ new_session: yes # this knits each chapter separately in a new session
 delete_merged_file: true
 rmd_files: [ "index.Rmd",
              "why-rmd.Rmd",
-             "getting-oriented.Rmd",
-             "getting-started.Rmd",
+             "installation.Rmd",
+             "workflow.Rmd",
              "figures-and-tables.Rmd",
              "pdf-html-word.Rmd",
              "citations.Rmd",

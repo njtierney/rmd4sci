@@ -1,8 +1,8 @@
-# Getting Started
+# Workflow
 
 Before we start with rmarkdown, we need to make sure that you have some basic file storage hygiene. This helps make you more productive in the future because you'll spend less time fighting against file paths.
 
-## Overview*
+## Overview
 
 * **Teaching** 10 minutes
 * **Exercises** 10 minutes

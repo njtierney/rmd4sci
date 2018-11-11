@@ -28,3 +28,11 @@ We may, depending on time, also cover the following areas:
 - Change the size and type of your figures
 - Create captions for your figures, and reference them in text
 - Debug and handle common errors
+
+# Why write this as a book?
+
+There are many great books on rmarkdown and it's various features, such as "Rmarkdown: The definitive guide", and Yihui's two books, "...", "...", and his thesis, "...".
+
+> So why write a book?
+
+Good question. The answer is that writing this as a book provides a way for me to structure the content in the form of a workshop, in a way suitable for learning in a few hours. 
