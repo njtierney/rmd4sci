@@ -1,9 +1,6 @@
-# Why R/Markdown
+# Why RMarkdown
 
 The goal of this section is to briefly discuss why we want to learn rmarkdown, the benefits, and the barriers to using it.
-
-* reproducibility as a problem
-* Literate programming as an idea and a solution
 
 ## Overview
 
@@ -15,10 +12,20 @@ The goal of this section is to briefly discuss why we want to learn rmarkdown, t
 * What is markdown?
 * Why should I use Rmarkdown? I already use <insert> (scientific word, Microsoft Word, LaTeX, Word Perfect), and this works fine for me.
 * Should I write my whole paper in Rmarkdown?
+* Can I combine my software and my writing?
+* What is the value in a reproducible report?
 
 ## Objectives
 
 * [Learn how to use markdown](https://www.markdowntutorial.com/)
+
+## Reproducibility is a problem
+
+
+
+## Literate programming is a partial solution
+
+## Rmarkdown is another partial solution
 
 ## Why are we here? {.exercise}
 

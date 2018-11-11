@@ -1,4 +1,4 @@
-# Referencing Figures, Tables, and Sections
+# Citing Figures, Tables & Sections
 
 In order to use this referencing style, you must use the following in the YAML
 

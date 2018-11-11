@@ -1,4 +1,4 @@
-# Getting oriented
+# Installation
 
 In this section, the aim is to have everyone setup with R, RStudio, and RMarkdown.
 

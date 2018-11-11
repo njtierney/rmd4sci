@@ -29,7 +29,7 @@ We may, depending on time, also cover the following areas:
 - Create captions for your figures, and reference them in text
 - Debug and handle common errors
 
-# Why write this as a book?
+## Why write this as a book?
 
 There are many great books on rmarkdown and it's various features, such as "Rmarkdown: The definitive guide", and Yihui's two books, "...", "...", and his thesis, "...".
 
