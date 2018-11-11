@@ -2,6 +2,9 @@
 
 The goal of this section is to briefly discuss why we want to learn rmarkdown, the benefits, and the barriers to using it.
 
+* reproducibility as a problem
+* Literate programming as an idea and a solution
+
 ## Overview
 
 * **Teaching** 3 minutes

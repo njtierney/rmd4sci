@@ -23,6 +23,34 @@
 
 ## Objectives
 
+*
+
+## Tables
+
+* For tables (made with `kable`)
+  * kable(table, caption = )
+  * some other useful features of kable
+    * `digits = 3`
+    * `booktabs = TRUE`
+  * example
+  * output
+  * other advanced tables
+     * `... %>% kableExtra::kable_styling(latex_options = c("hold_position"))`
+     * kableExtra
+     * huxtable
+     * ???
+
+### Figures
+
+* Plots and graphics (relatively simple)
+* Inserting images (either with `![]()`, or `knitr::include_graphics()`)
+* inserting captions with `fig.cap` (NOT `fig.caption`)
+* For figures 
+  * Need to place these in 
+  * example
+  * output
+
+
 ## Exercise {.exercise}
 
 1. Generic exercise

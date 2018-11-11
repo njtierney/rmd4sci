@@ -1,1 +1,23 @@
-# RStudio
+# RStudio, What and Why
+
+* What it is
+* Some basic setup
+
+## Overview
+
+* **Teaching** 3 minutes
+* **Exercises** 3 minutes
+
+## Questions
+
+* What is RStudio?
+* Why should I use RStudio?
+* What features should I change?
+
+## Objectives
+
+* Get familiarised with RStudio, get set up with not storing session info
+
+## Why are we here? {.exercise}
+
+1. Form small groups of 2-4 with your neighbours and discuss 

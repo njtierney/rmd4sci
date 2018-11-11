@@ -4,7 +4,7 @@ In this section, the aim is to have everyone setup with R, RStudio, and RMarkdow
 
 ## Overview
 
-* **Duration** 15 minutes
+***Duration** 15 minutes
 
 ## Questions
 
@@ -34,6 +34,8 @@ https://www.rstudio.com/products/rstudio/download/#download
 
 ## RMarkdown
 
+To ensure you are up to date, run the following script to install the packages.
+
 ```{r install-rmd, eval = FALSE}
 install.packages("rmarkdown", 
                  dependencies = c("Imports", "Suggests"))
@@ -45,6 +47,12 @@ install.packages("tinytex",
                  dependencies = c("Imports", "Suggests"))
 
 install.packages('tidyverse')
+
+```
+
+As we will be using PDF for output of some of our documents in this workshop, you need to install LaTeX. `tinytex` is an R package that installs a sane, lightweight version of LaTeX. It will only install LaTeX if you need to, which is nice!
+
+```{r run-tiny-tex, eval = FALSE}
 tinytex::install_tinytex()
 ```
 
@@ -58,4 +66,3 @@ library(knitr)
 library(tinytex)
 library(tidyverse)
 ```
-

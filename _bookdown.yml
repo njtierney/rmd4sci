@@ -17,6 +17,6 @@ rmd_files: [ "index.Rmd",
              "ref-fig-tab-sec.Rmd",
              "citations-and-styles.Rmd",
              "common-problems.Rmd",
-             "learning-more.Rmd",
-             "misc.Rmd"
+             "alternative-outputs-and-exts.Rmd",
+             "misc.Rmd",
              "references.Rmd"]

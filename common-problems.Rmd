@@ -8,6 +8,18 @@
 
 ## Objectives
 
+## Content
+
+We present the name of the error, the error message, and how to solve it
+
+* duplicated chunk names
+* objects not created in the right order
+* missing ",", or "(", "}", or "'"
+* Chunk option with trailing ", or not input
+* file path incorrect
+* incorrectly spelled chunk options
+* LaTeX errors
+
 ## Exercise {.exercise}
 
 1. Generic exercise

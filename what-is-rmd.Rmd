@@ -1,1 +1,50 @@
 # What is rmarkdown
+
+
+* Anatomy of an rmarkdown document
+  * Metadata
+    - YAML
+  * text
+    - markdown formatting
+  * code
+    - code formatting
+    
+* What is markdown?
+
+* inline R code
+* code chunks
+  * What is a backtick
+  * chunk names
+    * no spaces
+    * give every chunk a name, it will save you time
+  * chunk options
+    * The ones you need to know about:
+      * fig.size
+      * fig.width
+      * out.width
+      * out.height
+      * dev
+      * cache
+      * eval
+      * echo
+      * error
+      * message
+      * include
+      * result
+
+## Overview
+
+* **Teaching** XX minutes
+* **Exercises** XX minutes
+
+## Questions
+
+* 
+
+## Objectives
+
+* 
+
+## XX Exercise {.exercise}
+
+1. 

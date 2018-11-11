@@ -1,1 +1,26 @@
 # Keyboard Shortcuts
+
+
+* How to bring up the master list
+* code chunk create
+* knit doc
+* multiple cursors
+* delete line
+* comment out a line (in R and in markdown)
+
+## Overview
+
+* **Teaching** XX minutes
+* **Exercises** XX minutes
+
+## Questions
+
+* 
+
+## Objectives
+
+* 
+
+## XX Exercise {.exercise}
+
+1. 

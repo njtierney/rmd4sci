@@ -2,6 +2,15 @@
 
 Before we start with rmarkdown, we need to make sure that you have some basic file storage hygiene. This helps make you more productive in the future because you'll spend less time fighting against file paths.
 
+* Project workflow
+  * Use RStudio projects
+  * Use the "here" package
+  * reference Jenny's blog post on this
+
+* creating an rmarkdown document
+* (mention in the rmarkdown part) Use HTML first, PDF/word later
+
+
 ## Overview
 
 * **Teaching** 10 minutes

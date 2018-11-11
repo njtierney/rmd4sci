@@ -2,6 +2,13 @@
 
 ## Overview
 
+* with `fig.height`, `fig.width`, `out.width`, `dev`
+
+* setting it globally with `knitr::opts_chunk$set(chunk_option1 = TRUE, ...)`
+
+* example
+* output
+
 ## Questions
 
 * How do I change the height and width of a figure?

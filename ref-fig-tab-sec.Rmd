@@ -1,1 +1,50 @@
 # Referencing Figures, Tables, and Sections
+
+In order to use this referencing style, you must use the following in the YAML
+
+```
+output:
+  bookdown::pdf_document2
+```
+
+Or for HTML:
+
+```
+output:
+  bookdown::html_document2
+```
+
+Or for word:
+
+```
+output:
+  bookdown::word_document2
+```
+
+* Figures `\@ref(fig:chunk-name))`
+  * example
+  * output
+* Tables `\@ref(tab:chunk-name))`
+  * example
+  * output
+* Sections `\@ref(slug))`
+  * Section is written as `## whatever you want {#slug})`
+  * example
+  * output
+
+## Overview
+
+* **Teaching** XX minutes
+* **Exercises** XX minutes
+
+## Questions
+
+* 
+
+## Objectives
+
+* 
+
+## XX Exercise {.exercise}
+
+1. 
