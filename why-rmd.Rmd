@@ -9,25 +9,26 @@ The goal of this section is to briefly discuss why we want to learn rmarkdown, t
 
 ## Questions
 
-* What is markdown?
-* Why should I use Rmarkdown? I already use <insert> (scientific word, Microsoft Word, LaTeX, Word Perfect), and this works fine for me.
-* Should I write my whole paper in Rmarkdown?
-* Can I combine my software and my writing?
 * What is the value in a reproducible report?
+* What is markdown?
+* Can I combine my software and my writing?
 
 ## Objectives
 
 * [Learn how to use markdown](https://www.markdowntutorial.com/)
+* Think about why you want to use markdown
 
 ## Reproducibility is a problem
 
-We are in a crisis at the moment where a lot of people cannot reproduce scientific work. This isn't just a few people, and it's not cheap. Estimates say that in the ___ industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs $28 Billion dollars annualy. That's one country, one field, and one year.
+We are in a crisis at the moment where a lot of people cannot reproduce scientific work. This isn't just a few people, and it's not cheap. Estimates say that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs $28 Billion dollars annually [^1]. That's one country, one field, and one year.
+
+[^1]:The article, [Freedman, 2010](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002165), Heard via Garret Grolemund's [great talk](https://www.youtube.com/watch?v=HVlwNayog-k)
 
 So what can we do about it?
 
 ## Literate programming is a partial solution
 
-The idea of literate programming shines some light on this dark area of science. This is the idea of Donald Knuth (___) where you combine your text with your code output to create a document. This is a _blend_ of your literature (text), and your programming (code), to create something that you can read from top to bottom, your intro, methods, results, discussion, conclusion, and see all the pieces of your data analysis all together.
+The idea of literate programming shines some light on this dark area of science. This is an idea from [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) where you combine your text with your code output to create a document. This is a _blend_ of your literature (text), and your programming (code), to create something that you can read from top to bottom, your intro, methods, results, discussion, conclusion, and see all the pieces of your data analysis all together.
 
 This was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the _Sweave_ (S+weave (from the )) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:
 
@@ -37,12 +38,11 @@ This was a popular idea, and it has had some interesting discussion and contribu
 
 In 2004, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), of [daring fireball](https://daringfireball.net/) created a [markdown](https://en.wikipedia.org/wiki/Markdown), a simple way to create text that rendered into a HTML webpage.
 
+### A brief example of markdown
+
 For example, 
 
-````
-
 ```
-
 - bullet list
 - bullet list
 - bullet list
@@ -54,6 +54,15 @@ For example,
 __bold__, **bold**, _italic_, *italic*
 
 > quote of something profound 
+```
+
+````
+```r
+# computer code goes in three back ticks
+1 + 1
+2 + 2
+```
+````
 
 Would be converted to:
 
@@ -70,10 +79,90 @@ __bold__, **bold**, _italic_, *italic*
 
 > quote of something profound 
 
-## Rmarkdown is another partial solution
+```{r}
+# computer code goes in three back ticks
+1 + 1
+2 + 2
+```
 
-Rmarkdown is a way to solve this problem
+With very little marking up, we can create rich text, that actually resembles the text that we want to see. 
 
-## Why are we here? {.exercise}
+So, how do we combine this with our R code, into a literate programming environment?
 
-1. Form small groups of 2-4 with your neighbours and discuss how you expect learning rmarkdown might benefit you.
+## Rmarkdown helps complete the solution to the reproducibility problem
+
+`Rmarkdown` provides an environment where you can write your complete analysis, and marries your text, and code together into a rich document. You write your code as code chunks, put your text around that, and then hey presto, you have a document you can reproduce.
+
+```{r include=FALSE}
+fit_coef = '`r fit_coef[1]`'  # an ugly hack; don't look at me
+```
+
+```yaml
+---
+title: "Lab Report"
+author: "You"
+date: "2018-11-12"
+output: pdf_document
+---
+```
+
+````
+
+```r
+library(tidyverse)
+library(here)
+weather <- read_csv(here("data", "weather.csv"))
+```
+
+Let's have a look at the weather
+
+`r ''```r
+hist(weather$temp)
+```
+
+`r ''```r
+fit <- lm(temp ~ ., data = weather)
+fit_coef <- coef(fit)
+```
+
+The effect of temperature of wind was `r fit_coef[1]`
+
+This can be seen in this table
+
+```r
+knitr::kable(coef(fit))
+```
+
+````
+
+__Screenshot of this__
+
+So now we got a report. This is great! It has a plot, it has a table, we even refer to some of the values in the text.
+
+But what if the data changes? What if someone wants to know _exactly_ how you did your analysis?
+
+Say you'd created your report by hand in microsoft word, and with a graphical user interface software.
+
+You would need to:
+
+1. Go back to the GUI, re run the analysis
+1. Import the results into excel
+1. Create your graph
+1. cpoy the graph into word
+1. copy the results of the coefficients into the text
+1. copy the results of the coefficient table into the text.
+
+This is painful.
+
+But if you did it in rmarkdown?
+
+Just updte the data, and render the document again.
+
+That's it.
+
+That is why we use rmarkdown.
+
+## Exercises {.exercise}
+
+1. **Why are we here** Form small groups of 2-4 with your neighbours and discuss how you expect learning rmarkdown might benefit you.
+1. **Learn to use markdown** In your small groups, spend five minutes working through this [brief online markdown tutorial](https://www.markdowntutorial.com/)

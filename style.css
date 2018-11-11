@@ -19,3 +19,9 @@ pre code {
     color: #ffffff;
     background-color: #26a69a;
 }
+
+.exercise a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
