@@ -21,6 +21,25 @@
 
 * 
 
-## XX Exercise {.exercise}
 
-1. 
+
+## Common Shortcuts
+
+Below is a small table of tasks you can perform with keyboard 
+
+| Action      | Windows/Linux | Mac  | 
+|-------------|---------------|----------------|
+| Knit document | Ctrl + Shift + K | Cmd + Shift + K |
+| Insert Chunk  | Ctrl + Alt + I   | Cmd + Option + I |
+| Run Current Chunk | Ctrl + Alt + C | Cmd + Option + C | 
+| Run Next Chunk | Ctrl + Alt + N    | Cmd + Option + N | 
+| Jump to  	Shift+Alt+J 	| Cmd+Shift+Option+J |
+| Show Keyboard Shortcut Reference  |	Alt+Shift+K | Option+Shift+K |
+
+## Further Reading
+
+- The [https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf](Rstudio Cheat Sheet) has an index of shortcuts. 
+- This [https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts] help file has a guide to customising keyboard shortcuts.
+
+## Exercises {.exercise}
+- Using the Keyboard Shortcut Reference, find the keyboard shortcut for inserting a pipe character ( %>% )
