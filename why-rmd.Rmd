@@ -21,11 +21,58 @@ The goal of this section is to briefly discuss why we want to learn rmarkdown, t
 
 ## Reproducibility is a problem
 
+We are in a crisis at the moment where a lot of people cannot reproduce scientific work. This isn't just a few people, and it's not cheap. Estimates say that in the ___ industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs $28 Billion dollars annualy. That's one country, one field, and one year.
 
+So what can we do about it?
 
 ## Literate programming is a partial solution
 
+The idea of literate programming shines some light on this dark area of science. This is the idea of Donald Knuth (___) where you combine your text with your code output to create a document. This is a _blend_ of your literature (text), and your programming (code), to create something that you can read from top to bottom, your intro, methods, results, discussion, conclusion, and see all the pieces of your data analysis all together.
+
+This was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the _Sweave_ (S+weave (from the )) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:
+
+* It uses a form of LaTeX, which provides great flexibility at the cost of complexity.
+* Printing figures involves additional work
+* There isn't a way to save (cache) your work. Every analysis has to be repeated from start to finish, which can be time consuming.
+
+In 2004, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), of [daring fireball](https://daringfireball.net/) created a [markdown](https://en.wikipedia.org/wiki/Markdown), a simple way to create text that rendered into a HTML webpage.
+
+For example, 
+
+````
+
+```
+
+- bullet list
+- bullet list
+- bullet list
+
+1. numbered list
+2. numbered list
+3. numbered list
+
+__bold__, **bold**, _italic_, *italic*
+
+> quote of something profound 
+
+Would be converted to:
+
+
+- bullet list
+- bullet list
+- bullet list
+
+1. numbered list
+2. numbered list
+3. numbered list
+
+__bold__, **bold**, _italic_, *italic*
+
+> quote of something profound 
+
 ## Rmarkdown is another partial solution
+
+Rmarkdown is a way to solve this problem
 
 ## Why are we here? {.exercise}
 
