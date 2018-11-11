@@ -27,5 +27,4 @@ We may, depending on time, also cover the following areas:
 
 - Change the size and type of your figures
 - Create captions for your figures, and reference them in text
-- Cite research articles and generate a bibliography
 - Debug and handle common errors

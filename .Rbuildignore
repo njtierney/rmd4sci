@@ -1,2 +1,4 @@
 ^tic\.R$
 ^\.travis\.yml$
+^.*\.Rproj$
+^\.Rproj\.user$
