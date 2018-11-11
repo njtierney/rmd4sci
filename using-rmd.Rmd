@@ -1,0 +1,66 @@
+# Using Rmarkdown
+
+## Overview
+
+* **Teaching** 10 minutes
+* **Exercises** 10 minutes
+
+## Questions
+
+* What do I put in the YAML metadata?
+* How do I create a code chunk?
+* What sort of options to I need to worry about for my code?
+
+## Objectives
+
+* Create an rmarkdown document, do some basic exploration
+
+## The anatomy of an rmarkdown document
+
+An rmarkdown document is broken up into three partS:
+
+* Metadata (YAML)
+* text (markdown formatting)
+* code (code formatting)
+
+The metadata of the document tells you how it is formed - what the title is, what date to put, and other control information. 
+
+## A note on workflow with rmarkdown
+
+HTML first, PDF/word later
+
+## Using code chunks
+
+* What is a backtick
+  * chunk names
+    * no spaces
+    * give every chunk a name, it will save you time
+
+## Using code chunk options
+
+* chunk options
+    * The ones you need to know about:
+      * fig.size
+      * fig.width
+      * out.width
+      * out.height
+      * dev
+      * cache
+      * eval
+      * echo
+      * error
+      * message
+      * include
+      * result
+
+## Using inline r code
+  
+
+## Exercise {.exercise}
+
+1. Download this data file
+1. Create a new rstudio project called "..."
+1. Run some brief summaries of the data in the rmarkdown document
+    - hist(data$)
+    - How big is the data?
+
