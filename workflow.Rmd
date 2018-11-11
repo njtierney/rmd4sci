@@ -2,15 +2,6 @@
 
 Before we start with rmarkdown, we need to make sure that you have some basic file storage hygiene. This helps make you more productive in the future because you'll spend less time fighting against file paths.
 
-* Project workflow
-  * Use RStudio projects
-  * Use the "here" package
-  * reference Jenny's blog post on this
-
-* creating an rmarkdown document
-* (mention in the rmarkdown part) Use HTML first, PDF/word later
-
-
 ## Overview
 
 * **Teaching** 10 minutes
@@ -31,5 +22,77 @@ Before we start with rmarkdown, we need to make sure that you have some basic fi
 
 In groups of 2-4 discuss:
 
-1. What your normal "workflow" is
-2. Possible challenges that might arise when maintaining your
+1. What your normal "workflow" is for starting a new project
+2. Possible challenges that might arise when maintaining your project
+
+## Start a new project: Open a new RStudio project
+
+I highly recommend when you start on a new idea, new research project, paper. Anything that is new. It should start its life as an rstudio project. What is an rstudio project? An rstudio project helps simplify a few things. 
+
+* Projects keep all your files together
+* Projects sets the working directory to the project directory
+* It starts a new session of R
+* Previously edited files are restored into the editor tabs
+* Other rstudio settings are restored
+
+Among other things, this avoids problems that you might see when people include a line at the top of their RScript
+
+```
+setwd("c:/really/long/file/path/to/this/directory)
+```
+
+Yes, this has the effect of **making the file paths work in your file**
+
+I [paraphrase some of JEnny's great blog post here](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/)
+
+But this is a problem, because, among other things, using `setwd()` like this:
+
+* Has 0% chance of working for anyone else
+* This includes you in >6 months
+* Your file is not self-contained and portable. What if this folder moved to /Downloads, or onto another machine?
+
+In order to get this to work, you need to hand edit the file path to your machine. If you do this all the time, this gets old, fast.
+
+## What is a file path?
+  
+So, this might all be a bit confusing if you don't know what a file path is. Briefly, a file path is the machine-readable directions to where files on your computer live. So, the file path:
+
+```
+Downloads/etc1010/week1/week1.Rmd
+```
+
+Describes the location of the file "week1.Rmd"
+
+## Exercise .{exercise}
+
+* (1-2 minutes) What folder are above the file, "Week1.Rmd"?
+* What would be the result of using the following code in week1.Rmd, and then using the code, and then moving this to another location, inside your C drive?
+
+```r
+setwd("Downloads/etc1010/week1/week1.Rmd)
+```
+
+## The "here" package
+
+RStudio projects help resolve file path problems, but in some cases you might have many folders in your r project. To help navigate them appropriately, you can use the `here` package to provide the full path directory, in a compact way.
+
+```r
+here::here("Downloads")
+```
+
+returns
+
+```
+[1] "/Users/ntie0001/github/njtierney/rmd4sci/Downloads"
+```
+
+# Remember
+
+> If the first line of your R script is 
+```
+setwd("C:\Users\jenny\path\that\only\I\have")
+```
+> I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
+
+
+-- Jenny Bryan

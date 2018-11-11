@@ -1,5 +1,8 @@
 # What is Rmarkdown
 
+* creating an rmarkdown document
+* (mention in the rmarkdown part) Use HTML first, PDF/word later
+
 
 * Anatomy of an rmarkdown document
   * Metadata
@@ -43,8 +46,13 @@
 
 ## Objectives
 
-* 
+* Create an rmarkdown document and do the following things.
 
-## XX Exercise {.exercise}
+## Exercise {.exercise}
 
-1. 
+1. Download this data file
+1. Create a new rstudio project called "..."
+1. Run some brief summaries of the data in the rmarkdown document
+    - hist(data$)
+    - How big is the data?
+

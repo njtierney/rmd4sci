@@ -5,8 +5,8 @@
 
 ## Overview
 
-* **Teaching** 3 minutes
-* **Exercises** 3 minutes
+* **Teaching** 5 minutes
+* **Exercises** 2 minutes
 
 ## Questions
 
