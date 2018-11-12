@@ -11,4 +11,10 @@ Authors@R:
            family = "Tierney",
            role = c("aut", "cre"),
            email = "nicholas.tierney@gmail.com")
-Imports: bookdown
+Imports: 
+    bookdown,
+    readr,
+    here,
+    remotes,
+    curl,
+    git2r
