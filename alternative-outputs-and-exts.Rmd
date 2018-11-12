@@ -30,8 +30,9 @@
 
 - [papaja](http://github.com/crsh/papaja)
 
-### Misc HTML
+### Misc
 
 - [rmdformats](https://github.com/juba/rmdformats)
 - [Bob Rudis' markdown templates](https://github.com/hrbrmstr/markdowntemplates)
 - [prettydoc by Yixuan Qiu](http://yixuan.cos.name/prettydoc/themes.html)
+- [svm r templates by Steve Miller](https://github.com/svmiller/svm-r-markdown-templates)

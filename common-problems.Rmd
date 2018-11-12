@@ -39,6 +39,42 @@ Error in parse(text = code, keep.source = FALSE) :
 
 * The easiest way is to do Cmd+Shift+F, which opens up a global search in your rstudio project, and then type in the offending string mentioned in the NOTE. In this case, I would search for the partial string `"fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and`. I search for the partial string because there might be parts at the end of the error message that aren't in the text.
 
+## "Forgotten Trail III": 
+
+**What it might look like**
+
+```
+processing file: figures-tables-captions.Rmd
+(*) NOTE: I saw chunk options "read-gapminder include = FALSE, echo = FALSe"
+ please go to https://yihui.name/knitr/options
+ (it is likely that you forgot to quote "character" options)
+Error in parse(text = code, keep.source = FALSE) : 
+  <text>:1:23: unexpected symbol
+1: alist( read-gapminder include
+                          ^
+```
+
+**How to solve**
+
+This error message is pretty good, I needed to add a comma after my chunk name. 
+
+So, go from:
+
+````markdown
+`r ''```{r read-gapminder include = FALSE, echo = FALSE}
+gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
+```
+````
+
+to 
+
+````markdown
+`r ''```{r read-gapminder, include = FALSE, echo = FALSE}
+gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
+```
+````
+
+
 ## "The Path Not Taken" File path incorrect
 
 **What it might look like**
@@ -56,6 +92,46 @@ These are often not an error, but you just won't get the behaviour that you expe
 **How to solve**
 
 * There might be a switch you can flick to ask `knitr` to solve
+
+## "Spolling II" Incorrectly spelled chunk option inputs
+
+So this is when you provide the wrong input to your chunk options. Like something that requires `TRUE` gets "yes", or something that needs `"100%"` instead gets `100`
+
+**What it might look like**
+
+```
+Quitting from lines 31-32 (figures-tables-captions.Rmd) 
+Error in eval(x, envir = envir) : object 'FALSe' not found
+Calls: local ... process_group.block -> call_block -> eval_lang -> eval -> eval
+Execution halted
+Error in Rscript_render(f, render_args, render_meta) : 
+  Failed to compile figures-tables-captions.Rmd
+Calls: <Anonymous> ... render_book -> render_new_session -> Rscript_render
+Execution halted
+```
+
+**How to solve**
+
+What was the problem? Turns out I provided the option `FALSe` instead of `FALSE`.
+
+
+Go from:
+
+````markdown
+`r ''```{r read-gapminder include = FALSE, echo = FALSe}
+gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
+```
+````
+
+to 
+
+````markdown
+`r ''```{r read-gapminder, include = FALSE, echo = FALSE}
+gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
+```
+````
+
+
 
 ## LaTeX errors
 
