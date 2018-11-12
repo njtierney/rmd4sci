@@ -17,4 +17,6 @@ Imports:
     here,
     remotes,
     curl,
-    git2r
+    git2r,
+    dplyr,
+    ggplot2
