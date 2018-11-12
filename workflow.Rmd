@@ -1,6 +1,6 @@
 # Workflow
 
-Before we start with rmarkdown, we need to make sure that you have some basic file storage hygiene. This helps make you more productive in the future because you'll spend less time fighting against file paths.
+Before we start with rmarkdown, we need to make sure that you understand _file storage hygiene_. This helps you keep your files, paths, and directories clean, which prevents unexpected problems. It will make you more productive in the future because you'll spend less time fighting against file paths. Not sure what a file path is? We explain that as well.
 
 ## Overview
 
@@ -11,12 +11,13 @@ Before we start with rmarkdown, we need to make sure that you have some basic fi
 
 * Where should I put all my files?
 * What is an RStudio project, anyway?
-* How should I start an rmarkdown document?
+* What is a file path?
 
 ## Objectives
 
-* Understand the basics of file paths
-* Learn how to set up an RStudio Project to organise your work
+* Understand what a file path is
+* Set up an RStudio Project to organise your work
+* Put some data in your project to set up the next tasks
 
 ## Exercise {.exercise}
 
@@ -27,6 +28,8 @@ In groups of 2-4 discuss:
 
 ## Start a new project: Open a new RStudio project
 
+This section is heavily influenced by [Jenny Bryan's great blog post on project based workflows.](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/)
+
 I highly recommend when you start on a new idea, new research project, paper. Anything that is new. It should start its life as an rstudio project. What is an rstudio project? An rstudio project helps simplify a few things. 
 
 * Projects keep all your files together
@@ -34,24 +37,49 @@ I highly recommend when you start on a new idea, new research project, paper. An
 * It starts a new session of R
 * Previously edited files are restored into the editor tabs
 * Other rstudio settings are restored
+* You can have multiple R projects open at the same time
 
-Among other things, this avoids problems that you might see when people include a line at the top of their RScript
+Basically, this helps keep you sane. Your projects are each independent. Objects and functions you create and run from project idea won't impact the another. You can work on different projects at the same time. And you can refer to your data and other projects in a sane way.
 
-```
+What do we mean when we say that you can refer to these data/projects in a sane way?
+
+Well, this avoids problems that you might see when people include a line at the top of their RScript
+
+```r
 setwd("c:/really/long/file/path/to/this/directory)
 ```
 
-Yes, this has the effect of **making the file paths work in your file**
+This says, "set my working directory to this specific working directory".
 
-I [paraphrase some of JEnny's great blog post here](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/)
+It means that you can read in data and other things like this:
 
-But this is a problem, because, among other things, using `setwd()` like this:
+```r
+data <- read_csv("data/mydata.csv")
+```
 
-* Has 0% chance of working for anyone else
-* This includes you in >6 months
-* Your file is not self-contained and portable. What if this folder moved to /Downloads, or onto another machine?
+Instead of
 
-In order to get this to work, you need to hand edit the file path to your machine. If you do this all the time, this gets old, fast.
+```r
+data <- read_csv("c:/really/long/file/path/to/this/directory/"data/mydata.csv")
+```
+
+So while this has the effect of **making the file paths work in your file**, it is a problem.
+It is a problem because, among other things, using `setwd()` like this:
+
+* Has 0% chance of working on someone else's machine (this includes you in >6 months)
+* Your file is not self-contained and portable. (What if this folder moved to /Downloads, or onto another machine?)
+
+So, to get this to work, you need to hand edit the file path to your machine. 
+
+If you do this all the time, this gets old, fast.
+
+RStudio projects help resolve file path problems, because they automatically set the working directory to the location of the rstudio project.
+
+## Exercise
+
+1. Create a new Rstudio project called "world-health"
+2. Create a folder called "data" inside this project
+3. Download the gapminder data from [here](data/gapminder.csv), and put it in the `data/` directory
 
 ## What is a file path?
   
@@ -61,11 +89,44 @@ So, this might all be a bit confusing if you don't know what a file path is. Bri
 Downloads/etc1010/week1/week1.Rmd
 ```
 
-Describes the location of the file "week1.Rmd"
+Describes the location of the file "week1.Rmd". Which could be visualised as:
+
+```
+Downloads
+└──  etc1010
+      └──  week1
+            └──  week1.Rmd
+            └── data
+                └── health.csv
+```
+
+```{r tree-elbow, eval = FALSE, echo = FALSE}
+file_dir <- "Downloads/etc1010/week1/week1.Rmd"
+
+gsub(pattern = "/", 
+     replacement = "\n└──  ", 
+     x = file_dir) %>%
+  clipr::write_clip()
+
+```
+
+So, if you want to read in the `health.csv` file, you might need to write code like this:
+
+```r
+health <- read_csv("Downloads/etc1010/week1/data/health.csv")
+```
+
+As we now know, this is a problem, because this is not portable code.
+
+If you have an RStudio project file inside the `etc1010` folder, you can instead write the following:
+
+```r
+health <- read_csv("week1/data/health.csv")
+```
 
 ## Exercise .{exercise}
 
-* (1-2 minutes) What folder are above the file, "Week1.Rmd"?
+* (1-2 minutes) What folders are above the file, "Week1.Rmd"?
 * What would be the result of using the following code in week1.Rmd, and then using the code, and then moving this to another location, inside your C drive?
 
 ```r
@@ -74,17 +135,39 @@ setwd("Downloads/etc1010/week1/week1.Rmd)
 
 ## The "here" package
 
-RStudio projects help resolve file path problems, but in some cases you might have many folders in your r project. To help navigate them appropriately, you can use the `here` package to provide the full path directory, in a compact way.
+Although tStudio projects help resolve file path problems, in some cases you might have many folders in your r project. To help navigate them appropriately, you can use the `here` package to provide the full path directory, in a compact way.
 
 ```r
-here::here("Downloads")
+here::here("week1")
 ```
 
 returns
 
 ```
-[1] "/Users/ntie0001/github/njtierney/rmd4sci/Downloads"
+[1] "/Users/ntie0001/github/njtierney/etc1010/week1"
 ```
+
+And 
+
+```r
+here::here("week1", "data", "health.csv")
+```
+
+returns
+
+```
+[1] "/Users/ntie0001/github/njtierney/etc1010/week1/data/health.csv"
+```
+
+You can read the above `here` code as:
+
+> In the folder week1, and the folder data, there is a file called health.csv, can you please give me the full path to that file? 
+
+This is really handy for a few reasons:
+
+1. If you decide to not use RStudio projects
+2. Rmarkdown documents have a special way of looking for files, this helps eliminate file path pain.
+3. This is completely portable
 
 # Remember
 
@@ -94,5 +177,5 @@ setwd("C:\Users\jenny\path\that\only\I\have")
 ```
 > I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
 
-
 -- Jenny Bryan
+

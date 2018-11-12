@@ -7,6 +7,7 @@
 
 ## Questions
 
+* How should I start an rmarkdown document?
 * What do I put in the YAML metadata?
 * How do I create a code chunk?
 * What sort of options to I need to worry about for my code?
