@@ -79,7 +79,7 @@ RStudio projects help resolve file path problems, because they automatically set
 
 1. Create a new Rstudio project called "world-health"
 2. Create a folder called "data" inside this project
-3. Download the gapminder data from [here](data/gapminder.csv), and put it in the `data/` directory
+3. Download the gapminder data from [here](https://raw.githubusercontent.com/njtierney/rmd4sci/master/data/gapminder.csv), and put it in the `data/` directory
 
 ## What is a file path?
   
@@ -179,3 +179,12 @@ setwd("C:\Users\jenny\path\that\only\I\have")
 
 -- Jenny Bryan
 
+# Summary
+
+In this lesson we've:
+
+* Learnt what file paths are
+* How to setup an rstudio project
+* How to construct full file paths with the `here` package
+
+There is more to file paths, and 
