@@ -3,6 +3,7 @@
 * `_files/`
 * `_cache/`
 * compile order
+* Using tabsetting in HTML docs?
 
 ## Unanswered questions
 

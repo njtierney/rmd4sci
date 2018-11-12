@@ -39,7 +39,7 @@ output:
 
 ## Questions
 
-* 
+* How do I refer to the table or figure in text and link to it?
 
 ## Objectives
 
