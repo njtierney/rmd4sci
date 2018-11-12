@@ -50,7 +50,7 @@ Tools > Global Options (Or `Command + ,`)
 - Under workspace, uncheck restore .RData into workspace at startup
 - Save workspace to .RData on exit : "Never"
 
-```{r fig-rstudio-workspace-options, fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and don't save it either.}
+```{r fig-rstudio-workspace-options, fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and don't save it either."}
 knitr::include_graphics("figs/rstudio-remove-data.png")
 ```
 
