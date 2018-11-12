@@ -1,25 +1,68 @@
-# Common Problems
+# Common Problems with rmarkdown (and some solutions)
 
-## Overview
+There are some things that I run into fairly frequently (and some not so much) when I'm rendering my rmarkdown documents. This section details some the common problems, and the solution that I have found works for me.
 
-## Questions
+## "Duplication": Duplicated chunk names
 
-* I got error message "", what do I do?
+**What it might look like**
 
-## Objectives
+**How to solve**
 
-## Content
+## "Not what I ordered": Objects not created in the right order
 
-We present the name of the error, the error message, and how to solve it
+**What it might look like**
 
-* duplicated chunk names
-* objects not created in the right order
-* missing ",", or "(", "}", or "'"
-* Chunk option with trailing ", or not input
-* file path incorrect
-* incorrectly spelled chunk options
-* LaTeX errors
+**How to solve**
+
+## "Forgotten Trails I":  Missing ",", or "(", "}", or "'"
+
+**What it might look like**
+
+**How to solve**
+
+
+## "Forgotten Trails II": Chunk option with trailing ", or not input
+
+**What it might look like**
+
+```
+processing file: rstudio.Rmd
+(*) NOTE: I saw chunk options "fig-rstudio-workspace-options, fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and don't save it either."
+ please go to https://yihui.name/knitr/options
+ (it is likely that you forgot to quote "character" options)
+Error in parse(text = code, keep.source = FALSE) : 
+  <text>:1:51: unexpected INCOMPLETE_STRING
+1: alist( 'fig-rstudio-workspace-options', fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and don't save it either. )
+```
+
+**How to solve it?**
+
+* The easiest way is to do Cmd+Shift+F, which opens up a global search in your rstudio project, and then type in the offending string mentioned in the NOTE. In this case, I would search for the partial string `"fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and`. I search for the partial string because there might be parts at the end of the error message that aren't in the text.
+
+## "The Path Not Taken" File path incorrect
+
+**What it might look like**
+
+**How to solve**
+
+## "Spolling I" Incorrectly spelled chunk options
+
+These are often not an error, but you just won't get the behaviour that you expect.
+
+**What it might look like**
+
+* `fig.caption` instead of `fig.cap`. This once caused me to rewrite a lot of code and an entire section of a paper until I realised the problem.
+
+**How to solve**
+
+* There might be a switch you can flick to ask `knitr` to solve
+
+## LaTeX errors
+
+**What it might look like**
+
+**How to solve**
 
 ## Exercise {.exercise}
 
-1. Generic exercise
+1. Go to this repo [njtierney/rmd-errors](https://github.com/njtierney/rmd-errors), and give debugging some of these common rmarkdown errors a go.
