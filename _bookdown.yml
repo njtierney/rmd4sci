@@ -18,6 +18,5 @@ rmd_files: [ "index.Rmd",
              "citations-and-styles.Rmd",
              "common-problems.Rmd",
              "alternative-outputs-and-exts.Rmd",
-             "misc.Rmd",
              "references.Rmd",
              "acknowledgements.Rmd"]
