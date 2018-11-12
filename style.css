@@ -16,12 +16,22 @@ pre code {
 .exercise {
     padding-left: 2em;
     border: 1px solid;
-    color: #ffffff;
-    background-color: #26a69a;
+    border-color: #ffffff;
+    /* color: #ffffff; white*/
+    color: #696969;
+    /* background-color: #26a69a; dark teal*/
+    /* background-color: #7CC9C2; lighter teal*/
+    background-color: #96D3CE; medium teal
+    /* background-color: #D3EDEA; */
+    
 }
 
 .exercise a {
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+}
+
+.exercise p code {
+  color: inherit;
 }
