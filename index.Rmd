@@ -31,7 +31,7 @@ We may, depending on time, also cover the following areas:
 
 ## Why write this as a book?
 
-There are many great books on rmarkdown and it's various features, such as "Rmarkdown: The definitive guide", and Yihui's two books, "...", "...", and his thesis, "...".
+There are many great books on rmarkdown and it's various features, such as ["Rmarkdown: The definitive guide"](https://bookdown.org/yihui/rmarkdown/), ["bookdown: Authoring Books and Technical Documents with R Markdown"](https://bookdown.org/yihui/bookdown/), and ["Dynamic Documents with R and knitr. 2nd edition"](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963), and Yihui Xie's thesis, ["Dynamic Graphics and Reporting for Statistics"](https://lib.dr.iastate.edu/etd/13518/).
 
 > So why write a book?
 

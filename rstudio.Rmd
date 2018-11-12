@@ -25,7 +25,7 @@ If R is the engine and bare bones of your car, then RStudio is like _the rest of
 
 The image below shows us the general layout of RStudio. Notice the following features:
 
-```{r rstudio-screenshot, eval = FALSE, echo = FALSE, fig.cap = "A screenshot of the RStudio working environment."}
+```{r rstudio-screenshot, echo = FALSE, fig.cap = "A screenshot of the RStudio working environment."}
 knitr::include_graphics("figs/rstudio-screenshot.png")
 ```
 
@@ -50,7 +50,7 @@ Tools > Global Options (Or `Command + ,`)
 - Under workspace, uncheck restore .RData into workspace at startup
 - Save workspace to .RData on exit : "Never"
 
-```{r fig-rstudio-workspace-options, fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and don't save it either."}
+```{r fig-rstudio-workspace-options, fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and don't save it either.", out.width = "50%"}
 knitr::include_graphics("figs/rstudio-remove-data.png")
 ```
 
