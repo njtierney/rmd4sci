@@ -1,5 +1,7 @@
 # HTML, PDF, and Word (and more!)
 
+One of the really great, powerful things about rmarkdown is that we can convert it to many different output types. The top three that you might be most likely to use are HTML, PDF, and Microsoft Word. There are others, but in this section, we are going to briefly discuss how to render to these output formats, and some things that you might want to do for each of them.
+
 ## Overview
 
 ## Questions
@@ -9,6 +11,25 @@
 * How can I include a screenshot of an interactive graphic in PDF or Word?
 
 ## Objectives
+
+## How do I convert to HTML, PDF, or Word?
+
+Here are three ways to do this:
+
+1. You can control this in the "knit" button
+2. You can change the YAML option
+3. You can call the `render` function.
+
+## How do I set options specific to each of these?
+
+Sometimes you might want to have specific output changes to 
+
+## How can I include a screenshot of an interactive graphic in PDF or Word?
+
+You might wish to include a screenshot of an interactive graphic you had in your HTML document. To do this, you will need the webshot package, and will need the following code in your rmarkdown document.
+
+I recommend 
+
 
 ## Exercise {.exercise}
 

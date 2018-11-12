@@ -1,5 +1,7 @@
 # Using Rmarkdown
 
+Now that we've covered how to organise your project, and gotten some data, and talked a bit about what rmarkdown is, let's talk about using it.
+
 ## Overview
 
 * **Teaching** 10 minutes
@@ -24,21 +26,55 @@ An rmarkdown document is broken up into three partS:
 * text (markdown formatting)
 * code (code formatting)
 
-The metadata of the document tells you how it is formed - what the title is, what date to put, and other control information. 
+### Metadata
 
-## A note on workflow with rmarkdown
+The metadata of the document tells you how it is formed - what the title is, what date to put, and other control information.  If you're familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, etc at the front matter.
 
-HTML first, PDF/word later
+Rmarkdown documents use YAML (Yet Another Markup Language) to provide the metadata. It looks like this.
 
-## Using code chunks
+```YAML
+---
+title: "An example document"
+author: "Nicholas Tierney"
+output: html_document
+---
+```
+
+It starts an ends with three dashes `---`, and had fields in there, such as `title`, `author`, and `output`.
+
+These options in the YAML are actually passed down into the `render` function,
+
+```r
+html_document(toc = TRUE, toc_depth = 2, dev = 'svg')
+```
+
+is the same as:
+
+```YAML
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    dev: 'svg'
+```
+
+
+### Text
+
+
+
+### Code
+
+We refer to code in an rmarkdown document in two ways, code chunks, and inline code.
+
+#### Code chunks
 
 * What is a backtick
   * chunk names
     * no spaces
     * give every chunk a name, it will save you time
-
-## Using code chunk options
-
+    
+    
 * chunk options
     * The ones you need to know about:
       * fig.size
@@ -54,13 +90,85 @@ HTML first, PDF/word later
       * include
       * result
 
-## Using inline r code
-  
+#### Inline code
+
+You can call code inline (in the text) by like so:
+
+````markdown
+
+There are `r "\u0060r nrow(airquality) \u0060"` observations in the airquality dataset, 
+and `r "\u0060r 'ncol(airquality) \u0060"` variables.
+
+````
+
+## Creating an rmarkdown document
+
+* rstudio menu system
+* what is the template that we have?
+* compiling an rmarkdown document
+* different compiling formats
+
+## Working with an rmarkdown document
+
+### Nick's rmarkdown hygiene reccommendations
+
+I highly recommend that each document you write has three chunks at the top.
+
+
+````markdown
+
+`r ''````{r setup , include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      fig.align = "center",
+                      fig.width = 4, 
+                      fig.height = 4, 
+                      dev = "png",
+                      cache = TRUE)
+```
+
+`r ''````{r library}
+library(tidyverse)
+library(naniar)
+library(visdat)
+```
+
+`r ''````{r functions}
+# A function to scale input to 0-1
+scale_01 <- function(x){
+  (x - min(x, na.rm = TRUE)) / diff(range(x, na.rm = TRUE))
+}
+```
+
+````
+
+In the `setup` chunk, you set the options that you want to define globally. In this case, I've told rmarkdown:
+
+* `echo = FALSE`: I don't want any code printed by setting `echo = FALSE`.
+* `fig.align = "center"` Align my figures in the center
+* `fig.width = 4` & `fig.height = 4`. Set the width and height to 4 inches. 
+*  `dev = "png"`. Save the images as PNG
+* `cache = TRUE`. Save the output results of all my chunks so that they don't need to be run again.
+
+In the `library` chunk, you put all the library calls. This helps make it clearer for anyone else who might read your work what is needed to run this document. I often go through the process of moving these `library` calls to the top of the document when I have a moment, or when I'm done writing. You can also look at Miles McBain's [`packup`](https://github.com/milesMcBain/packup) package to help move these library calls to the top of a document.
+
+In the `functions` chunk, you put any functions that you write in the process of writing your document. Similar to the `library` chunk, I write these functions as I go, as needed, and them move these to the top when I get a moment, or once I'm done. The benefit of this is that all your functions are in one spot, and you might be able to identify ways to make them work better together, or improve them separately. You might even want to move these into a new R package, and putting them here makes that easier to see what you are doing.
+
+Now, this is my personal preference, but I find the following benefits:
+
+1. The "top part" of your document contains all the metadata / setup info. Your global options, 
+1. It helps another person get oriented with your work - they know the settings, the functions used, and the special things that you wrote (your functions)
+
+### Reading in data
+
+To read in data
+
+## HTML first: A note on workflow with rmarkdown
+
+It can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until _you really need to_. [This is also recommended by the author of rmarkdown and knitr, Yihui Xie](). Because HTML doesn't have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly. 
 
 ## Exercise {.exercise}
 
-1. Download this data file
-1. Create a new rstudio project called "..."
+1. Use the rstudio project you previously created, `world-health`, and create an rmarkdown document
 1. Run some brief summaries of the data in the rmarkdown document
     - hist(data$)
     - How big is the data?
