@@ -19,4 +19,5 @@ Imports:
     curl,
     git2r,
     dplyr,
-    ggplot2
+    ggplot2,
+    broom

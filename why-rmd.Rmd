@@ -162,7 +162,7 @@ hist(data$gdpPercap)
 
 Let's fit a simple linear model of the effect of year on life expectancy
 
-`r ''```{r example-lm, eval = FALSE}
+`r ''```{r example-lm}
 fit <- lm(lifeExp ~ year, data = data)
 fit
 ```
@@ -170,6 +170,7 @@ fit
 And let's look at the coefficient table:
 
 `r ''```{r coef-table}
+library(broom)
 fit_coef <- tidy(fit)
 knitr::kable(fit_coef,
              caption = "A table of the coefficients")
@@ -179,7 +180,6 @@ knitr::kable(fit_coef,
 The effect of year on life expectancy is `r "\u0060r fit_coef$estimate[2]\u0060"`.
 ````
 
-<!-- `r fit_coef$estimate[2]`. -->
 
 __Screenshot of this__
 
