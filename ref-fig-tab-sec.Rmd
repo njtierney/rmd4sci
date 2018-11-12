@@ -1,4 +1,48 @@
-# Citing Figures, Tables & Sections
+# Citing Figures, Tables & Sections {#start}
+
+When you're writing a report, you refer to a table or figure in text. 
+
+```{r no-show, include = FALSE, message = FALSE}
+gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
+```
+
+> Australia's life expectancy has increased a great deal over the past 50 years (Figure 1)
+
+```{r example-gg-oz-gap, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(dplyr)
+gapminder %>%
+  filter(country == "Australia") %>%
+  ggplot(aes(x = year,
+             y = lifeExp)) + 
+  geom_point()
+```
+
+_Figure 1. Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!_
+
+And sure, this is figure 1. But what happens if actually, that figure should be moved later in the paper? You need to do the following:
+
+1. Update the reference to figure 1 in the text. 
+1. Update the figure 1 caption to not say figure 1.
+
+This is fine. Once. But it is never once. After this, it is frustrating, and error prone.
+
+There is a way to solve this, which this lesson discusses.
+
+## Overview
+
+* **Teaching** 10 minutes
+* **Exercises** 15 minutes
+
+## Questions
+
+* How do I refer to the table or figure in text and link to it?
+
+## Objectives
+
+* Link to tables or figures in text.
+
+## How to refer to tables and figures in text?
 
 In order to use this referencing style, you must use the following in the YAML
 
@@ -21,30 +65,102 @@ output:
   bookdown::word_document2
 ```
 
-* Figures `\@ref(fig:chunk-name))`
-  * example
-  * output
-* Tables `\@ref(tab:chunk-name))`
-  * example
-  * output
-* Sections `\@ref(slug))`
-  * Section is written as `## whatever you want {#slug})`
-  * example
-  * output
+This is a new version of document that supports a better way to reference things in text.
 
-## Overview
+#### Exercise {.exercise}
 
-* **Teaching** XX minutes
-* **Exercises** XX minutes
+1. convert your output to use `bookdown::html_document2` in your YAML.
 
-## Questions
+### Referencing a figure
 
-* How do I refer to the table or figure in text and link to it?
+To refer to a figure, you write the following in your text:
 
-## Objectives
+`Figure \@ref(fig:chunk-name))`
 
-* 
+````markdown
+`r ''```{r gg-oz-plot, fig.cap = "Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"}
+library(ggplot2)
+library(dplyr)
+gapminder %>%
+  filter(country == "Australia") %>%
+  ggplot(aes(x = year,
+             y = lifeExp)) + 
+  geom_point()
+```
 
-## XX Exercise {.exercise}
+Australia's life expectancy has increased a great deal over the past 50 years
 
-1. 
+(See Figure \@ref(fig:gg-oz-plot))
+
+````
+
+
+
+```{r gg-oz-plot, fig.cap = "Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"}
+library(ggplot2)
+library(dplyr)
+gapminder %>%
+  filter(country == "Australia") %>%
+  ggplot(aes(x = year,
+             y = lifeExp)) + 
+  geom_point()
+```
+
+Australia's life expectancy has increased a great deal over the past 50 years (See Figure \@ref(fig:gg-oz-plot))
+
+#### Exercise {.exercise}
+
+1. Add a new plot in your document and reference it
+
+### Referencing a table
+
+To cite a table, you write the following:
+
+`Table \@ref(tab:chunk-name))`
+
+````markdown
+`r ''```{r gg-oz-tab}
+gapminder %>%
+  filter(country == "Australia") %>%
+  knitr::kable(caption = "Raw gapminder data for Australia.")
+```
+
+We can see below in Table \@ref(tab:gg-oz-tab) the raw data used to create Figure \@ref(fig:gg-oz-plot)).
+
+```{r gg-oz-tab}
+gapminder %>%
+  filter(country == "Australia") %>%
+  knitr::kable(caption = "Raw gapminder data for Australia.")
+```
+
+#### Exercise {.exercise}
+
+1. Create a table in your document and refer to it in text
+
+### Referencing a section
+
+You can even reference a section in your report:
+
+`\@ref(slug))`
+
+However, in order to write this, you need to include `slug` in your markdown header, like so:
+
+```
+## your amazing header {#slug}
+```
+
+For example, I can refer to the first section (Section \@ref(start)) in this document by referring to the section as 
+
+`\@ref(start)`
+
+because it was written as:
+
+```
+# Citing Figures, Tables & Sections {#start}
+```
+
+#### Exercise {.exercise}
+
+1. Reference a section in the report.
+
+## Summary

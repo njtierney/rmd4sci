@@ -87,8 +87,8 @@ library(dplyr)
 
 gapminder %>%
   filter(country == "Australia") %>%
-  ggplot(aes(x = lifeExp,
-             y = year)) + 
+  ggplot(aes(x = year,
+             y = lifeExp)) + 
   geom_point()
 
 ```
