@@ -42,7 +42,7 @@ output: html_document
 
 It starts an ends with three dashes `---`, and had fields in there, such as `title`, `author`, and `output`.
 
-These options in the YAML are actually passed down into the `render` function,
+The options in the YAML are actually passed down into the `render` function,
 
 ```r
 html_document(toc = TRUE, toc_depth = 2, dev = 'svg')
@@ -61,6 +61,52 @@ output:
 
 ### Text
 
+Is markdown, as we discussed in the earlier section,
+
+It provides a simple way to mark up text
+
+```
+- bullet list
+- bullet list
+- bullet list
+
+1. numbered list
+2. numbered list
+3. numbered list
+
+__bold__, **bold**, _italic_, *italic*
+
+> quote of something profound 
+```
+
+````
+```r
+# computer code goes in three back ticks
+1 + 1
+2 + 2
+```
+````
+
+Would be converted to:
+
+
+- bullet list
+- bullet list
+- bullet list
+
+1. numbered list
+2. numbered list
+3. numbered list
+
+__bold__, **bold**, _italic_, *italic*
+
+> quote of something profound 
+
+```{r}
+# computer code goes in three back ticks
+1 + 1
+2 + 2
+```
 
 
 ### Code
@@ -69,26 +115,36 @@ We refer to code in an rmarkdown document in two ways, code chunks, and inline c
 
 #### Code chunks
 
+Code chunks are marked by three backticks and curly braces with `r` inside them:
+
+````markdown
+`r ''```{r chunk-name}
+# a code chunk
+```
+````
+
 * What is a backtick
   * chunk names
     * no spaces
     * give every chunk a name, it will save you time
-    
-    
-* chunk options
-    * The ones you need to know about:
-      * fig.size
-      * fig.width
-      * out.width
-      * out.height
-      * dev
-      * cache
-      * eval
-      * echo
-      * error
-      * message
-      * include
-      * result
+
+You can control how the code is output by changing the code chunks, which follow the title. The ones that you need to know about right now are:
+
+  * cache: TRUE / FALSE. Do you want to save the output of the chunk so it doesn't have to run next time?
+  * eval: Do you want to evaluate the code?
+  * echo: Do you want to print the code?
+  * include: Do you want to include code output in the final output document? Setting to `FALSE` means nothing is put into the output document.
+  
+<!-- What are messages, warnings, errors, results? -->
+
+  <!-- * error: If you want R to stop on errors, set to `FALSE` -->
+  <!-- * warning: preserve warnings (produced by `warning()`). IF `FALSE`, all warnings will be printed in the console instead of the output document  -->
+  <!-- * message: Similar to warning, do you want to preserve messages provided by `message()`.  -->
+
+
+<!--   * results: option 'hold' will wait until the code chunk is complete and then  -->
+  
+You can read more about the options at the official documentation: https://yihui.name/knitr/options/#code-evaluation
 
 #### Inline code
 
@@ -104,9 +160,8 @@ and `r "\u0060r 'ncol(airquality) \u0060"` variables.
 ## Creating an rmarkdown document
 
 * rstudio menu system
-* what is the template that we have?
-* compiling an rmarkdown document
-* different compiling formats
+* explore the template provided by rstudio
+* Compile an rmarkdown document
 
 ## Working with an rmarkdown document
 
@@ -173,3 +228,8 @@ It can be easy to get caught up with how your document looks. I highly recommend
     - hist(data$)
     - How big is the data?
 
+<!-- # My philosophy on Rmarkdown -->
+
+<!-- - Keep it simple -->
+<!-- - focus on content -->
+<!-- - Then move it to word or LaTeX if you need to -->

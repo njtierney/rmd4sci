@@ -18,6 +18,10 @@ The goal of this section is to briefly discuss why we want to learn rmarkdown, t
 * [Learn how to use markdown](https://www.markdowntutorial.com/)
 * Think about why you want to use markdown
 
+## Exercises {.exercise}
+
+1. **Why are we here** Form small groups of 2-4 with your neighbours and discuss how you expect learning rmarkdown might benefit you.
+
 ## Reproducibility is a problem
 
 We are in a crisis at the moment where a lot of people cannot reproduce scientific work. This isn't just a few people, and it's not cheap. Estimates say that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs $28 Billion dollars annually [^1]. That's one country, one field, and one year.
@@ -87,9 +91,13 @@ __bold__, **bold**, _italic_, *italic*
 
 With very little marking up, we can create rich text, that actually resembles the text that we want to see. 
 
-So, how do we combine this with our R code, into a literate programming environment?
+## Exercises {.exercise}
+
+1. **Learn to use markdown** In your small groups, spend five minutes working through this [brief online markdown tutorial](https://www.markdowntutorial.com/)
 
 ## Rmarkdown helps complete the solution to the reproducibility problem
+
+So, how do we combine this with our R code, into a literate programming environment?
 
 `Rmarkdown` provides an environment where you can write your complete analysis, and marries your text, and code together into a rich document. You write your code as code chunks, put your text around that, and then hey presto, you have a document you can reproduce.
 
@@ -99,41 +107,79 @@ fit_coef = '`r fit_coef[1]`'  # an ugly hack; don't look at me
 
 ```yaml
 ---
-title: "Lab Report"
-author: "You"
-date: "2018-11-12"
-output: pdf_document
+title: "Exploring gapminder"
+author: "Nicholas Tierney"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
 ---
 ```
 
 ````
 
-```r
+`r ''````{r setup , include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      fig.align = "center",
+                      fig.width = 4, 
+                      fig.height = 4, 
+                      dev = "png",
+                      cache = TRUE)
+```
+
+`r ''````{r library}
 library(tidyverse)
-library(here)
-weather <- read_csv(here("data", "weather.csv"))
+library(naniar)
+library(visdat)
+library(broom)
 ```
 
-Let's have a look at the weather
-
-`r ''```r
-hist(weather$temp)
+`r ''````{r functions}
+# A function to scale input to 0-1
+scale_01 <- function(x){
+  (x - min(x, na.rm = TRUE)) / diff(range(x, na.rm = TRUE))
+}
 ```
 
-`r ''```r
-fit <- lm(temp ~ ., data = weather)
-fit_coef <- coef(fit)
+`r ''```{r data-read-in}
+data <- read_csv(here::here("data", "oz_gapminder.csv"))
 ```
 
-The effect of temperature of wind was `r fit_coef[1]`
 
-This can be seen in this table
+# Introduction
 
-```r
-knitr::kable(coef(fit))
+let's look at the lifespan
+
+`r ''```{r}
+hist(data$lifeExp)
 ```
 
+Let's look at the GDP per capita
+
+`r ''```{r example-cache}
+hist(data$gdpPercap)
+```
+
+Let's fit a simple linear model of the effect of year on life expectancy
+
+`r ''```{r example-lm, eval = FALSE}
+fit <- lm(lifeExp ~ year, data = data)
+fit
+```
+
+And let's look at the coefficient table:
+
+`r ''```{r coef-table}
+fit_coef <- tidy(fit)
+knitr::kable(fit_coef,
+             caption = "A table of the coefficients")
+```
+
+
+The effect of year on life expectancy is `r "\u0060r fit_coef$estimate[2]\u0060"`.
 ````
+
+<!-- `r fit_coef$estimate[2]`. -->
 
 __Screenshot of this__
 
@@ -161,8 +207,3 @@ Just updte the data, and render the document again.
 That's it.
 
 That is why we use rmarkdown.
-
-## Exercises {.exercise}
-
-1. **Why are we here** Form small groups of 2-4 with your neighbours and discuss how you expect learning rmarkdown might benefit you.
-1. **Learn to use markdown** In your small groups, spend five minutes working through this [brief online markdown tutorial](https://www.markdowntutorial.com/)

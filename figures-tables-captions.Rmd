@@ -181,3 +181,10 @@ There are many different ways to produce tables in R. We have chosen to show `ka
 
 ## Summary
 
+
+<!-- - `pander` -->
+<!-- - `xtable` -->
+<!-- - `kableExtra` -->
+<!-- - the list goes on! -->
+<!-- - https://github.com/ropenscilabs/packagemetrics -->
+<!-- - https://ropensci.org/blog/blog/2017/06/27/packagemetrics -->

@@ -124,7 +124,7 @@ If you have an RStudio project file inside the `etc1010` folder, you can instead
 health <- read_csv("week1/data/health.csv")
 ```
 
-## Exercise .{exercise}
+## Exercise {.exercise}
 
 * (1-2 minutes) What folders are above the file, "Week1.Rmd"?
 * What would be the result of using the following code in week1.Rmd, and then using the code, and then moving this to another location, inside your C drive?

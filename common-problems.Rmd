@@ -2,6 +2,21 @@
 
 There are some things that I run into fairly frequently (and some not so much) when I'm rendering my rmarkdown documents. This section details some the common problems, and the solution that I have found works for me.
 
+To avoid problems in the first place, I try and do the following:
+
+- Develop code in chunks and execute the chunks until they work, then move on.
+- knit the document regularly to check for errors.
+
+Then, if there is an error:
+
+- recreate the error in an interactive session:
+    - restart R
+    - run all chunks below
+    - find the chunk that did not work, fix until it does
+    - run all chunks below
+    - explore working directory issues
+      - remember that the rmarkdown directory is where the .Rmd file lives
+
 ## "Duplication": Duplicated chunk names
 
 **What it might look like**

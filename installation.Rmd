@@ -46,6 +46,8 @@ install.packages("knitr",
 install.packages("tinytex",
                  dependencies = c("Imports", "Suggests"))
 
+install.packages("here")
+
 install.packages('tidyverse')
 
 ```
