@@ -63,6 +63,16 @@ These are often not an error, but you just won't get the behaviour that you expe
 
 **How to solve**
 
+## I want to include inline R code verbatim to show an example
+
+... Like for a book on using rmarkdown or something.
+
+Check out this great [blog post by T. Hovorka from R Views](https://rviews.rstudio.com/2017/12/04/how-to-show-r-inline-code-blocks-in-r-markdown/)
+
+It boils down to this:
+
+<span style="color:blue">``` `r "\u0060\u0060 \u0060r \"\\u0060r expression\\u0060\"\u0060 \u0060\u0060"` ```</span>.
+
 ## Exercise {.exercise}
 
 1. Go to this repo [njtierney/rmd-errors](https://github.com/njtierney/rmd-errors), and give debugging some of these common rmarkdown errors a go.
