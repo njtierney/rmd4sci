@@ -131,9 +131,13 @@ gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 ```
 ````
 
+## "The Legend of Link I": Your images in `![]()` don't work.
 
+I often forget that it is `![](path/to/image)`, and note `![]("path/to/image")`. There are no quote marks!
 
 ## LaTeX errors
+
+There is no panacea for LaTeX errors, but if you aren't familiar with "what that error message" might look like, here are some details.
 
 **What it might look like**
 
