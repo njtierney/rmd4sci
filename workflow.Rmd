@@ -169,7 +169,7 @@ This is really handy for a few reasons:
 2. Rmarkdown documents have a special way of looking for files, this helps eliminate file path pain.
 3. This is completely portable
 
-# Remember
+## Remember
 
 > If the first line of your R script is 
 ```
@@ -179,7 +179,7 @@ setwd("C:\Users\jenny\path\that\only\I\have")
 
 -- Jenny Bryan
 
-# Summary
+# # ummary
 
 In this lesson we've:
 

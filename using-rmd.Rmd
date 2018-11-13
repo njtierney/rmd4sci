@@ -102,7 +102,7 @@ __bold__, **bold**, _italic_, *italic*
 
 > quote of something profound 
 
-```{r}
+```{r example-chunk}
 # computer code goes in three back ticks
 1 + 1
 2 + 2
