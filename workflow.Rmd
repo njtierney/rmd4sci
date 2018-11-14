@@ -179,7 +179,7 @@ setwd("C:\Users\jenny\path\that\only\I\have")
 
 -- Jenny Bryan
 
-# # ummary
+# # Smmary
 
 In this lesson we've:
 
