@@ -41,7 +41,9 @@ install.packages("rmarkdown")
 install.packages("knitr" 
 install.packages("tinytex")
 install.packages("here")
-install.packages('tidyverse')
+install.packages("tidyverse")
+install.packages("broom")
+install.packages("fs")
 ```
 
 As we will be using PDF for output of some of our documents in this workshop, you need to install LaTeX. `tinytex` is an R package that installs a sane, lightweight version of LaTeX. It will only install LaTeX if you need to, which is nice!
