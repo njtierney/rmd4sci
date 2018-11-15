@@ -16,10 +16,15 @@ This book aims to teach the following:
     - Create captions for figures and tables
     - Change the size and type of figures
     - Save the figures to disk when creating an rmarkdown document
+- Work with equations
+    - inline and display
+    - caption equations
+    - reference equations
 - Manage bibliographies
   - Cite articles in text
   - generate bibliographies
   - hange bibliography styles
 - Debug and handle common errors with rmarkdown
+- Next steps in working with rmarkdown - how to extend yourself to other rmarkdown formats
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
