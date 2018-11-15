@@ -13,21 +13,25 @@ url: 'https\://rmd4sci.njtierney.com/'
 
 # About this
 
-This is a 3 hour workshop initially designed for the SSA Vic and MIG meeting on November 13, 2018.
+This is a book on rmarkdown, aimed for scientists. It was initially developed as a 3 hour workshop, but is now developed into a resource that will grow and change over time. It is a **living book**
 
-After completing this course, you will know how to:
+This book aims to leave people being about to do the following:
 
 - Create your own R Markdown document
-- Create figures and tables that you can reference in text, and update with - your data
+- Improve workflow:
+  - With rstudio projects
+  - Using keyboard shortcuts
 - Export your R Markdown document to PDF, HTML, and Microsoft Word
-- Use keyboard shortcuts to improve workflow
-- Cite research articles and generate a bibliography
-
-We may, depending on time, also cover the following areas:
-
-- Change the size and type of your figures
-- Create captions for your figures, and reference them in text
-- Debug and handle common errors
+- Better manage figures and tables
+    - Reference figures and tables in text so that they dynamically update
+    - Create captions for figures and tables
+    - Change the size and type of figures
+    - Save the figures to disk when creating an rmarkdown document
+- Manage bibliographies
+  - Cite articles in text
+  - generate bibliographies
+  - hange bibliography styles
+- Debug and handle common errors with rmarkdown
 
 ## Why write this as a book?
 
@@ -36,6 +40,5 @@ There are many great books on rmarkdown and it's various features, such as ["Rma
 > So why write a book?
 
 Good question. The answer is that writing this as a book provides a way for me to structure the content in the form of a workshop, in a way suitable for learning in a few hours. 
-
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
