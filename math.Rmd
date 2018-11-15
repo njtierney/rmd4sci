@@ -49,9 +49,19 @@ Understanding whether or not you have created the right equation can be difficul
 
 #### Fractions
 
+#### Sub and Super Scripts
+
+#### Square roots
+
+#### Summations
+
+#### Special functions
+
+#### Self-sizing parentheses
+
 #### Greek letters
 
-#### Sub and Super Scripts
+#### Matrices
 
 ## Example math commands
 
