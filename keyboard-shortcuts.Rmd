@@ -48,6 +48,6 @@ Below is a small table of tasks you can perform with keyboard
 - The [https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf](Rstudio Cheat Sheet) has an index of shortcuts. 
 - This [https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts] help file has a guide to customising keyboard shortcuts.
 
-## Exercises {.exercise}
+## Your Turn {.exercise}
 
 - Using the Keyboard Shortcut Reference, find the keyboard shortcut for inserting a pipe character ( %>% )

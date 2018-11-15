@@ -31,6 +31,6 @@ You might wish to include a screenshot of an interactive graphic you had in your
 I recommend 
 
 
-## Exercise {.exercise}
+## Your Turn {.exercise}
 
 1. Generic exercise

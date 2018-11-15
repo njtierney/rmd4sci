@@ -35,7 +35,7 @@ For demonstration purposes, let's take a plot from earlier and show how it's out
 
 * with `fig.height`, `fig.width`, `out.width`, `dev`
 
-### Exercise {.exercise}
+### Your Turn {.exercise}
 
 1. Create three figures, each with the following attributes
 
@@ -49,7 +49,7 @@ knitr::opts_chunk$set(chunk_option1 = TRUE, ...)
 
 (As mentioned earlier), I typically set this up in a code chunk at the start of a document.
 
-### Exercise {.exercise}
+### Your Turn {.exercise}
 
 1. Set the global options in your document to 
 
@@ -67,7 +67,7 @@ output:
 ---
 ```
 
-## Exercise {.exercise}
+## Your Turn {.exercise}
 
 1. Save your images in your document by setting `keep_md: true`
 

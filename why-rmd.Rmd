@@ -18,7 +18,7 @@ The goal of this section is to briefly discuss why we want to learn rmarkdown, t
 * [Learn how to use markdown](https://www.markdowntutorial.com/)
 * Think about why you want to use markdown
 
-## Exercise {.exercise}
+## Your Turn {.exercise}
 
 1. **Why are we here** Form small groups of 2-4 with your neighbours and discuss how you expect learning rmarkdown might benefit you.
 
@@ -95,7 +95,7 @@ __bold__, **bold**, _italic_, *italic*
 
 With very little marking up, we can create rich text, that actually resembles the text that we want to see. 
 
-## Exercises {.exercise}
+## Your Turn {.exercise}
 
 1. **Learn to use markdown** In your small groups, spend five minutes working through this [brief online markdown tutorial](https://www.markdowntutorial.com/)
 

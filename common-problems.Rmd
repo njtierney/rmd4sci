@@ -168,6 +168,6 @@ It boils down to this:
 
 <span style="color:blue">``` `r "\u0060\u0060 \u0060r \"\\u0060r expression\\u0060\"\u0060 \u0060\u0060"` ```</span>.
 
-## Exercise {.exercise}
+## Your Turn {.exercise}
 
 1. Go to this repo [njtierney/rmd-errors](https://github.com/njtierney/rmd-errors), and give debugging some of these common rmarkdown errors a go.

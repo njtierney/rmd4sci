@@ -67,7 +67,7 @@ citation("ggplot2")
 
 For journals or books, you'll need to get a specific .bib file. Yes, this can be a bit of a pain, but this is where you need to use a reference management software like [Zotero](https://www.zotero.org/), [Mendeley](https://www.mendeley.com/download-desktop/), [papers](https://www.papersapp.com/), or my personal preference [paperpile](https://paperpile.com/). The important thing to to **use something**. These all allow you to get .bib files of your articles, which you can then placec in your `references.bib` file.
   
-### Exercise {.exercise}
+### ## Your Turn {.exercise}
 
 1. Generate a references.bib file to place your citations
 1. Using the `citation()` function, generate citations for the packages we have used, "dplyr", "ggplot2", "gapminder", and for the R software, place these in your `references.bib` file
@@ -91,7 +91,7 @@ csl: my_journal.csl
 ---
 ```
 
-### Exercise {.exercise}
+### ## Your Turn {.exercise}
 
 1. select your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (> 1800 citations and counting)
 1. place this in your rstudio project
@@ -119,6 +119,6 @@ This is taken from [this SO thread](https://stackoverflow.com/questions/51335125
 
 > Note: this will only work if you use pandoc's built-in citation package and won't work if you set citation_package: natbib in the YAML
 
-### Exercise {.exercise}
+### ## Your Turn {.exercise}
 
 1. Generate a bibliography and an appendix, following it

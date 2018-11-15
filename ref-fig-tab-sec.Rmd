@@ -67,7 +67,7 @@ output:
 
 This is a new version of document that supports a better way to reference things in text.
 
-#### Exercise {.exercise}
+#### Your Turn {.exercise}
 
 1. convert your output to use `bookdown::html_document2` in your YAML.
 
@@ -108,7 +108,7 @@ gapminder %>%
 
 Australia's life expectancy has increased a great deal over the past 50 years (See Figure \@ref(fig:gg-oz-plot))
 
-#### Exercise {.exercise}
+#### Your Turn {.exercise}
 
 1. Add a new plot in your document and reference it
 
@@ -133,7 +133,7 @@ gapminder %>%
   knitr::kable(caption = "Raw gapminder data for Australia.")
 ```
 
-#### Exercise {.exercise}
+#### Your Turn {.exercise}
 
 1. Create a table in your document and refer to it in text
 
@@ -159,7 +159,7 @@ because it was written as:
 # Citing Figures, Tables & Sections {#start}
 ```
 
-#### Exercise {.exercise}
+#### Your Turn {.exercise}
 
 1. Reference a section in the report.
 

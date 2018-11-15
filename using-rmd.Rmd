@@ -221,7 +221,7 @@ To read in data
 
 It can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until _you really need to_. [This is also recommended by the author of rmarkdown and knitr, Yihui Xie](). Because HTML doesn't have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly. 
 
-## Exercise {.exercise}
+## Your Turn {.exercise}
 
 1. Use the rstudio project you previously created, `world-health`, and create an rmarkdown document
 1. Run some brief summaries of the data in the rmarkdown document

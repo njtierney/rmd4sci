@@ -70,7 +70,7 @@ knitr::kable(top_gap,
 
 There are other options that you can set in `kable`, but for these options will get you through a large majority of what you need. For more information on what `kable` can provide, see `?knitr::kable`, and for more features on table generation in R, see the further reading section below.
 
-### Exercise {.exercise}
+### Your Turn {.exercise}
 
 1. Create a summary of your gapminder data, and put it into a table.
 1. This table should have a caption, and the number of significant digits should be 2.
@@ -164,7 +164,7 @@ knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 
 `
 
-### Exercise {.exercise}
+### Your Turn {.exercise}
 
 1. Create a plot in your gapminder.Rmd document
 1. Add a figure caption
