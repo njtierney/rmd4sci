@@ -17,9 +17,17 @@ LaTeX style equation writing. This section introduces the two types equations, i
 
 ## Objectives
 
+## Some history {.history}
+
+Equation editing was first made available in TeX, which later become LaTeX, named after ...
+
 ## Anatomy of Equations
 
 This section shows you some basic equations types that you want to be familiar with.
+
+
+
+
 
 Inline equations are referenced by a pair of dollar signs: `$`.
 
