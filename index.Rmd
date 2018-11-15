@@ -13,11 +13,11 @@ url: 'https\://rmd4sci.njtierney.com/'
 
 # About this
 
-This is a book on rmarkdown, aimed for scientists. It was initially developed as a 3 hour workshop, but is now developed into a resource that will grow and change over time. It is a **living book**
+This is a book on rmarkdown, aimed for scientists. It was initially developed as a 3 hour workshop, but is now developed into a resource that will grow and change over time as a **living book**.
 
-This book aims to leave people being about to do the following:
+This book aims to teach the following:
 
-- Create your own R Markdown document
+- Getting started with your own R Markdown document
 - Improve workflow:
   - With rstudio projects
   - Using keyboard shortcuts
