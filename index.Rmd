@@ -11,7 +11,7 @@ link-citations: yes
 url: 'https\://rmd4sci.njtierney.com/'
 ---
 
-# About this
+# About this {-}
 
 This is a book on rmarkdown, aimed for scientists. It was initially developed as a 3 hour workshop, but is now developed into a resource that will grow and change over time as a **living book**.
 

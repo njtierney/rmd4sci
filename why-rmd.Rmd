@@ -95,6 +95,16 @@ __bold__, **bold**, _italic_, *italic*
 
 With very little marking up, we can create rich text, that actually resembles the text that we want to see. 
 
+Some other nice features of markdown include:
+
+- superscript: 
+- subscript:
+- strikethrough:
+- small caps:
+- links:
+- images:
+- footnote(s):
+
 ## Your Turn {.exercise}
 
 1. **Learn to use markdown** In your small groups, spend five minutes working through this [brief online markdown tutorial](https://www.markdowntutorial.com/)
