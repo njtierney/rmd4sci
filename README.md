@@ -1,6 +1,6 @@
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip) [![Travis build status](https://travis-ci.org/njtierney/rmd4sci.svg?branch=master)](https://travis-ci.org/njtierney/rmd4sci)
 
-# Rmarkdown for Scientists
+# Rmarkdown for Scientists <img src="logo.png" align="right" height=140/>
 
 This is a book on rmarkdown, aimed for scientists. It was initially developed as a 3 hour workshop, but is now developed into a resource that will grow and change over time as a **living book**.
 
