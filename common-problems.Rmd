@@ -37,10 +37,10 @@ Chunks like this:
 
 ````markdown
 
-`r ''```{r title-one}
+```{r title-one}`r ''`
 ```
 
-`r ''```{r title-one}
+```{r title-one}`r ''`
 ```
 
 ````
