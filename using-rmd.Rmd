@@ -118,7 +118,7 @@ We refer to code in an rmarkdown document in two ways, code chunks, and inline c
 Code chunks are marked by three backticks and curly braces with `r` inside them:
 
 ````markdown
-`r ''```{r chunk-name}
+```{r chunk-name}`r ''`
 # a code chunk
 ```
 ````
