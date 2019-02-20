@@ -1,5 +1,6 @@
 # Different Outputs and Extensions 
 
+There are many different outputs for rmarkdown - as a start, THIS VERY BOOK IS WRITTEN IN RMARKDOWN! How cool is that?
 
 ## Alternative output formats
 

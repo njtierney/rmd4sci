@@ -6,8 +6,8 @@ There are many keyboard shortcuts that you can access in R, this section provide
 
 ## Overview
 
-* **Teaching** XX minutes
-* **Exercises** XX minutes
+* **Teaching** 5 minutes
+* **Exercises** 5 minutes
 
 ## Questions
 
@@ -51,3 +51,4 @@ Below is a small table of tasks you can perform with keyboard
 ## Your Turn {.exercise}
 
 - Using the Keyboard Shortcut Reference, find the keyboard shortcut for inserting a pipe character ( %>% )
+- Spend 3 minutes practicing these commands in a document.

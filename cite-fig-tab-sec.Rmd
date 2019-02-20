@@ -42,7 +42,7 @@ There is a way to solve this, which this lesson discusses.
 
 * Link to tables or figures in text.
 
-## How to refer to tables and figures in text?
+## How to refer to tables and figures in text? {.demo}
 
 In order to use this referencing style, you must use the following in the YAML
 
@@ -67,15 +67,17 @@ output:
 
 This is a new version of document that supports a better way to reference things in text.
 
-#### Your Turn {.exercise}
+## Your Turn {.exercise}
 
 1. convert your output to use `bookdown::html_document2` in your YAML.
 
-### Referencing a figure
+## Referencing a figure
 
 To refer to a figure, you write the following in your text:
 
 `Figure \@ref(fig:chunk-name))`
+
+### Demo {.demo}
 
 ````markdown
 `r ''```{r gg-oz-plot, fig.cap = "Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"}
@@ -94,8 +96,6 @@ Australia's life expectancy has increased a great deal over the past 50 years
 
 ````
 
-
-
 ```{r gg-oz-plot, fig.cap = "Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"}
 library(ggplot2)
 library(dplyr)
@@ -108,11 +108,11 @@ gapminder %>%
 
 Australia's life expectancy has increased a great deal over the past 50 years (See Figure \@ref(fig:gg-oz-plot))
 
-#### Your Turn {.exercise}
+### Your Turn {.exercise}
 
 1. Add a new plot in your document and reference it
 
-### Referencing a table
+## Referencing a table
 
 To cite a table, you write the following:
 
@@ -133,11 +133,11 @@ gapminder %>%
   knitr::kable(caption = "Raw gapminder data for Australia.")
 ```
 
-#### Your Turn {.exercise}
+### Your Turn {.exercise}
 
 1. Create a table in your document and refer to it in text
 
-### Referencing a section
+## Referencing a section
 
 You can even reference a section in your report:
 
@@ -159,7 +159,7 @@ because it was written as:
 # Citing Figures, Tables & Sections {#start}
 ```
 
-#### Your Turn {.exercise}
+### Your Turn {.exercise}
 
 1. Reference a section in the report.
 

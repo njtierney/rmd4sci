@@ -4,6 +4,9 @@ One of the really great, powerful things about rmarkdown is that we can convert 
 
 ## Overview
 
+* **Teaching**: 10 minutes
+* **Exercises**: 15 minutes
+
 ## Questions
 
 * How do I convert to HTML, PDF, or Word?
@@ -24,7 +27,7 @@ knitr::include_graphics("figs/rstudio-knit-button")
 
 You might notice that depending on the option you select, this changes things in the YAML - which is another way to control which output you have:
 
-2. You can change the YAML option
+2. You can change the YAML option 
 
 ```YAML
 

@@ -82,6 +82,13 @@ Error in parse_block(g[-1], g[1], params.src) :
 
 **What it might look like**
 
+```r
+plot(my_table)
+
+my_table <- table(mtcars$cyl)
+```
+
+
 **The error message**
 
 **How to solve**

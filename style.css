@@ -43,6 +43,16 @@ pre code {
   background-color: #CDD8EF;
 }
 
+.demo{
+  padding-left: 2em;
+  border: 1px solid;
+  border-color: #ffffff;
+  color: #696969;
+  background-color: #FFACAC;
+}
+
+/* "#7B321C" dark red */
+/* "#FFACAC" light red */
 /*
 .blank{
   padding-left: 2em;

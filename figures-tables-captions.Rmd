@@ -1,6 +1,6 @@
 # Figures, Tables, Captions.
 
-You need figures and tables in your own writing, whether it be a journal paper, an internal document, or some documentation, it's highly likely you'll need tables and figures. In this section, we discuss how to add figures and tables into your rmarkdown document, and how to provide captions for them.
+You need figures and tables in your own writing, whether it be a journal paper, an internal document, or some documentation. In this section, we discuss how to add figures and tables into your rmarkdown document, and how to provide captions for them.
 
 ## Overview
 
@@ -19,6 +19,8 @@ You need figures and tables in your own writing, whether it be a journal paper, 
 
 To produce a table, I recommend you use the `kable` function from the `knitr` package.
 
+### Demo {.demo}
+
 `kable` takes a `data.frame` as input, and outputs the table into a `markdown table`, which will get rendered into the appropriate output format.
 
 For example, let's say we wanted to share the first 6 rows of our gapminder data.
@@ -28,6 +30,7 @@ gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 ```
 
 This gives us the following output
+
 ```{r show-gapminder}
 top_gap <- head(gapminder)
 
@@ -68,7 +71,13 @@ knitr::kable(top_gap,
              digits = 2)
 ```
 
-There are other options that you can set in `kable`, but for these options will get you through a large majority of what you need. For more information on what `kable` can provide, see `?knitr::kable`, and for more features on table generation in R, see the further reading section below.
+There are other options that you can set in `kable`, but for these options will get you through a large majority of what you need. For more information on what `kable` can provide, see `?knitr::kable`.
+
+There are many different ways to produce tables in R. We have chosen to show `kable` today because kable is minimal, but powerful. Some other packages to investigate include:
+
+* [kableExtra](https://cran.r-project.org/web/packages/kableExtra/index.html) (in particular the option `kableExtra::kable_styling(latex_options = c("hold_position"))`
+* [huxtable](https://hughjonesd.github.io/huxtable/)
+
 
 ### Your Turn {.exercise}
 
@@ -78,6 +87,8 @@ There are other options that you can set in `kable`, but for these options will 
 ## Figures
 
 Printing figures is probably my favourite feature of rmarkdown. It is actually relatively straightforward in the case of plots. You provide the plot you want to show in a code chunk!
+
+#### Demo {.demo}
 
 For example, I can print a plot of the gapminder data for Australia like so:
 
@@ -93,7 +104,7 @@ gapminder %>%
 
 ```
 
-### Captions for figures
+### Captions for figures {.demo}
 
 Inserting a caption for a figure is a little bit different. The caption argument is controlled in the chunk option, under the option, `fig.cap`.
 
@@ -125,6 +136,11 @@ gapminder %>%
   geom_point()
 ```
 
+### Your Turn {.exercise}
+
+* Create a plot with your .Rmd doc
+* Add a figure caption
+
 ### Inserting images
 
 We cannot always generate the graphics that we want - for example, we might have an image of something that we want to show, or perhaps a nice flowchart someone else made.
@@ -137,6 +153,8 @@ In our case, say we wanted to insert the new SSA logo into our document, there a
 **Markdown syntax**
 
 The markdown syntax to insert an image is: `![caption]("path/to/image")`
+
+#### Demo {.demo}
 
 So we could insert the new SSA vic logo by doing the following:
 
@@ -166,21 +184,12 @@ knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 
 ### Your Turn {.exercise}
 
-1. Create a plot in your gapminder.Rmd document
-1. Add a figure caption
 1. Download [the gapminder logo](https://www.gapminder.org/wp-content/themes/gapminder/images/logo.png) and put it into a new directory call "figs"
 1. Insert this image into your rmarkdown document around where you introduce gapminder.
 
-## Further reading 
-
-There are many different ways to produce tables in R. We have chosen to show `kable` today because kable is minimal, but powerful. Some other packages to investigate include:
-
-* [kableExtra](https://cran.r-project.org/web/packages/kableExtra/index.html) (in particular the option `kableExtra::kable_styling(latex_options = c("hold_position"))`
-* [huxtable](https://hughjonesd.github.io/huxtable/)
-
-
 ## Summary
 
+We've now learned how to insert tables, plots, and images into our documents!
 
 <!-- - `pander` -->
 <!-- - `xtable` -->
