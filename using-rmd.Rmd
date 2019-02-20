@@ -1,6 +1,6 @@
 # Using Rmarkdown
 
-Now that we've covered how to organise your project, and gotten some data, and talked a bit about what rmarkdown is, let's talk about using it.
+Now that we've covered how to organise your project, have some data, and talked a bit about what rmarkdown is, let's talk about using it.
 
 ## Overview
 
@@ -20,7 +20,7 @@ Now that we've covered how to organise your project, and gotten some data, and t
 
 ## The anatomy of an rmarkdown document
 
-An rmarkdown document is broken up into three partS:
+This is an rmarkdown document (demo). It has three parts:
 
 * Metadata (YAML)
 * text (markdown formatting)
@@ -165,7 +165,13 @@ and `r "\u0060r 'ncol(airquality) \u0060"` variables.
 
 ## Working with an rmarkdown document
 
-### Nick's rmarkdown hygiene reccommendations
+**Demo: Create an rmarkdown document in rstudio.**
+
+### Your Turn {.exercise}
+
+1. Create an rmarkdown document in rstudio
+
+## Nick's rmarkdown hygiene reccommendations
 
 I highly recommend that each document you write has three chunks at the top.
 
@@ -212,6 +218,7 @@ Now, this is my personal preference, but I find the following benefits:
 
 1. The "top part" of your document contains all the metadata / setup info. Your global options, 
 1. It helps another person get oriented with your work - they know the settings, the functions used, and the special things that you wrote (your functions)
+1. Remember, "another person" includes yourself in 6 months.
 
 ### Reading in data
 
