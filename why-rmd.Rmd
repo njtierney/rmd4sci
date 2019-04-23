@@ -32,15 +32,15 @@ So what can we do about it?
 
 ## Literate programming is a partial solution
 
-The idea of literate programming shines some light on this dark area of science. This is an idea from [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) where you combine your text with your code output to create a document. This is a _blend_ of your literature (text), and your programming (code), to create something that you can read from top to bottom, your intro, methods, results, discussion, conclusion, and see all the pieces of your data analysis all together.
+The idea of literate programming shines some light on this dark area of science. This is an idea from [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) where you combine your text with your code output to create a document. This is a _blend_ of your literature (**text**), and your programming (**code**), to create something that you can read from top to bottom. Imagine your paper - the introduction, methods, results, discussion, and conclusion, and all the bits of code that make each section. With rmarkdown, you can see all the pieces of your data analysis all together.
 
 #### Some history {.history}
 
-This was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the _Sweave_ (S+weave (from the )) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:
+This was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the _Sweave_ (S+weave) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:
 
 * It uses a form of LaTeX, which provides great flexibility at the cost of complexity.
 * Printing figures involves additional work
-* There isn't a way to save (cache) your work. Every analysis has to be repeated from start to finish, which can be time consuming.
+* There isn't a way to save (cache) your work. Every analysis has to be repeated from start to finish. This was time consuming.
 
 ## Markdown as a new player to legibility
 
@@ -93,17 +93,18 @@ __bold__, **bold**, _italic_, *italic*
 2 + 2
 ```
 
-With very little marking up, we can create rich text, that actually resembles the text that we want to see. 
+With very little marking up, we can create rich text, that **actually resembles** the text that we want to see. 
 
 Some other nice features of markdown include:
 
-- superscript: 
-- subscript:
-- strikethrough:
-- small caps:
-- links:
-- images:
-- footnote(s):
+|  thing          | markdown      | rendered     |
+|----------------:|--------------:|:-------------|
+|  superscript    |  `2^nd^`      | 2^nd^        |
+|  subscript      |  `CO~2~`      | CO~2~        |
+|  strikethrough  |  `~~mistake~~`| ~~mistake~~  |
+| links           | `[text](http:://www.example.com/your-link-goes-here)`| [text](http:://www.example.com/your-link-goes-here) |
+| images          | `![alternative text](link)` | ![alternative text](link)|
+| footnote(s)     | `[^4]` followed by `[^4]: footnote text goes here`.| [^4] followed by [^4]: footnote text goes here. |
 
 ## Your Turn {.exercise}
 
@@ -190,7 +191,7 @@ You would need to:
 1. Go back to the GUI, re run the analysis
 1. Import the results into excel
 1. Create your graph
-1. cpoy the graph into word
+1. copy the graph into word
 1. copy the results of the coefficients into the text
 1. copy the results of the coefficient table into the text.
 
@@ -226,11 +227,13 @@ That is why we use rmarkdown.
 
 In this section we've learned about:
 
--
--
--
--
--
+- What the value is in a reproducible report
+- What is markdown
+- How to combine software and writing
+- How to use markdown
 
 ## Learning more
 
+- [rstudio's rmarkdown cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+
+- [Bookdown's section on markdown syntax](https://bookdown.org/yihui/bookdown/markdown-syntax.html)
