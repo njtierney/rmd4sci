@@ -267,10 +267,6 @@ Now, this is my personal preference, but I find the following benefits:
 1. It helps another person get oriented with your work - they know the settings, the functions used, and the special things that you wrote (your functions)
 1. Remember, "another person" includes yourself in 6 months.
 
-## HTML first: A note on workflow with rmarkdown
-
-It can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until _you really need to_. [This is also recommended by the author of rmarkdown and knitr, Yihui Xie](https://yihui.name/en/2018/07/in-html-i-trust/). Because HTML doesn't have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly. 
-
 ## Your Turn {.exercise}
 
 1. Update your rmarkdown document based on the aforementioned hygiene steps discussed by Nick.
