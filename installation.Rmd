@@ -38,7 +38,7 @@ To ensure you are up to date, run the following script to install the packages.
 
 ```{r install-rmd, eval = FALSE}
 install.packages("rmarkdown")
-install.packages("knitr" 
+install.packages("knitr")
 install.packages("tinytex")
 install.packages("here")
 install.packages("tidyverse")
