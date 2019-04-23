@@ -1,6 +1,6 @@
 # Citing Figures, Tables & Sections {#start}
 
-When you're writing a report, you refer to a table or figure in text. 
+When you're writing a report, you often refer to a table or figure in text. 
 
 ```{r no-show, include = FALSE, message = FALSE}
 gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
@@ -25,7 +25,11 @@ And sure, this is figure 1. But what happens if actually, that figure should be 
 1. Update the reference to figure 1 in the text. 
 1. Update the figure 1 caption to not say figure 1.
 
-This is fine. Once. But it is never once. After this, it is frustrating, and error prone.
+This is fine. 
+
+Once. 
+
+But it is never once. After this, it is frustrating, and error prone.
 
 There is a way to solve this, which this lesson discusses.
 
@@ -65,11 +69,15 @@ output:
   bookdown::word_document2
 ```
 
-This is a new version of document that supports a better way to reference things in text.
+This is a new version of document that supports a better way to reference things in text. This reads as:
+
+> Make the output the HTML/PDF/Word document from the bookdown package.
+
+That is, the special `::` after `bookdown`, `bookdown::html_document2` read as "The html_document2 function from the bookdown package".
 
 ## Your Turn {.exercise}
 
-1. convert your output to use `bookdown::html_document2` in your YAML.
+1. Convert your output to use `bookdown::html_document2` in your YAML.
 
 ## Referencing a figure
 
@@ -162,5 +170,3 @@ because it was written as:
 ### Your Turn {.exercise}
 
 1. Reference a section in the report.
-
-## Summary

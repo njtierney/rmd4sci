@@ -10,7 +10,7 @@ Now that you are near the end of your data analysis, you want to make sure that 
 ## Questions
 
 * What sort of things can I cite?
-* How do I manage my .bib file?
+* How do I manage my `.bib` file?
 * How do I change the citation style?
 
 ## Objectives
