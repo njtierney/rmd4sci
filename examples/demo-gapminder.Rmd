@@ -33,8 +33,8 @@ scale_01 <- function(x){
 
 # Data reading in here
 
-```{r data-read-in, echo = FALSE, message = FALSE, cache = TRUE}
-data <- read_csv(here::here("data", "gapminder.csv"))
+```{r data-read-in, echo = FALSE, message = FALSE, cache = FALSE}
+data <- read_csv(here::here("data", "oz_gapminder.csv"))
 ```
 
 ```{r demo, eval = TRUE, echo = TRUE}

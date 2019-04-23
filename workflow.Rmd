@@ -80,7 +80,11 @@ users
   └── njtierney
       └── Desktop
           └──  rmd4sci-materials
-               └──  demo-gapminder.Rmd
+               └──  demo.R
+               └── exercises
+               └── exploratory-data-analysis
+                   └── eda-document.Rmd
+                   └── eda-script.R
                └──  data
                     └──  gapminder.csv
 ```
@@ -163,9 +167,9 @@ usethis::use_course("bit.ly/rmd4sci-monash")
 
 ## Your turn {.exercise}
 
-1. Run the code inside the `demo.Rmd` document
+1. Run the code inside the `demo.R` document
 2. Why does the `read_csv` code work?
-3. Run the code inside the `exploratory-data-analysis` folder - `gapminder-eda.Rmd`.
+3. Run the code inside the `exploratory-data-analysis` folder - `eda-script.R`.
 4. Does the `read_csv` code work?
 
 ## The "here" package
