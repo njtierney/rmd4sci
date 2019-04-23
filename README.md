@@ -23,7 +23,7 @@ This book aims to teach the following:
 - Manage bibliographies
   - Cite articles in text
   - generate bibliographies
-  - hange bibliography styles
+  - Change bibliography styles
 - Debug and handle common errors with rmarkdown
 - Next steps in working with rmarkdown - how to extend yourself to other rmarkdown formats
 
