@@ -23,8 +23,8 @@ Now that we've covered how to organise your project, have some data, and talked 
 This is an rmarkdown document (demo). It has three parts:
 
 * Metadata (YAML)
-* text (markdown formatting)
-* code (code formatting)
+* Text (markdown formatting)
+* Code (code formatting)
 
 ### Metadata
 
@@ -40,24 +40,24 @@ output: html_document
 ---
 ```
 
-It starts an ends with three dashes `---`, and had fields in there, such as `title`, `author`, and `output`.
+It starts an ends with three dashes `---`, and has fields like the following: `title`, `author`, and `output`.
 
-The options in the YAML are actually passed down into the `render` function,
+The options in the YAML are actually passed down into the `render` function under the hood.
 
-```r
-html_document(toc = TRUE, toc_depth = 2, dev = 'svg')
-```
-
-is the same as:
+This means that:
 
 ```YAML
 output:
   html_document:
     toc: true
     toc_depth: 2
-    dev: 'svg'
 ```
 
+is the same as:
+
+```r
+html_document(toc = TRUE, toc_depth = 2)
+```
 
 ### Text
 
@@ -123,17 +123,36 @@ Code chunks are marked by three backticks and curly braces with `r` inside them:
 ```
 ````
 
-* What is a backtick
-  * chunk names
-    * no spaces
-    * give every chunk a name, it will save you time
+**a backtick** is a special character you might not have seen before, it is typically located under the tilde key (`~`). On USA / Australia keyboards, is under the escape key:
 
-You can control how the code is output by changing the code chunks, which follow the title. The ones that you need to know about right now are:
+```{r show-backtick, out.width = "100%", echo = FALSE, fig.cap = "image from https://commons.wikimedia.org/wiki/File:ANSI_Keyboard_Layout_Diagram_with_Form_Factor.svg"}
+knitr::include_graphics("figs/ansi-keyboard.png")
+```
 
-  * cache: TRUE / FALSE. Do you want to save the output of the chunk so it doesn't have to run next time?
-  * eval: Do you want to evaluate the code?
-  * echo: Do you want to print the code?
-  * include: Do you want to include code output in the final output document? Setting to `FALSE` means nothing is put into the output document.
+### Chunk names
+
+Every chunk should ideally have a name. As I've mentioned earlier, naming things is hard, but follow these rules and you'll be fine:
+
+* one word that describes the action (e.g., "read")
+* one word that describes the thing inside the code (e.g, "gapminder")
+* separate words with "-" or "_" (e.g., `read-gapminder`)
+
+## Code chunk options
+
+You can control how the code is output by changing the code chunk options which follow the title. 
+
+````markdown
+```{r read-gapminder, eval = FALSE, echo = TRUE}`r ''`
+gap <- read_csv("gapminder.csv")
+```
+````
+
+The ones that you need to know about right now are:
+
+  * `cache`: TRUE / FALSE. Do you want to save the output of the chunk so it doesn't have to run next time?
+  * `eval`: Do you want to evaluate the code?
+  * `echo`: Do you want to print the code?
+  * `include`: Do you want to include code output in the final output document? Setting to `FALSE` means nothing is put into the output document, but the code is still run.
   
 <!-- What are messages, warnings, errors, results? -->
 
@@ -146,9 +165,15 @@ You can control how the code is output by changing the code chunks, which follow
   
 You can read more about the options at the official documentation: https://yihui.name/knitr/options/#code-evaluation
 
-#### Inline code
+### Inline code
 
-You can call code inline (in the text) by like so:
+Sometimes you want to run the code inside a sentence. When the code is run inside the sentence, it is called running the code "inline".
+
+You might want to run the code inline to name the number of variables or rows in a dataset in a sentence like:
+
+> There are XXX observations in the airquality dataset, and XXX variables.
+
+You can call code "inline"  like so:
 
 ````markdown
 
@@ -157,10 +182,16 @@ and `r "\u0060r 'ncol(airquality) \u0060"` variables.
 
 ````
 
+Which gives you the following sentence
+
+> There are `r nrow(airquality)` observations in the airquality dataset, and `r ncol(airquality)` variables.
+
+What's great about this is that if your data changes upstream, then you don't need to work out where you mentioned your data, you just update the document.
+
 ## Creating an rmarkdown document
 
-* rstudio menu system
-* explore the template provided by rstudio
+* Rstudio menu system
+* Explore the template provided by rstudio
 * Compile an rmarkdown document
 
 ## Working with an rmarkdown document
@@ -169,7 +200,19 @@ and `r "\u0060r 'ncol(airquality) \u0060"` variables.
 
 ### Your Turn {.exercise}
 
-1. Create an rmarkdown document in rstudio
+1. Use the rstudio project you previously created, `rmd4sci-materials`, and create an rmarkdown document
+1. Run some brief summaries of the data in the rmarkdown document inside the `
+    - hist(data$)
+    - How big is the data?
+    - How many countries are there?
+    - What was the lowest life expectancy in Australia's History?
+    - How about the lowest GDP for Australia?
+    - Where does Australia rank in GDP in 1999?
+
+<!-- # My philosophy on Rmarkdown -->
+
+<!-- - Keep it simple -->
+<!-- - focus on content -->
 
 ## Nick's rmarkdown hygiene reccommendations
 
@@ -189,8 +232,6 @@ knitr::opts_chunk$set(echo = FALSE,
 
 `r ''````{r library}
 library(tidyverse)
-library(naniar)
-library(visdat)
 ```
 
 `r ''````{r functions}
@@ -198,6 +239,10 @@ library(visdat)
 scale_01 <- function(x){
   (x - min(x, na.rm = TRUE)) / diff(range(x, na.rm = TRUE))
 }
+```
+
+`r ''````{r read-data}
+gapminder <- read_csv(here::here("data", "gapminder.csv"))
 ```
 
 ````
@@ -214,29 +259,18 @@ In the `library` chunk, you put all the library calls. This helps make it cleare
 
 In the `functions` chunk, you put any functions that you write in the process of writing your document. Similar to the `library` chunk, I write these functions as I go, as needed, and them move these to the top when I get a moment, or once I'm done. The benefit of this is that all your functions are in one spot, and you might be able to identify ways to make them work better together, or improve them separately. You might even want to move these into a new R package, and putting them here makes that easier to see what you are doing.
 
+In the `readr` chunk, you read in any data you are going to be using in the document.
+
 Now, this is my personal preference, but I find the following benefits:
 
 1. The "top part" of your document contains all the metadata / setup info. Your global options, 
 1. It helps another person get oriented with your work - they know the settings, the functions used, and the special things that you wrote (your functions)
 1. Remember, "another person" includes yourself in 6 months.
 
-### Reading in data
-
-To read in data
-
 ## HTML first: A note on workflow with rmarkdown
 
-It can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until _you really need to_. [This is also recommended by the author of rmarkdown and knitr, Yihui Xie](). Because HTML doesn't have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly. 
+It can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until _you really need to_. [This is also recommended by the author of rmarkdown and knitr, Yihui Xie](https://yihui.name/en/2018/07/in-html-i-trust/). Because HTML doesn't have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly. 
 
 ## Your Turn {.exercise}
 
-1. Use the rstudio project you previously created, `world-health`, and create an rmarkdown document
-1. Run some brief summaries of the data in the rmarkdown document
-    - hist(data$)
-    - How big is the data?
-
-<!-- # My philosophy on Rmarkdown -->
-
-<!-- - Keep it simple -->
-<!-- - focus on content -->
-<!-- - Then move it to word or LaTeX if you need to -->
+1. Update your rmarkdown document based on the aforementioned hygiene steps discussed by Nick.
