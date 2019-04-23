@@ -39,7 +39,7 @@ The R console is the bit where you can run your code. This is where the R code i
 The file/plot/pkg viewer is a handy browser for your current files, like finder, or file explorer, plots are where your plots appear, you can view packages, see the help files.
 And the environment / history pain contains the list of things you have created, and the past commands that you have run.
 
-## Is there anything I should set up?
+## Exercise: RStudio default options {.exercise}
 
 To first get set up, I highly recommend changing the following setting
 
