@@ -50,7 +50,7 @@ In 2004, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), of [daring fi
 
 For example, 
 
-```
+```markdown
 - bullet list
 - bullet list
 - bullet list
@@ -104,7 +104,8 @@ Some other nice features of markdown include:
 |  strikethrough  |  `~~mistake~~`| ~~mistake~~  |
 | links           | `[text](http:://www.example.com/your-link-goes-here)`| [text](http:://www.example.com/your-link-goes-here) |
 | images          | `![alternative text](link)` | ![alternative text](link)|
-| footnote(s)     | `[^4]` followed by `[^4]: footnote text goes here`.| [^4] followed by [^4]: footnote text goes here. |
+
+<!-- | footnote(s)     | `[^4]` followed by `[^4]: footnote text goes here`.| [^4] followed by [^4]: footnote text goes here. | -->
 
 ## Your Turn {.exercise}
 

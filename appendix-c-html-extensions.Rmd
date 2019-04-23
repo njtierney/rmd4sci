@@ -1,4 +1,4 @@
-## A handy feature to add to HTML
+# HTML document extensions
 
 Some common options for HTML include:
 

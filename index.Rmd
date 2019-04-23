@@ -40,7 +40,7 @@ This book aims to teach the following:
     
 ## Why write this as a book?
 
-There are many great books on rmarkdown and it's various features, such as ["Rmarkdown: The definitive guide"](https://bookdown.org/yihui/rmarkdown/), ["bookdown: Authoring Books and Technical Documents with R Markdown"](https://bookdown.org/yihui/bookdown/), and ["Dynamic Documents with R and knitr. Second edition"](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963), and Yihui Xie's thesis, ["Dynamic Graphics and Reporting for Statistics"](https://lib.dr.iastate.edu/etd/13518/).
+There are many great books on rmarkdown and it's various features, such as ["Rmarkdown: The definitive guide"](https://bookdown.org/yihui/rmarkdown/), ["bookdown: Authoring Books and Technical Documents with R Markdown"](https://bookdown.org/yihui/bookdown/), and ["Dynamic Documents with R and knitr, Second edition"](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963), and Yihui Xie's thesis, ["Dynamic Graphics and Reporting for Statistics"](https://lib.dr.iastate.edu/etd/13518/).
 
 > So why write a book?
 
@@ -77,6 +77,6 @@ With the remaining sections being used as extra material, or have since been wri
 Course materials can be downloaded by using the following command from the `usethis` package:
 
 ```{r use-course, echo = TRUE, eval = FALSE}
-usethis::use_course("link")
+usethis::use_course("bit.ly/rmd4sci-monash")
 ```
 

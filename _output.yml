@@ -21,7 +21,7 @@ bookdown::pdf_book:
     before_body: latex/before_body.tex
     after_body: latex/after_body.tex
   keep_tex: yes
-  latex_engine: xelatex
+  latex_engine: pdflatex
   template: null
   pandoc_args: [--top-level-division=chapter, --wrap=none]
   toc_depth: 3
