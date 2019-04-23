@@ -1,0 +1,76 @@
+---
+title: "Exploring gapminder"
+author: "Nicholas Tierney"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      fig.align = "center",
+                      fig.width = 4, 
+                      fig.height = 4, 
+                      dev = "png",
+                      cache = FALSE)
+```
+
+```{r library}
+library(tidyverse)
+library(naniar)
+library(visdat)
+library(broom)
+```
+
+````{r functions}
+# A function to scale input to 0-1
+scale_01 <- function(x){
+  (x - min(x, na.rm = TRUE)) / diff(range(x, na.rm = TRUE))
+}
+```
+
+# Data reading in here
+
+```{r data-read-in, echo = FALSE, message = FALSE, cache = TRUE}
+data <- read_csv(here::here("data", "gapminder.csv"))
+```
+
+```{r demo, eval = TRUE, echo = TRUE}
+1 + 1
+```
+
+# Introduction
+
+let's look at the lifespan
+
+```{r hist-life-exp}
+hist(data$lifeExp)
+```
+
+Let's look at the GDP per capita
+
+```{r example-cache}
+hist(data$gdpPercap)
+```
+
+Let's fit a simple linear model of the effect of year on life expectancy
+
+```{r example-lm}
+fit <- lm(lifeExp ~ year, data = data)
+fit
+```
+
+And let's look at the coefficient table:
+
+```{r coef-table}
+fit_coef <- tidy(fit)
+knitr::kable(fit_coef,
+             caption = "A table of the coefficients")
+year_slope <- round(fit_coef$estimate[2], 3)
+```
+
+The effect of year on life expectancy is `r year_slope`.
+
+# Bibliography

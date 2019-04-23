@@ -1,0 +1,40 @@
+---
+title: "Exploring gapminder"
+author: "Nicholas Tierney"
+output: html_document
+---
+
+```{r library, message = FALSE}
+library(tidyverse)
+library(broom)
+```
+
+```{r data-read-in, message = FALSE}
+data <- read_csv(here::here("data/gapminder.csv"))
+```
+
+# Introduction
+
+let's look at the lifespan
+
+```{r hist-life-exp}
+hist(data$lifeExp)
+```
+
+Let's fit a simple linear model of the effect of year on life expectancy
+
+```{r example-lm}
+fit <- lm(lifeExp ~ year, data = data)
+fit
+```
+
+And let's look at the coefficient table:
+
+```{r coef-table}
+library(broom)
+fit_coef <- tidy(fit)
+knitr::kable(fit_coef,
+             caption = "A table of the coefficients")
+```
+
+The effect of year on life expectancy is `r fit_coef$estimate[2]`.

@@ -1,0 +1,63 @@
+---
+title: "Introduction document"
+author: "Nicholas Tierney"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+
+````{r setup , include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      fig.align = "center",
+                      fig.width = 4, 
+                      fig.height = 4, 
+                      dev = "png",
+                      cache = TRUE)
+```
+
+````{r library}
+library(tidyverse)
+library(naniar)
+library(visdat)
+```
+
+````{r functions}
+# A function to scale input to 0-1
+scale_01 <- function(x){
+  (x - min(x, na.rm = TRUE)) / diff(range(x, na.rm = TRUE))
+}
+```
+
+```{r data-read-in}
+data <- read_csv(here::here("data", "oz_gapminder.csv"))
+```
+
+# Introduction
+
+This code will be cached
+
+```{r example-cache}
+
+```
+
+This code will not run
+
+```{r example-eval, eval = FALSE}
+plot()
+```
+
+This code will have the output printed, but the code will not be printed
+
+```{r example-echo, echo = FALSE}
+plot(iris)
+```
+
+none of the output of this will be included (equivalent to `echo = FALSE, message = FALSE, error = FALSE, warning = FALSE`)
+
+```{r example-include, include = FALSE}
+
+```
+
+
+# Bibliography
