@@ -17,8 +17,13 @@ rmd_files: [ "index.Rmd",
              "math.Rmd",
              "cite-fig-tab-sec.Rmd",
              "citations-and-styles.Rmd",
+             "caption-reference-eqn.Rmd",
              "common-problems.Rmd",
              "alternative-outputs-and-exts.Rmd",
              "next-steps.Rmd",
              "references.Rmd",
-             "acknowledgements.Rmd"]
+             "acknowledgements.Rmd",
+             "appendix-a-template.Rmd",
+             "appendix-b-faq.Rmd",
+             "appendix-c-html-extensions.Rmd"
+             ]

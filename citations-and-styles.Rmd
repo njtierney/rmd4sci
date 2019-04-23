@@ -121,4 +121,4 @@ This is taken from [this SO thread](https://stackoverflow.com/questions/51335125
 
 ### ## Your Turn {.exercise}
 
-1. Generate a bibliography and an appendix, following it
+1. Generate a bibliography and an appendix that follows it
