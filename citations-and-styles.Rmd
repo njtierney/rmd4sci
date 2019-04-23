@@ -10,7 +10,7 @@ Now that you are near the end of your data analysis, you want to make sure that 
 ## Questions
 
 * What sort of things can I cite?
-* How do I manage my .bib file?
+* How do I manage my `.bib` file?
 * How do I change the citation style?
 
 ## Objectives
@@ -121,4 +121,4 @@ This is taken from [this SO thread](https://stackoverflow.com/questions/51335125
 
 ### ## Your Turn {.exercise}
 
-1. Generate a bibliography and an appendix, following it
+1. Generate a bibliography and an appendix that follows it

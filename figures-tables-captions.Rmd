@@ -73,16 +73,13 @@ knitr::kable(top_gap,
 
 There are other options that you can set in `kable`, but for these options will get you through a large majority of what you need. For more information on what `kable` can provide, see `?knitr::kable`.
 
-There are many different ways to produce tables in R. We have chosen to show `kable` today because kable is minimal, but powerful. Some other packages to investigate include:
-
-* [kableExtra](https://cran.r-project.org/web/packages/kableExtra/index.html) (in particular the option `kableExtra::kable_styling(latex_options = c("hold_position"))`
-* [huxtable](https://hughjonesd.github.io/huxtable/)
-
+There are many different ways to produce tables in R. We have chosen to show `kable` today because kable is minimal, but powerful. If you want to extend `kable` to do more, look at [kableExtra](https://cran.r-project.org/web/packages/kableExtra/index.html), in particular the option `kableExtra::kable_styling(latex_options = c("hold_position"))`.
 
 ### Your Turn {.exercise}
 
 1. Create a summary of your gapminder data, and put it into a table.
-1. This table should have a caption, and the number of significant digits should be 2.
+1. Add a caption to this table
+1. Set the number of decimals to 2.
 
 ## Figures
 
@@ -160,7 +157,7 @@ So we could insert the new SSA vic logo by doing the following:
 
 ````markdown
 ```
-![SSA Logo!](figs/ssa-logo.png)
+![SSA Logo!](bit.ly/ssa-vic)
 ```
 ````
 

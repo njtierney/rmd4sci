@@ -34,13 +34,13 @@ This book aims to teach the following:
 - Manage bibliographies
   - Cite articles in text
   - generate bibliographies
-  - hange bibliography styles
+  - Change bibliography styles
 - Debug and handle common errors with rmarkdown
 - Next steps in working with rmarkdown - how to extend yourself to other rmarkdown formats
     
 ## Why write this as a book?
 
-There are many great books on rmarkdown and it's various features, such as ["Rmarkdown: The definitive guide"](https://bookdown.org/yihui/rmarkdown/), ["bookdown: Authoring Books and Technical Documents with R Markdown"](https://bookdown.org/yihui/bookdown/), and ["Dynamic Documents with R and knitr. 2nd edition"](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963), and Yihui Xie's thesis, ["Dynamic Graphics and Reporting for Statistics"](https://lib.dr.iastate.edu/etd/13518/).
+There are many great books on rmarkdown and it's various features, such as ["Rmarkdown: The definitive guide"](https://bookdown.org/yihui/rmarkdown/), ["bookdown: Authoring Books and Technical Documents with R Markdown"](https://bookdown.org/yihui/bookdown/), and ["Dynamic Documents with R and knitr. Second edition"](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963), and Yihui Xie's thesis, ["Dynamic Graphics and Reporting for Statistics"](https://lib.dr.iastate.edu/etd/13518/).
 
 > So why write a book?
 
@@ -54,9 +54,25 @@ This book was written to provide course materials for a 3 hour course on rmarkdo
 
 We worked through the following sections in the book in 3 hours:
 
-...(link sections to chapters)
+- [Why use Rmarkdown](why-rmd)
+- [Installation](installation)
+- [what is rstudio?](rstudio)
+- [suggested workflow and hygiene](workflow)
+- [how to use rmarkdown](using-rmd)
+- [using rmarkdown with pdf, html, and word](pdf-html-word)
+- [what are some useful keyboard shortcuts](keyboard-shortcuts)
+- [Adding captions to tables and figures](figures-tables-captions)
+- [Changing figures](changing-figures)
+- [Adding mathematics](math)
+- [Citing Figures and Tables](cite-fig-tab-sec)
+- [Changing Citations and styles](citations-and-styles)
 
-with the remaining sections being used as extra material, or have since been written after the course.
+With the remaining sections being used as extra material, or have since been written after the course:
+
+- [Fixing some common problems in rmarkdown](common-problems)
+- [What are some alternative outputs of rmarkdown?](alternative-outputs-and-exts)
+- [Where to go next?](next-steps)
+- [Suggested references](references)
 
 Course materials can be downloaded by using the following command from the `usethis` package:
 
