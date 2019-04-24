@@ -48,7 +48,7 @@ In 2004, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), of [daring fi
 
 ### A brief example of markdown
 
-For example, 
+For example,
 
 ```markdown
 - bullet list
@@ -61,7 +61,7 @@ For example,
 
 __bold__, **bold**, _italic_, *italic*
 
-> quote of something profound 
+> quote of something profound
 ```
 
 ````
@@ -85,7 +85,7 @@ Would be converted to:
 
 __bold__, **bold**, _italic_, *italic*
 
-> quote of something profound 
+> quote of something profound
 
 ```{r example-calculator}
 # computer code goes in three back ticks
@@ -93,7 +93,7 @@ __bold__, **bold**, _italic_, *italic*
 2 + 2
 ```
 
-With very little marking up, we can create rich text, that **actually resembles** the text that we want to see. 
+With very little marking up, we can create rich text, that **actually resembles** the text that we want to see.
 
 Some other nice features of markdown include:
 
@@ -103,7 +103,7 @@ Some other nice features of markdown include:
 |  subscript      |  `CO~2~`      | CO~2~        |
 |  strikethrough  |  `~~mistake~~`| ~~mistake~~  |
 | links           | `[text](http:://www.example.com/your-link-goes-here)`| [text](http:://www.example.com/your-link-goes-here) |
-| images          | `![alternative text](link)` | ![alternative text](link)|
+| images          | `![alternative text](link)` | `![alternative text](link)`|
 
 <!-- | footnote(s)     | `[^4]` followed by `[^4]: footnote text goes here`.| [^4] followed by [^4]: footnote text goes here. | -->
 
@@ -216,7 +216,7 @@ knitr::include_graphics(here::here("figs",
 
 ```
 
-The results are different! 
+The results are different!
 
 And we just pointed it to some different data. Then re-rendered it.
 
