@@ -21,11 +21,9 @@ bookdown::pdf_book:
     before_body: latex/before_body.tex
     after_body: latex/after_body.tex
   keep_tex: yes
-  latex_engine: pdflatex
-  template: null
+  latex_engine: xelatex
   pandoc_args: [--top-level-division=chapter, --wrap=none]
   toc_depth: 3
   toc_unnumbered: no
   toc_appendix: yes
   highlight_bw: yes
-  quote_footer: ["\\VA{", "}{}"]
