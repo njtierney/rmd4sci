@@ -62,4 +62,4 @@ It can be easy to get caught up with how your document looks. I highly recommend
 
 ## Your Turn {.exercise}
 
-1. Generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the installation chapter note on installing $\LaTeX$ with the R package, `tinytex`.
+1. Generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the installation chapter note on installing \LaTeX\ with the R package, `tinytex`.
