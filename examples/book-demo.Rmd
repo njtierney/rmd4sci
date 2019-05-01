@@ -10,7 +10,7 @@ library(broom)
 ```
 
 ```{r data-read-in, message = FALSE}
-data <- read_csv(here::here("data/gapminder.csv"))
+data <- read_csv(here::here("data/oz_gapminder.csv"))
 ```
 
 # Introduction

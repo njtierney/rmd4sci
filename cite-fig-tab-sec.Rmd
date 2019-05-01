@@ -132,6 +132,7 @@ gapminder %>%
   filter(country == "Australia") %>%
   knitr::kable(caption = "Raw gapminder data for Australia.")
 ```
+````
 
 We can see below in Table \@ref(tab:gg-oz-tab) the raw data used to create Figure \@ref(fig:gg-oz-plot)).
 
