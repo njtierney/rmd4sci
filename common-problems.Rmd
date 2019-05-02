@@ -246,6 +246,20 @@ It boils down to this:
 
 <span style="color:blue">``` `r "\u0060\u0060 \u0060r \"\\u0060r expression\\u0060\"\u0060 \u0060\u0060"` ```</span>.
 
+## My Figure or Table isn't being cited
+
+**What it might look like**
+
+You create a figure, 
+
+**The error message**
+
+There isn't one - you just get `\@ref(fig:figure-chunk-name)` printed.
+
+**How to solve**
+
+You need to make sure that you actually print the table or plot. If you create the plot and save it, but do not print it in the document, then you will not be able to reference the plot or table.
+
 ## Your Turn {.exercise}
 
 1. Go to this repo [njtierney/rmd-errors](https://github.com/njtierney/rmd-errors), and give debugging some of these common rmarkdown errors a go.
