@@ -171,3 +171,15 @@ because it was written as:
 ### Your Turn {.exercise}
 
 1. Reference a section in the report.
+
+## One small note
+
+If you are using a template of some kind, such as those in `rticles`, and want the full featured citation features, then your YAML will need to include something like this:
+
+```yaml
+output:
+  bookdown::pdf_book:
+    base_format: rticles::plos_article
+```
+
+
