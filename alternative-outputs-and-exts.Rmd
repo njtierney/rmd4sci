@@ -7,7 +7,7 @@ There are many different outputs for rmarkdown - as a start, THIS VERY BOOK IS W
 - [write a book with bookdown](https://github.com/rstudio/bookdown)
 - [build a website with blogdown](https://github.com/rstudio/blogdown)
 
-**slideshows**
+**Make slideshows**
 
 - [HTML: xaringan](https://github.com/yihui/xaringan)
 - [HTML: slidy](https://bookdown.org/yihui/rmarkdown/slidy-presentation.html)
