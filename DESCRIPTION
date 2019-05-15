@@ -20,8 +20,11 @@ Imports:
     git2r,
     dplyr,
     ggplot2,
-    broom
+    broom,
+    rmarkdown
 License: Creative Commons Attribution-NonCommercial 4.0 International License
 Suggests: 
     spelling
 Language: en-US
+URL: https://github.com/njtierney/rmd4sci
+BugReports: https://github.com/njtierney/rmd4sci/issues
