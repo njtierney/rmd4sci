@@ -22,6 +22,8 @@ Imports:
     ggplot2,
     broom,
     rmarkdown
+Remotes:
+    rstudio/bookdown
 License: Creative Commons Attribution-NonCommercial 4.0 International License
 Suggests: 
     spelling
