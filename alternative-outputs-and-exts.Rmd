@@ -6,22 +6,18 @@ There are many different outputs for rmarkdown - as a start, THIS VERY BOOK IS W
 
 - [write a book with bookdown](https://github.com/rstudio/bookdown)
 - [build a website with blogdown](https://github.com/rstudio/blogdown)
+- [create a simple dashboard with flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/)
+- [generate learning exercises with `learnr`](https://bookdown.org/yihui/rmarkdown/learnr.html#learnr)
+- [generate multiple reports with parameterised reports](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html#parameterized-reports)
+- [tufte](https://github.com/rstudio/tufte)
 
-**Make slideshows**
+### Slideshows
 
 - [HTML: xaringan](https://github.com/yihui/xaringan)
 - [HTML: slidy](https://bookdown.org/yihui/rmarkdown/slidy-presentation.html)
 - [HTML: ioslides](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html)
 - [PDF: beamer](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html)
 - [powerpoint](https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html)
-    
-- [create a simple dashboard with flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/)
-- [generate learning exercises with `learnr`](https://bookdown.org/yihui/rmarkdown/learnr.html#learnr)
-- [generate multiple reports with parameterised reports](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html#parameterized-reports)
-
-## Tufte
-
-- [tufte](https://github.com/rstudio/tufte)
 
 ### For Journals
 
