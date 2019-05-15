@@ -1,0 +1,73 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+.exercise {
+    padding-left: 2em;
+    border: 1px solid;
+    border-color: #ffffff;
+    /* color: #ffffff; white*/
+    color: #696969; /* dark grey*/
+    /* background-color: #26a69a; dark teal*/
+    background-color: #96D3CE; medium teal
+    /* background-color: #D3EDEA; */
+    
+}
+
+.history {
+  padding-left: 2em;
+  border: 1px solid;
+  border-color: #ffffff;
+  color: #696969;
+  background-color: #FFD992;
+}
+
+/* colors generated w http://paletton.com/#uid=73g0u0k9gMF1u+354U+dHBqiftl */
+
+.question{
+  padding-left: 2em;
+  border: 1px solid;
+  border-color: #ffffff;
+  color: #696969;
+  background-color: #CDD8EF;
+}
+
+.demo{
+  padding-left: 2em;
+  border: 1px solid;
+  border-color: #ffffff;
+  color: #696969;
+  background-color: #FFACAC;
+}
+
+/* "#7B321C" dark red */
+/* "#FFACAC" light red */
+/*
+.blank{
+  padding-left: 2em;
+  border: 1px solid;
+  border-color: #ffffff;
+  color: #696969;
+  background-color: #;
+}
+*/
+.exercise a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.exercise p code {
+  color: inherit;
+}

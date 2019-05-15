@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>RMarkdown for Scientists</title>
+  <meta name="description" content="A book created for a 3 hour workshop on rmarkdown" />
+  <meta name="generator" content="bookdown 0.10.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="RMarkdown for Scientists" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://rmd4sci.njtierney.com/" />
+  
+  <meta property="og:description" content="A book created for a 3 hour workshop on rmarkdown" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="RMarkdown for Scientists" />
+  
+  <meta name="twitter:description" content="A book created for a 3 hour workshop on rmarkdown" />
+  
+
+<meta name="author" content="Nicholas Tierney" />
+
+
+<meta name="date" content="2019-05-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="why-rmarkdown.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">R Markdown for Scientists</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#why-write-this-as-a-book"><i class="fa fa-check"></i><b>0.1</b> Why write this as a book?</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i><b>0.2</b> How to use this book</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html"><i class="fa fa-check"></i><b>1</b> Why RMarkdown</a><ul>
+<li class="chapter" data-level="1.1" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#overview"><i class="fa fa-check"></i><b>1.1</b> Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#questions"><i class="fa fa-check"></i><b>1.2</b> Questions</a></li>
+<li class="chapter" data-level="1.3" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#objectives"><i class="fa fa-check"></i><b>1.3</b> Objectives</a></li>
+<li class="chapter" data-level="1.4" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#your-turn"><i class="fa fa-check"></i><b>1.4</b> Your Turn</a></li>
+<li class="chapter" data-level="1.5" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#reproducibility-is-a-problem"><i class="fa fa-check"></i><b>1.5</b> Reproducibility is a problem</a></li>
+<li class="chapter" data-level="1.6" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#literate-programming-is-a-partial-solution"><i class="fa fa-check"></i><b>1.6</b> Literate programming is a partial solution</a></li>
+<li class="chapter" data-level="1.7" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#markdown-as-a-new-player-to-legibility"><i class="fa fa-check"></i><b>1.7</b> Markdown as a new player to legibility</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#a-brief-example-of-markdown"><i class="fa fa-check"></i><b>1.7.1</b> A brief example of markdown</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#your-turn-1"><i class="fa fa-check"></i><b>1.8</b> Your Turn</a></li>
+<li class="chapter" data-level="1.9" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#rmarkdown-helps-complete-the-solution-to-the-reproducibility-problem"><i class="fa fa-check"></i><b>1.9</b> Rmarkdown helps complete the solution to the reproducibility problem</a></li>
+<li class="chapter" data-level="1.10" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#summary"><i class="fa fa-check"></i><b>1.10</b> Summary</a></li>
+<li class="chapter" data-level="1.11" data-path="why-rmarkdown.html"><a href="why-rmarkdown.html#learning-more"><i class="fa fa-check"></i><b>1.11</b> Learning more</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i><b>2</b> Installation</a><ul>
+<li class="chapter" data-level="2.1" data-path="installation.html"><a href="installation.html#overview-1"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="installation.html"><a href="installation.html#questions-1"><i class="fa fa-check"></i><b>2.2</b> Questions</a></li>
+<li class="chapter" data-level="2.3" data-path="installation.html"><a href="installation.html#software-setup"><i class="fa fa-check"></i><b>2.3</b> Software Setup</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="installation.html"><a href="installation.html#r"><i class="fa fa-check"></i><b>2.3.1</b> R</a></li>
+<li class="chapter" data-level="2.3.2" data-path="installation.html"><a href="installation.html#rstudio"><i class="fa fa-check"></i><b>2.3.2</b> RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="installation.html"><a href="installation.html#rmarkdown"><i class="fa fa-check"></i><b>2.4</b> RMarkdown</a></li>
+<li class="chapter" data-level="2.5" data-path="installation.html"><a href="installation.html#a-note-on-pdf"><i class="fa fa-check"></i><b>2.5</b> A note on PDF</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="installation.html"><a href="installation.html#problem-solving-with-latex"><i class="fa fa-check"></i><b>2.5.1</b> Problem solving with LaTeX</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="installation.html"><a href="installation.html#test-script"><i class="fa fa-check"></i><b>2.6</b> Test Script</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="rstudio-what-and-why.html"><a href="rstudio-what-and-why.html"><i class="fa fa-check"></i><b>3</b> RStudio, What and Why</a><ul>
+<li class="chapter" data-level="3.1" data-path="rstudio-what-and-why.html"><a href="rstudio-what-and-why.html#overview-2"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="rstudio-what-and-why.html"><a href="rstudio-what-and-why.html#questions-2"><i class="fa fa-check"></i><b>3.2</b> Questions</a></li>
+<li class="chapter" data-level="3.3" data-path="rstudio-what-and-why.html"><a href="rstudio-what-and-why.html#objectives-1"><i class="fa fa-check"></i><b>3.3</b> Objectives</a></li>
+<li class="chapter" data-level="3.4" data-path="rstudio-what-and-why.html"><a href="rstudio-what-and-why.html#what-is-rstudio-and-why-should-i-use-it"><i class="fa fa-check"></i><b>3.4</b> What is RStudio, and why should I use it?</a></li>
+<li class="chapter" data-level="3.5" data-path="rstudio-what-and-why.html"><a href="rstudio-what-and-why.html#exercise-rstudio-default-options"><i class="fa fa-check"></i><b>3.5</b> Exercise: RStudio default options</a></li>
+<li class="chapter" data-level="3.6" data-path="rstudio-what-and-why.html"><a href="rstudio-what-and-why.html#learning-more-1"><i class="fa fa-check"></i><b>3.6</b> Learning more</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>4</b> Workflow</a><ul>
+<li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#overview-3"><i class="fa fa-check"></i><b>4.1</b> Overview</a></li>
+<li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#questions-3"><i class="fa fa-check"></i><b>4.2</b> Questions</a></li>
+<li class="chapter" data-level="4.3" data-path="workflow.html"><a href="workflow.html#objectives-2"><i class="fa fa-check"></i><b>4.3</b> Objectives</a></li>
+<li class="chapter" data-level="4.4" data-path="workflow.html"><a href="workflow.html#your-turn-2"><i class="fa fa-check"></i><b>4.4</b> Your Turn</a></li>
+<li class="chapter" data-level="4.5" data-path="workflow.html"><a href="workflow.html#when-you-start-a-new-project-open-a-new-rstudio-project"><i class="fa fa-check"></i><b>4.5</b> When you start a new project: Open a new RStudio project</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="workflow.html"><a href="workflow.html#so-what-does-this-do"><i class="fa fa-check"></i><b>4.5.1</b> So what does this do?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="workflow.html"><a href="workflow.html#what-is-a-file-path"><i class="fa fa-check"></i><b>4.6</b> What is a file path?</a></li>
+<li class="chapter" data-level="4.7" data-path="workflow.html"><a href="workflow.html#your-turn-3"><i class="fa fa-check"></i><b>4.7</b> Your Turn</a></li>
+<li class="chapter" data-level="4.8" data-path="workflow.html"><a href="workflow.html#is-there-an-answer-to-the-madness"><i class="fa fa-check"></i><b>4.8</b> Is there an answer to the madness?</a></li>
+<li class="chapter" data-level="4.9" data-path="workflow.html"><a href="workflow.html#your-turn-use-your-own-rstudio-project"><i class="fa fa-check"></i><b>4.9</b> Your Turn: Use your own rstudio project</a></li>
+<li class="chapter" data-level="4.10" data-path="workflow.html"><a href="workflow.html#your-turn-4"><i class="fa fa-check"></i><b>4.10</b> Your turn</a></li>
+<li class="chapter" data-level="4.11" data-path="workflow.html"><a href="workflow.html#the-here-package"><i class="fa fa-check"></i><b>4.11</b> The “here” package</a></li>
+<li class="chapter" data-level="4.12" data-path="workflow.html"><a href="workflow.html#remember"><i class="fa fa-check"></i><b>4.12</b> Remember</a><ul>
+<li class="chapter" data-level="4.12.1" data-path="workflow.html"><a href="workflow.html#aside-creating-an-rstudio-project"><i class="fa fa-check"></i><b>4.12.1</b> Aside: Creating an RStudio project</a></li>
+</ul></li>
+<li class="chapter" data-level="4.13" data-path="workflow.html"><a href="workflow.html#summary-1"><i class="fa fa-check"></i><b>4.13</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html"><i class="fa fa-check"></i><b>5</b> Using Rmarkdown</a><ul>
+<li class="chapter" data-level="5.1" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#overview-4"><i class="fa fa-check"></i><b>5.1</b> Overview</a></li>
+<li class="chapter" data-level="5.2" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#questions-4"><i class="fa fa-check"></i><b>5.2</b> Questions</a></li>
+<li class="chapter" data-level="5.3" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#objectives-3"><i class="fa fa-check"></i><b>5.3</b> Objectives</a></li>
+<li class="chapter" data-level="5.4" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#the-anatomy-of-an-rmarkdown-document"><i class="fa fa-check"></i><b>5.4</b> The anatomy of an rmarkdown document</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#metadata"><i class="fa fa-check"></i><b>5.4.1</b> Metadata</a></li>
+<li class="chapter" data-level="5.4.2" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#text"><i class="fa fa-check"></i><b>5.4.2</b> Text</a></li>
+<li class="chapter" data-level="5.4.3" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#code"><i class="fa fa-check"></i><b>5.4.3</b> Code</a></li>
+<li class="chapter" data-level="5.4.4" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#chunk-names"><i class="fa fa-check"></i><b>5.4.4</b> Chunk names</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#code-chunk-options"><i class="fa fa-check"></i><b>5.5</b> Code chunk options</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#inline-code"><i class="fa fa-check"></i><b>5.5.1</b> Inline code</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#creating-an-rmarkdown-document"><i class="fa fa-check"></i><b>5.6</b> Creating an rmarkdown document</a></li>
+<li class="chapter" data-level="5.7" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#working-with-an-rmarkdown-document"><i class="fa fa-check"></i><b>5.7</b> Working with an rmarkdown document</a><ul>
+<li class="chapter" data-level="5.7.1" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#your-turn-5"><i class="fa fa-check"></i><b>5.7.1</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#nicks-rmarkdown-hygiene-reccommendations"><i class="fa fa-check"></i><b>5.8</b> Nick’s rmarkdown hygiene reccommendations</a></li>
+<li class="chapter" data-level="5.9" data-path="using-rmarkdown.html"><a href="using-rmarkdown.html#your-turn-6"><i class="fa fa-check"></i><b>5.9</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="html-pdf-and-word-and-more.html"><a href="html-pdf-and-word-and-more.html"><i class="fa fa-check"></i><b>6</b> HTML, PDF, and Word (and more!)</a><ul>
+<li class="chapter" data-level="6.1" data-path="html-pdf-and-word-and-more.html"><a href="html-pdf-and-word-and-more.html#overview-5"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
+<li class="chapter" data-level="6.2" data-path="html-pdf-and-word-and-more.html"><a href="html-pdf-and-word-and-more.html#questions-5"><i class="fa fa-check"></i><b>6.2</b> Questions</a></li>
+<li class="chapter" data-level="6.3" data-path="html-pdf-and-word-and-more.html"><a href="html-pdf-and-word-and-more.html#objectives-4"><i class="fa fa-check"></i><b>6.3</b> Objectives</a></li>
+<li class="chapter" data-level="6.4" data-path="html-pdf-and-word-and-more.html"><a href="html-pdf-and-word-and-more.html#how-do-i-convert-to-html-pdf-or-word"><i class="fa fa-check"></i><b>6.4</b> How do I convert to HTML, PDF, or Word?</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="html-pdf-and-word-and-more.html"><a href="html-pdf-and-word-and-more.html#a-note-on-workflow-with-rmarkdown-html-first-pdfword-later"><i class="fa fa-check"></i><b>6.4.1</b> A note on workflow with rmarkdown: HTML first, PDF/word later</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="html-pdf-and-word-and-more.html"><a href="html-pdf-and-word-and-more.html#your-turn-7"><i class="fa fa-check"></i><b>6.5</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html"><i class="fa fa-check"></i><b>7</b> Keyboard Shortcuts</a><ul>
+<li class="chapter" data-level="7.1" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#overview-6"><i class="fa fa-check"></i><b>7.1</b> Overview</a></li>
+<li class="chapter" data-level="7.2" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#questions-6"><i class="fa fa-check"></i><b>7.2</b> Questions</a></li>
+<li class="chapter" data-level="7.3" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#objectives-5"><i class="fa fa-check"></i><b>7.3</b> Objectives</a></li>
+<li class="chapter" data-level="7.4" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#gifs-of-the-action"><i class="fa fa-check"></i><b>7.4</b> Gifs of the action</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#knit-document"><i class="fa fa-check"></i><b>7.4.1</b> Knit document</a></li>
+<li class="chapter" data-level="7.4.2" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#insert-chunk"><i class="fa fa-check"></i><b>7.4.2</b> Insert Chunk</a></li>
+<li class="chapter" data-level="7.4.3" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#run-current-chunk"><i class="fa fa-check"></i><b>7.4.3</b> Run Current Chunk</a></li>
+<li class="chapter" data-level="7.4.4" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#jump-to"><i class="fa fa-check"></i><b>7.4.4</b> Jump to</a></li>
+<li class="chapter" data-level="7.4.5" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#create-multiple-cursors"><i class="fa fa-check"></i><b>7.4.5</b> Create multiple cursors</a></li>
+<li class="chapter" data-level="7.4.6" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#delete-the-current-line"><i class="fa fa-check"></i><b>7.4.6</b> Delete the current line</a></li>
+<li class="chapter" data-level="7.4.7" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#uncomment-out-a-line"><i class="fa fa-check"></i><b>7.4.7</b> Un/Comment out a line</a></li>
+<li class="chapter" data-level="7.4.8" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#reformat-section"><i class="fa fa-check"></i><b>7.4.8</b> Reformat Section</a></li>
+<li class="chapter" data-level="7.4.9" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#show-keyboard-shortcut-reference"><i class="fa fa-check"></i><b>7.4.9</b> Show Keyboard Shortcut Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#table-of-common-shortcuts"><i class="fa fa-check"></i><b>7.5</b> Table of Common Shortcuts</a></li>
+<li class="chapter" data-level="7.6" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#further-reading"><i class="fa fa-check"></i><b>7.6</b> Further Reading</a></li>
+<li class="chapter" data-level="7.7" data-path="keyboard-shortcuts.html"><a href="keyboard-shortcuts.html#your-turn-8"><i class="fa fa-check"></i><b>7.7</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html"><i class="fa fa-check"></i><b>8</b> Figures, Tables, Captions.</a><ul>
+<li class="chapter" data-level="8.1" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#overview-7"><i class="fa fa-check"></i><b>8.1</b> Overview</a></li>
+<li class="chapter" data-level="8.2" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#questions-7"><i class="fa fa-check"></i><b>8.2</b> Questions</a></li>
+<li class="chapter" data-level="8.3" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#objectives-6"><i class="fa fa-check"></i><b>8.3</b> Objectives</a></li>
+<li class="chapter" data-level="8.4" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#tables"><i class="fa fa-check"></i><b>8.4</b> Tables</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#demo"><i class="fa fa-check"></i><b>8.4.1</b> Demo</a></li>
+<li class="chapter" data-level="8.4.2" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#your-turn-9"><i class="fa fa-check"></i><b>8.4.2</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#figures"><i class="fa fa-check"></i><b>8.5</b> Figures</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#captions-for-figures"><i class="fa fa-check"></i><b>8.5.1</b> Captions for figures</a></li>
+<li class="chapter" data-level="8.5.2" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#your-turn-10"><i class="fa fa-check"></i><b>8.5.2</b> Your Turn</a></li>
+<li class="chapter" data-level="8.5.3" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#inserting-images"><i class="fa fa-check"></i><b>8.5.3</b> Inserting images</a></li>
+<li class="chapter" data-level="8.5.4" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#your-turn-11"><i class="fa fa-check"></i><b>8.5.4</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="figures-tables-captions-.html"><a href="figures-tables-captions-.html#summary-2"><i class="fa fa-check"></i><b>8.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="customising-your-figures.html"><a href="customising-your-figures.html"><i class="fa fa-check"></i><b>9</b> Customising your figures</a><ul>
+<li class="chapter" data-level="9.1" data-path="customising-your-figures.html"><a href="customising-your-figures.html#overview-8"><i class="fa fa-check"></i><b>9.1</b> Overview</a></li>
+<li class="chapter" data-level="9.2" data-path="customising-your-figures.html"><a href="customising-your-figures.html#questions-8"><i class="fa fa-check"></i><b>9.2</b> Questions</a></li>
+<li class="chapter" data-level="9.3" data-path="customising-your-figures.html"><a href="customising-your-figures.html#objectives-7"><i class="fa fa-check"></i><b>9.3</b> Objectives</a></li>
+<li class="chapter" data-level="9.4" data-path="customising-your-figures.html"><a href="customising-your-figures.html#which-chunk-options-should-you-care-about-for-this"><i class="fa fa-check"></i><b>9.4</b> Which chunk options should you care about for this?</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="customising-your-figures.html"><a href="customising-your-figures.html#your-turn-12"><i class="fa fa-check"></i><b>9.4.1</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="customising-your-figures.html"><a href="customising-your-figures.html#setting-global-options"><i class="fa fa-check"></i><b>9.5</b> Setting global options</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="customising-your-figures.html"><a href="customising-your-figures.html#your-turn-13"><i class="fa fa-check"></i><b>9.5.1</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="customising-your-figures.html"><a href="customising-your-figures.html#keeping-your-figures"><i class="fa fa-check"></i><b>9.6</b> Keeping your figures</a></li>
+<li class="chapter" data-level="9.7" data-path="customising-your-figures.html"><a href="customising-your-figures.html#your-turn-14"><i class="fa fa-check"></i><b>9.7</b> Your Turn</a></li>
+<li class="chapter" data-level="9.8" data-path="customising-your-figures.html"><a href="customising-your-figures.html#further-reading-1"><i class="fa fa-check"></i><b>9.8</b> Further Reading</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>10</b> Math</a><ul>
+<li class="chapter" data-level="10.1" data-path="math.html"><a href="math.html#overview-9"><i class="fa fa-check"></i><b>10.1</b> Overview</a></li>
+<li class="chapter" data-level="10.2" data-path="math.html"><a href="math.html#questions-9"><i class="fa fa-check"></i><b>10.2</b> Questions</a></li>
+<li class="chapter" data-level="10.3" data-path="math.html"><a href="math.html#objectives-8"><i class="fa fa-check"></i><b>10.3</b> Objectives</a></li>
+<li class="chapter" data-level="10.4" data-path="math.html"><a href="math.html#some-history-1"><i class="fa fa-check"></i><b>10.4</b> Some history</a></li>
+<li class="chapter" data-level="10.5" data-path="math.html"><a href="math.html#anatomy-of-equations"><i class="fa fa-check"></i><b>10.5</b> Anatomy of Equations</a></li>
+<li class="chapter" data-level="10.6" data-path="math.html"><a href="math.html#example-math-commands"><i class="fa fa-check"></i><b>10.6</b> Example math commands</a></li>
+<li class="chapter" data-level="10.7" data-path="math.html"><a href="math.html#exercise"><i class="fa fa-check"></i><b>10.7</b> Exercise</a></li>
+<li class="chapter" data-level="10.8" data-path="math.html"><a href="math.html#further-reading-2"><i class="fa fa-check"></i><b>10.8</b> Further Reading:</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="start.html"><a href="start.html"><i class="fa fa-check"></i><b>11</b> Citing Figures, Tables &amp; Sections</a><ul>
+<li class="chapter" data-level="11.1" data-path="start.html"><a href="start.html#overview-10"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
+<li class="chapter" data-level="11.2" data-path="start.html"><a href="start.html#questions-10"><i class="fa fa-check"></i><b>11.2</b> Questions</a></li>
+<li class="chapter" data-level="11.3" data-path="start.html"><a href="start.html#objectives-9"><i class="fa fa-check"></i><b>11.3</b> Objectives</a></li>
+<li class="chapter" data-level="11.4" data-path="start.html"><a href="start.html#how-to-refer-to-tables-and-figures-in-text"><i class="fa fa-check"></i><b>11.4</b> How to refer to tables and figures in text?</a></li>
+<li class="chapter" data-level="11.5" data-path="start.html"><a href="start.html#your-turn-15"><i class="fa fa-check"></i><b>11.5</b> Your Turn</a></li>
+<li class="chapter" data-level="11.6" data-path="start.html"><a href="start.html#referencing-a-figure"><i class="fa fa-check"></i><b>11.6</b> Referencing a figure</a><ul>
+<li class="chapter" data-level="11.6.1" data-path="start.html"><a href="start.html#demo-3"><i class="fa fa-check"></i><b>11.6.1</b> Demo</a></li>
+<li class="chapter" data-level="11.6.2" data-path="start.html"><a href="start.html#your-turn-16"><i class="fa fa-check"></i><b>11.6.2</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="11.7" data-path="start.html"><a href="start.html#referencing-a-table"><i class="fa fa-check"></i><b>11.7</b> Referencing a table</a><ul>
+<li class="chapter" data-level="11.7.1" data-path="start.html"><a href="start.html#your-turn-17"><i class="fa fa-check"></i><b>11.7.1</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="11.8" data-path="start.html"><a href="start.html#referencing-a-section"><i class="fa fa-check"></i><b>11.8</b> Referencing a section</a><ul>
+<li class="chapter" data-level="11.8.1" data-path="start.html"><a href="start.html#your-turn-18"><i class="fa fa-check"></i><b>11.8.1</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="11.9" data-path="start.html"><a href="start.html#one-small-note"><i class="fa fa-check"></i><b>11.9</b> One small note</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html"><i class="fa fa-check"></i><b>12</b> Citating Articles &amp; Bibliography Styles</a><ul>
+<li class="chapter" data-level="12.1" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html#overview-11"><i class="fa fa-check"></i><b>12.1</b> Overview</a></li>
+<li class="chapter" data-level="12.2" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html#questions-11"><i class="fa fa-check"></i><b>12.2</b> Questions</a></li>
+<li class="chapter" data-level="12.3" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html#objectives-10"><i class="fa fa-check"></i><b>12.3</b> Objectives</a></li>
+<li class="chapter" data-level="12.4" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html#how-to-cite-things"><i class="fa fa-check"></i><b>12.4</b> How to cite things</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html#what-is-a-.bib-file"><i class="fa fa-check"></i><b>12.4.1</b> What is a .bib file?</a></li>
+<li class="chapter" data-level="12.4.2" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html#and-how-do-i-generate-these-.bib-files"><i class="fa fa-check"></i><b>12.4.2</b> And how do I generate these .bib files?</a></li>
+<li class="chapter" data-level="12.4.3" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html#your-turn-19"><i class="fa fa-check"></i><b>12.4.3</b> ## Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html#how-to-change-the-bibliography-style"><i class="fa fa-check"></i><b>12.5</b> How to change the bibliography style</a><ul>
+<li class="chapter" data-level="12.5.1" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html#your-turn-20"><i class="fa fa-check"></i><b>12.5.1</b> ## Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="12.6" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html#how-to-move-the-bibliography-location"><i class="fa fa-check"></i><b>12.6</b> How to move the bibliography location</a><ul>
+<li class="chapter" data-level="12.6.1" data-path="citating-articles-bibliography-styles.html"><a href="citating-articles-bibliography-styles.html#your-turn-21"><i class="fa fa-check"></i><b>12.6.1</b> ## Your Turn</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="captioning-and-referencing-equations.html"><a href="captioning-and-referencing-equations.html"><i class="fa fa-check"></i><b>13</b> Captioning and referencing equations</a><ul>
+<li class="chapter" data-level="13.1" data-path="captioning-and-referencing-equations.html"><a href="captioning-and-referencing-equations.html#overview-12"><i class="fa fa-check"></i><b>13.1</b> Overview</a></li>
+<li class="chapter" data-level="13.2" data-path="captioning-and-referencing-equations.html"><a href="captioning-and-referencing-equations.html#questions-12"><i class="fa fa-check"></i><b>13.2</b> Questions</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="captioning-and-referencing-equations.html"><a href="captioning-and-referencing-equations.html#numbering-equations"><i class="fa fa-check"></i><b>13.2.1</b> Numbering equations</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="captioning-and-referencing-equations.html"><a href="captioning-and-referencing-equations.html#numbering-equations-1"><i class="fa fa-check"></i><b>13.3</b> Numbering equations</a></li>
+<li class="chapter" data-level="13.4" data-path="captioning-and-referencing-equations.html"><a href="captioning-and-referencing-equations.html#referencing-equations"><i class="fa fa-check"></i><b>13.4</b> Referencing equations</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html"><i class="fa fa-check"></i><b>14</b> Common Problems with rmarkdown (and some solutions)</a><ul>
+<li class="chapter" data-level="14.1" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#avoiding-problems"><i class="fa fa-check"></i><b>14.1</b> Avoiding problems</a></li>
+<li class="chapter" data-level="14.2" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#the-errors"><i class="fa fa-check"></i><b>14.2</b> The errors</a></li>
+<li class="chapter" data-level="14.3" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#duplication-duplicated-chunk-names"><i class="fa fa-check"></i><b>14.3</b> “Duplication”: Duplicated chunk names</a></li>
+<li class="chapter" data-level="14.4" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#not-what-i-ordered-objects-not-created-in-the-right-order"><i class="fa fa-check"></i><b>14.4</b> “Not what I ordered”: Objects not created in the right order</a></li>
+<li class="chapter" data-level="14.5" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#forgotten-trails-i-missing-or-or"><i class="fa fa-check"></i><b>14.5</b> “Forgotten Trails I”: Missing “,”, or “(”, “}”, or “’”</a></li>
+<li class="chapter" data-level="14.6" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#forgotten-trails-ii-chunk-option-with-trailing-or-not-input"><i class="fa fa-check"></i><b>14.6</b> “Forgotten Trails II”: Chunk option with trailing &quot;, or not input</a></li>
+<li class="chapter" data-level="14.7" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#forgotten-trail-iii"><i class="fa fa-check"></i><b>14.7</b> “Forgotten Trail III”:</a></li>
+<li class="chapter" data-level="14.8" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#the-path-not-taken-file-path-incorrect"><i class="fa fa-check"></i><b>14.8</b> “The Path Not Taken” File path incorrect</a></li>
+<li class="chapter" data-level="14.9" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#spolling-i-incorrectly-spelled-chunk-options"><i class="fa fa-check"></i><b>14.9</b> “Spolling I” Incorrectly spelled chunk options</a></li>
+<li class="chapter" data-level="14.10" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#spolling-ii-incorrectly-spelled-chunk-option-inputs"><i class="fa fa-check"></i><b>14.10</b> “Spolling II” Incorrectly spelled chunk option inputs</a></li>
+<li class="chapter" data-level="14.11" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#the-legend-of-link-i-your-images-in-dont-work."><i class="fa fa-check"></i><b>14.11</b> “The Legend of Link I”: Your images in <code>![]()</code> don’t work.</a></li>
+<li class="chapter" data-level="14.12" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#latex-errors"><i class="fa fa-check"></i><b>14.12</b> LaTeX errors</a></li>
+<li class="chapter" data-level="14.13" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#i-want-to-include-inline-r-code-verbatim-to-show-an-example"><i class="fa fa-check"></i><b>14.13</b> I want to include inline R code verbatim to show an example</a></li>
+<li class="chapter" data-level="14.14" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#my-figure-or-table-isnt-being-cited"><i class="fa fa-check"></i><b>14.14</b> My Figure or Table isn’t being cited</a></li>
+<li class="chapter" data-level="14.15" data-path="common-problems-with-rmarkdown-and-some-solutions.html"><a href="common-problems-with-rmarkdown-and-some-solutions.html#your-turn-22"><i class="fa fa-check"></i><b>14.15</b> Your Turn</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="different-outputs-and-extensions.html"><a href="different-outputs-and-extensions.html"><i class="fa fa-check"></i><b>15</b> Different Outputs and Extensions</a><ul>
+<li class="chapter" data-level="15.1" data-path="different-outputs-and-extensions.html"><a href="different-outputs-and-extensions.html#alternative-output-formats"><i class="fa fa-check"></i><b>15.1</b> Alternative output formats</a></li>
+<li class="chapter" data-level="15.2" data-path="different-outputs-and-extensions.html"><a href="different-outputs-and-extensions.html#tufte"><i class="fa fa-check"></i><b>15.2</b> Tufte</a><ul>
+<li class="chapter" data-level="15.2.1" data-path="different-outputs-and-extensions.html"><a href="different-outputs-and-extensions.html#for-journals"><i class="fa fa-check"></i><b>15.2.1</b> For Journals</a></li>
+<li class="chapter" data-level="15.2.2" data-path="different-outputs-and-extensions.html"><a href="different-outputs-and-extensions.html#apa"><i class="fa fa-check"></i><b>15.2.2</b> APA</a></li>
+<li class="chapter" data-level="15.2.3" data-path="different-outputs-and-extensions.html"><a href="different-outputs-and-extensions.html#misc"><i class="fa fa-check"></i><b>15.2.3</b> Misc</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="next-steps.html"><a href="next-steps.html"><i class="fa fa-check"></i><b>16</b> Next Steps</a><ul>
+<li class="chapter" data-level="16.1" data-path="next-steps.html"><a href="next-steps.html#learn-how-to-use-git-and-github"><i class="fa fa-check"></i><b>16.1</b> Learn how to use git and github</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>17</b> References</a></li>
+<li class="chapter" data-level="18" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i><b>18</b> Acknowledgements</a></li>
+<li class="chapter" data-level="19" data-path="templates.html"><a href="templates.html"><i class="fa fa-check"></i><b>19</b> Templates</a><ul>
+<li class="chapter" data-level="19.1" data-path="templates.html"><a href="templates.html#controlling-the-outputs"><i class="fa fa-check"></i><b>19.1</b> Controlling the outputs</a><ul>
+<li class="chapter" data-level="19.1.1" data-path="templates.html"><a href="templates.html#options-for-html"><i class="fa fa-check"></i><b>19.1.1</b> Options for HTML</a></li>
+<li class="chapter" data-level="19.1.2" data-path="templates.html"><a href="templates.html#options-for-pdf"><i class="fa fa-check"></i><b>19.1.2</b> Options for PDF</a></li>
+<li class="chapter" data-level="19.1.3" data-path="templates.html"><a href="templates.html#options-for-word"><i class="fa fa-check"></i><b>19.1.3</b> Options for Word</a></li>
+</ul></li>
+<li class="chapter" data-level="19.2" data-path="templates.html"><a href="templates.html#how-do-i-set-options-specific-to-each-output"><i class="fa fa-check"></i><b>19.2</b> How do I set options specific to each output</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>20</b> FAQ</a><ul>
+<li class="chapter" data-level="20.1" data-path="faq.html"><a href="faq.html#how-can-i-include-a-screenshot-of-an-interactive-graphic-in-pdf-or-word"><i class="fa fa-check"></i><b>20.1</b> How can I include a screenshot of an interactive graphic in PDF or Word?</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="html-document-extensions.html"><a href="html-document-extensions.html"><i class="fa fa-check"></i><b>21</b> HTML document extensions</a><ul>
+<li class="chapter" data-level="21.0.1" data-path="html-document-extensions.html"><a href="html-document-extensions.html#adding-tab-sets"><i class="fa fa-check"></i><b>21.0.1</b> Adding Tab sets</a></li>
+<li class="chapter" data-level="21.0.2" data-path="html-document-extensions.html"><a href="html-document-extensions.html#floating-table-of-contents"><i class="fa fa-check"></i><b>21.0.2</b> Floating table of contents</a></li>
+<li class="chapter" data-level="21.1" data-path="html-document-extensions.html"><a href="html-document-extensions.html#your-turn-23"><i class="fa fa-check"></i><b>21.1</b> Your turn</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">RMarkdown for Scientists</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">RMarkdown for Scientists</h1>
+<p class="author"><em>Nicholas Tierney</em></p>
+<p class="date"><em>2019-05-15</em></p>
+</div>
+<div id="about-this" class="section level1 unnumbered">
+<h1>About this</h1>
+<p>This is a book on rmarkdown, aimed for scientists. It was initially developed as a 3 hour workshop, but is now developed into a resource that will grow and change over time as a <strong>living book</strong>.</p>
+<p>This book aims to teach the following:</p>
+<ul>
+<li>Getting started with your own R Markdown document</li>
+<li>Improve workflow:
+<ul>
+<li>With rstudio projects</li>
+<li>Using keyboard shortcuts</li>
+</ul></li>
+<li>Export your R Markdown document to PDF, HTML, and Microsoft Word</li>
+<li>Better manage figures and tables
+<ul>
+<li>Reference figures and tables in text so that they dynamically update</li>
+<li>Create captions for figures and tables</li>
+<li>Change the size and type of figures</li>
+<li>Save the figures to disk when creating an rmarkdown document</li>
+</ul></li>
+<li>Work with equations
+<ul>
+<li>inline and display</li>
+<li>caption equations</li>
+<li>reference equations</li>
+</ul></li>
+<li>Manage bibliographies
+<ul>
+<li>Cite articles in text</li>
+<li>generate bibliographies</li>
+<li>Change bibliography styles</li>
+</ul></li>
+<li>Debug and handle common errors with rmarkdown</li>
+<li>Next steps in working with rmarkdown - how to extend yourself to other rmarkdown formats</li>
+</ul>
+<div id="why-write-this-as-a-book" class="section level2">
+<h2><span class="header-section-number">0.1</span> Why write this as a book?</h2>
+<p>There are many great books on rmarkdown and it’s various features, such as <a href="https://bookdown.org/yihui/rmarkdown/">“Rmarkdown: The definitive guide”</a>, <a href="https://bookdown.org/yihui/bookdown/">“bookdown: Authoring Books and Technical Documents with R Markdown”</a>, and <a href="https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963">“Dynamic Documents with R and knitr, Second edition”</a>, and Yihui Xie’s thesis, <a href="https://lib.dr.iastate.edu/etd/13518/">“Dynamic Graphics and Reporting for Statistics”</a>.</p>
+<blockquote>
+<p>So why write a book?</p>
+</blockquote>
+<p>Good question. The answer is that writing this as a book provides a way for me to structure the content in the form of a workshop, in a way suitable for learning in a few hours.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+</div>
+<div id="how-to-use-this-book" class="section level2">
+<h2><span class="header-section-number">0.2</span> How to use this book</h2>
+<p>This book was written to provide course materials for a 3 hour course on rmarkdown.</p>
+<p>We worked through the following sections in the book in 3 hours:</p>
+<ul>
+<li><a href="why-rmd">Why use Rmarkdown</a></li>
+<li><a href="installation">Installation</a></li>
+<li><a href="rstudio">what is rstudio?</a></li>
+<li><a href="workflow">suggested workflow and hygiene</a></li>
+<li><a href="using-rmd">how to use rmarkdown</a></li>
+<li><a href="pdf-html-word">using rmarkdown with pdf, html, and word</a></li>
+<li><a href="keyboard-shortcuts">what are some useful keyboard shortcuts</a></li>
+<li><a href="figures-tables-captions">Adding captions to tables and figures</a></li>
+<li><a href="changing-figures">Changing figures</a></li>
+<li><a href="math">Adding mathematics</a></li>
+<li><a href="cite-fig-tab-sec">Citing Figures and Tables</a></li>
+<li><a href="citations-and-styles">Changing Citations and styles</a></li>
+</ul>
+<p>With the remaining sections being used as extra material, or have since been written after the course:</p>
+<ul>
+<li><a href="common-problems">Fixing some common problems in rmarkdown</a></li>
+<li><a href="alternative-outputs-and-exts">What are some alternative outputs of rmarkdown?</a></li>
+<li><a href="next-steps">Where to go next?</a></li>
+<li><a href="references">Suggested references</a></li>
+</ul>
+<p>Course materials can be downloaded by using the following command from the <code>usethis</code> package:</p>
+<pre class="sourceCode r"><code class="sourceCode r">usethis<span class="op">::</span><span class="kw">use_course</span>(<span class="st">&quot;bit.ly/rmd4sci-monash&quot;</span>)</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="why-rmarkdown.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/njtierney/rmd4sci/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["_rmd4sci.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
