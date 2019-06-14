@@ -168,6 +168,18 @@ because it was written as:
 # Citing Figures, Tables & Sections {#start}
 ```
 
+**One note here - your slug can not start with a number**. Otherwise, it will print out the slug. So the following would not work:
+
+```
+## 10 rules {#10-rules}
+```
+
+You should instead write:
+
+```
+## 10 rules {#ten-rules}
+```
+
 ### Your Turn {.exercise}
 
 1. Reference a section in the report.
