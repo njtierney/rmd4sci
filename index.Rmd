@@ -4,7 +4,7 @@ author: "Nicholas Tierney"
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
 description: "A book created for a 3 hour workshop on rmarkdown"
-documentclass: book
+documentclass: krantz
 site: bookdown::bookdown_site
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike

@@ -1,4 +1,4 @@
-book_filename: "_rmd4sci.md"
+book_filename: rmd4sci
 output_dir: _book
 repo: https://github.com/njtierney/rmd4sci
 css: style.css
