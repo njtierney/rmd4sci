@@ -1,4 +1,4 @@
-# Citating Articles & Bibliography Styles
+# Citing Articles & Bibliography Styles
 
 Now that you are near the end of your data analysis, you want to make sure that you've ~~plugged in the gaps of REF1 REF2 and so on~~ correctly cited the articles and software you wanted to mention.
 

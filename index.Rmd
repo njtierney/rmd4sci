@@ -2,11 +2,16 @@
 title: "RMarkdown for Scientists"
 author: "Nicholas Tierney"
 date: "`r Sys.Date()`"
+knit: "bookdown::render_book"
 description: "A book created for a 3 hour workshop on rmarkdown"
 documentclass: book
 site: bookdown::bookdown_site
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
+colorlinks: yes
+fontsize: 12pt
+monofont: "Source Code Pro"
+monofontoptions: "Scale=0.7"
 link-citations: yes
 url: 'https\://rmd4sci.njtierney.com/'
 ---

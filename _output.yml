@@ -1,13 +1,15 @@
 bookdown::gitbook:
+  dev: svglite
   css: style.css
+  split_by: section
   config:
     toc:
-      collapse: section
+      collapse: none
       before: |
         <li><a href="./">R Markdown for Scientists</a></li>
       after: |
         <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
-    download: [pdf]
+    download: [pdf, epub, mobi]
     edit: https://github.com/njtierney/rmd4sci/edit/master/%s
     sharing:
       github: yes
@@ -20,10 +22,17 @@ bookdown::pdf_book:
     in_header: latex/preamble.tex
     before_body: latex/before_body.tex
     after_body: latex/after_body.tex
-  keep_tex: yes
+  keep_tex: true
+  dev: "cairo_pdf"
   latex_engine: xelatex
-  pandoc_args: [--top-level-division=chapter, --wrap=none]
+  citation_package: natbib
+  template: null
+  pandoc_args: --top-level-division=chapter
   toc_depth: 3
-  toc_unnumbered: no
-  toc_appendix: yes
-  highlight_bw: yes
+  toc_unnumbered: false
+  toc_appendix: true
+  quote_footer: ["\\VA{", "}{}"]
+  highlight_bw: true
+bookdown::epub_book:
+  dev: svglite
+  stylesheet: style.css
