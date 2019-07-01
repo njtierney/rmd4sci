@@ -17,6 +17,7 @@ Imports:
     here,
     remotes,
     curl,
+    svglite
     git2r,
     dplyr,
     ggplot2,
