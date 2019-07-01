@@ -1,5 +1,4 @@
 bookdown::gitbook:
-  dev: svglite
   css: style.css
   split_by: section
   config:
@@ -34,5 +33,4 @@ bookdown::pdf_book:
   quote_footer: ["\\VA{", "}{}"]
   highlight_bw: true
 bookdown::epub_book:
-  dev: svglite
   stylesheet: style.css
