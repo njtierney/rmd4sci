@@ -82,6 +82,6 @@ With the remaining sections being used as extra material, or have since been wri
 Course materials can be downloaded by using the following command from the `usethis` package:
 
 ```{r use-course, echo = TRUE, eval = FALSE}
-usethis::use_course("bit.ly/rmd4sci-monash")
+usethis::use_course("bit.ly/rmd4sci-canberra")
 ```
 

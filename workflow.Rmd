@@ -158,7 +158,7 @@ Let's open one together.
 1. Run the following code to start a new rstudio project called "rmd4sci-monash"
 
 ```r
-usethis::use_course("bit.ly/rmd4sci-monash")
+usethis::use_course("bit.ly/rmd4sci-canberra")
 ```
 
 2. Follow the prompts to download this to your desktop and then run the rstudio project. (You can move it later if you like!)

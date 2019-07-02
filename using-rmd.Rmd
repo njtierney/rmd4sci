@@ -30,7 +30,7 @@ This is an rmarkdown document (demo). It has three parts:
 
 The metadata of the document tells you how it is formed - what the title is, what date to put, and other control information.  If you're familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, etc at the front matter.
 
-Rmarkdown documents use YAML (Yet Another Markup Language) to provide the metadata. It looks like this.
+Rmarkdown documents use YAML (YAML Ain't Markup Language) to provide the metadata. It looks like this.
 
 ```YAML
 ---
