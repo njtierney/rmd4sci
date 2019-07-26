@@ -2,7 +2,7 @@ bookdown::gitbook:
   css: style.css
   config:
     toc:
-      collapse: none
+      collapse: section
       before: |
         <li><a href="./">R Markdown for Scientists</a></li>
       after: |
