@@ -40,7 +40,7 @@ output: html_document
 ---
 ```
 
-It starts an ends with three dashes `---`, and has fields like the following: `title`, `author`, and `output`.
+It starts and ends with three dashes `---`, and has fields like the following: `title`, `author`, and `output`.
 
 The options in the YAML are actually passed down into the `render` function under the hood.
 
