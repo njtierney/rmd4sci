@@ -16,6 +16,8 @@ env:
 
 script:
 - Rscript -e 'bookdown::render_book("index.Rmd")'
+- Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book', quiet = TRUE)"
+- Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book', quiet = TRUE)"
 
 deploy:
   - provider: script
