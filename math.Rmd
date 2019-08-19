@@ -41,6 +41,8 @@ E = mc^2
 $$
 ```
 
+<!-- TODO: will need to display the unevaluated LaTeX code? -->
+
 $$
 E = mc^2
 $$
