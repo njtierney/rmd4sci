@@ -97,7 +97,7 @@ With very little marking up, we can create rich text, that **actually resembles*
 
 Some other nice features of markdown include:
 
-|  thing          | markdown      | rendered     |
+|  feature        | markdown      | rendered     |
 |----------------:|--------------:|:-------------|
 |  superscript    |  `2^nd^`      | 2^nd^        |
 |  subscript      |  `CO~2~`      | CO~2~        |
