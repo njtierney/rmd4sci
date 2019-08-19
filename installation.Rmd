@@ -50,7 +50,7 @@ install.packages("fs")
 
 rmarkdown documents can be compiled to PDF, which is a great feature. In order to convert the documents to PDF, they use a software called LaTeX (\LaTeX) (pronounced la-tek or lay-tek). 
 
-Installing LaTeX [can be a pain](https://yihui.name/tinytex/pain/), but thankfully there is an easier way to instlal it - [`tinytex`](https://yihui.name/tinytex/). `tinytex` is an R package that installs a sane, lightweight (<200Mb) version of LaTeX. 
+Installing LaTeX [can be a pain](https://yihui.name/tinytex/pain/), but thankfully there is an easier way to install it - [`tinytex`](https://yihui.name/tinytex/). `tinytex` is an R package that installs a sane, lightweight (<200Mb) version of LaTeX. 
 
 ```{r run-tiny-tex, eval = FALSE}
 tinytex::install_tinytex()
@@ -64,11 +64,11 @@ Error: Detected an existing tlmgr at /usr/local/bin/tlmgr. It seems TeX Live has
 
 ### Problem solving with LaTeX
 
-If you have any problems with installing `tinytex`, I reccomend you check out the [tinytex FAQ page](https://yihui.name/tinytex/faq/).
+If you have any problems with installing `tinytex`, I recommend you check out the [tinytex FAQ page](https://yihui.name/tinytex/faq/).
 
 ## Test Script
 
-You should be able to fun the following code on your machine
+You should be able to run the following code on your machine
 
 ```{r library-test, eval = FALSE}
 library(rmarkdown)
