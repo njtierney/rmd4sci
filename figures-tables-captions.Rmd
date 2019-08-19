@@ -133,6 +133,8 @@ gapminder %>%
   geom_point()
 ```
 
+<!-- TODO: needs to be effectively evaluated? Little convoluted with the many backticks involved... -->
+
 ### Your Turn {.exercise}
 
 * Create a plot with your .Rmd doc
