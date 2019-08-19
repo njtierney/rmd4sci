@@ -23,7 +23,7 @@ Here are three ways to do this:
 
 1. You can control this in the "knit" button
 
-```{r knit-screenshot, eval = FALSE}
+```{r knit-screenshot, eval = TRUE, echo = FALSE}
 knitr::include_graphics("figs/rstudio-knit-button")
 ```
 
