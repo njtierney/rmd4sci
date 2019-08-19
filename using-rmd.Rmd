@@ -214,7 +214,7 @@ What's great about this is that if your data changes upstream, then you don't ne
 <!-- - Keep it simple -->
 <!-- - focus on content -->
 
-## Nick's rmarkdown hygiene reccommendations
+## Nick's rmarkdown hygiene recommendations
 
 I highly recommend that each document you write has three chunks at the top.
 
