@@ -63,7 +63,7 @@ knitr::opts_chunk$set(chunk_option1 = TRUE, ...)
 
 ## Keeping your figures {.demo}
 
-You can set the options for your figures, which will change how they appear on the page, but this won't save the figures anywhere. In order to save the figures to file, you need to et the YAML option `keep_md: true`:
+You can set the options for your figures, which will change how they appear on the page, but this won't save the figures anywhere. In order to save the figures to file, you need to edit the YAML option `keep_md: true`:
 
 ```YAML
 ---
