@@ -5,6 +5,7 @@ css: style.css
 new_session: yes # this knits each chapter separately in a new session
 delete_merged_file: true
 rmd_files: [ "index.Rmd",
+             "license.Rmd",
              "why-rmd.Rmd",
              "installation.Rmd",
              "rstudio.Rmd",
