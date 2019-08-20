@@ -13,7 +13,7 @@
 
 ## Objectives
 
-* Get familiarised with RStudio, get set up with not storing session info
+* Get familiarised with RStudio, get set up with not storing the workspace
 * Download the course materials for the workshop
 
 ## What is RStudio, and why should I use it?
@@ -61,7 +61,7 @@ knitr::include_graphics("figs/rstudio-remove-data.png")
 This means that you won't save the objects and other things that you create in your R session and reload them. This is important for two reasons
 
 1. **Reproducibility**: you don't want to have objects from last week cluttering your session
-2. **Privacy**: you don't want to save private date or other things to your session. You only want to read these in.
+2. **Privacy**: you don't want to save private data or other things to your session. You only want to read these in.
 
 Your "history" is the commands that you have entered into R.
 

@@ -70,7 +70,7 @@ This is painful. And when you do this all the time, it gets old, fast.
 So, this might all be a bit confusing if you don't know what a file path is. Briefly, a file path is the machine-readable directions to where files on your computer live. So, the file path:
 
 ```
-Users/njtierney/rmd4sci-materials/demo-gapminder.Rmd
+/Users/njtierney/rmd4sci-materials/demo-gapminder.Rmd
 ```
 
 Describes the location of the file "demo-gapminder.Rmd". This could be visualised as:
@@ -102,7 +102,7 @@ gsub(pattern = "/",
 So, if you want to read in the `gapminder.csv` file, you might need to write code like this:
 
 ```r
-gapminder <- read_csv("Users/njtierney/Desktop/rmd4sci-materials/data/gapminder.csv")
+gapminder <- read_csv("/Users/njtierney/Desktop/rmd4sci-materials/data/gapminder.csv")
 ```
 
 As we now know, this is a problem, because this is not portable code.
@@ -115,7 +115,7 @@ gapminder <- read_csv("data/gapminder.csv")
 
 ## Your Turn {.exercise}
 
-* (1-2 minutes) What folders are above the `health.csv` file in the following given string? `"users/miles/etc1010/week1/data/health.csv"`
+* (1-2 minutes) What folders are above the `health.csv` file in the following given string? `"/Users/miles/etc1010/week1/data/health.csv"`
 
 * What would be the result of using the following code in `demo-gapminder.Rmd`, and then using the code, and then moving this to another location, say inside your C drive?
 
@@ -155,7 +155,7 @@ Let's open one together.
 
 ## Your Turn: Use your own rstudio project {.exercise}
 
-1. Run the following code to start a new rstudio project called "rmd4sci-monash"
+1. Run the following code to start a new rstudio project called "rmd4sci-canberra"
 
 ```r
 usethis::use_course("bit.ly/rmd4sci-canberra")
@@ -174,7 +174,7 @@ usethis::use_course("bit.ly/rmd4sci-canberra")
 
 ## The "here" package
 
-Although tStudio projects help resolve file path problems, in some cases you might have many folders in your r project. To help navigate them appropriately, you can use the `here` package to provide the full path directory, in a compact way.
+Although RStudio projects help resolve file path problems, in some cases you might have many folders in your r project. To help navigate them appropriately, you can use the `here` package to provide the full path directory, in a compact way.
 
 ```r
 here::here("data")
@@ -195,7 +195,7 @@ here::here("data", "gapminder.csv")
 returns
 
 ```
-[1] "/Users/ntie0001/Desktop/rmd4sci-materials/data/gapminder.csv"
+[1] "/Users/njtierney/Desktop/rmd4sci-materials/data/gapminder.csv"
 ```
 
 You can read the above `here` code as:
@@ -257,7 +257,9 @@ And click "create project".
 knitr::include_graphics(here::here("figs", "rstudio-create-proj-4.png"))
 ```
 
-Done!
+D<!-- TODO: need to update image? -->
+
+one!
 
 ## Summary
 

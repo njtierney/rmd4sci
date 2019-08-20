@@ -27,7 +27,18 @@ To add a tab set, you include `{.tabset}` after your heading
 
 ### Floating table of contents
 
-A floating table of contents can be added
+A floating table of contents can be added with the following lines in the YAML header:
+
+```YAML
+---
+title: "Your title"
+author: "Your name"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+```
 
 ## Your turn {.exercise}
 
