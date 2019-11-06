@@ -40,7 +40,14 @@ output: html_document
 ---
 ```
 
-It starts and ends with three dashes `---`, and has fields like the following: `title`, `author`, and `output`.
+It starts and ends with three dashes `---`, and has fields like the following: `title`, `author`, and `output`. 
+
+The title and author are special inputs which place the title and author information at the top of the document in large font. They are optional!
+
+output: `html_document` tells us we want this to be a HTML document - you'll see what this looks like in a moment!
+
+
+#### Some extra details
 
 The options in the YAML are actually passed down into the `render` function under the hood.
 
@@ -56,7 +63,7 @@ output:
 is the same as:
 
 ```r
-html_document(toc = TRUE, toc_depth = 2)
+render(file.Rmd, output_format = html_document(toc = TRUE, toc_depth = 2))
 ```
 
 ### Text
