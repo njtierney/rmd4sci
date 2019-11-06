@@ -58,7 +58,7 @@ data <- read_csv("c:/really/long/file/path/to/this/directory/data/mydata.csv")
 
 So while this has the effect of **making the file paths work in your file**, it is a problem. It is a problem because, among other things, using `setwd()` like this:
 
-* Has 0% chance of working on someone else's machine (**this includes you in >6 months**)
+* Has 0% chance of working on someone else's machine (**this could include you in 6 months!**)
 * Your file is not self-contained and portable. (Think: _"What if this folder moved to /Downloads, or onto another machine?"_)
 
 So, to get this to work, you need to hand edit the file path to your machine. 
@@ -67,20 +67,20 @@ This is painful. And when you do this all the time, it gets old, fast.
 
 ## What is a file path?
   
-So, this might all be a bit confusing if you don't know what a file path is. Briefly, a file path is the machine-readable directions to where files on your computer live. So, the file path:
+So, this might all be a bit confusing if you don't know what a file path is. A file path is the machine-readable directions to where files on your computer live. So, the file path:
 
 ```
-/Users/njtierney/rmd4sci-materials/demo-gapminder.Rmd
+/Users/njtierney/rmd4sci-materials/demo.R
 ```
 
-Describes the location of the file "demo-gapminder.Rmd". This could be visualised as:
+Describes the location of the file "demo.R". This could be visualised as:
 
 ```
 users
   └── njtierney
       └── Desktop
           └──  rmd4sci-materials
-               └──  demo.R
+               └── demo.R << THIS IS THE FILE HERE
                └── exercises
                └── exploratory-data-analysis
                    └── eda-document.Rmd
@@ -158,7 +158,7 @@ Let's open one together.
 1. Run the following code to start a new rstudio project called "rmd4sci-canberra"
 
 ```r
-usethis::use_course("bit.ly/rmd4sci-canberra")
+usethis::use_course("bit.ly/rmd4sci-materials")
 ```
 
 2. Follow the prompts to download this to your desktop and then run the rstudio project. (You can move it later if you like!)
@@ -171,6 +171,8 @@ usethis::use_course("bit.ly/rmd4sci-canberra")
 2. Why does the `read_csv` code work?
 3. Run the code inside the `exploratory-data-analysis` folder - `eda-script.R`.
 4. Does the `read_csv` code work?
+5. Run the code inside the `exploratory-data-analysis` folder - `eda-document.Rmd`, by clicking the "knit" button (we'll go into this in more detail soon!)
+6. Does it work?
 
 ## The "here" package
 
@@ -257,9 +259,9 @@ And click "create project".
 knitr::include_graphics(here::here("figs", "rstudio-create-proj-4.png"))
 ```
 
-D<!-- TODO: need to update image? -->
+D!-- TODO: need to update image? -->
 
-one!
+oDne!
 
 ## Summary
 
