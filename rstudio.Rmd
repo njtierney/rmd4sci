@@ -44,7 +44,7 @@ And the environment / history pain contains the list of things you have created,
 
 To first get set up, I highly recommend changing the following setting
 
-Tools > Global Options (Or `Cmd + ,`)
+Tools > Global Options (or `Cmd + ,` on Mac)
 
 Under the **General** tab:
 
