@@ -13,7 +13,8 @@
 
 ## Objectives
 
-* Get familiarised with RStudio, get set up with not storing the workspace
+* Get familiarised with RStudio
+* Get set up with not storing the RStudio workspace
 * Download the course materials for the workshop
 
 ## What is RStudio, and why should I use it?
@@ -23,8 +24,8 @@ If R is the engine and bare bones of your car, then RStudio is like _the rest of
 The RStudio layout has the following features:
 
 - On the upper left, the Rmarkdown script
-- On the lower left  The R console
-- On the lower right the view for files, plots, packages, help, and viewer.
+- On the lower left, the R console
+- On the lower right, the view for files, plots, packages, help, and viewer.
 - On the upper right, the environment / history pane
 
 
