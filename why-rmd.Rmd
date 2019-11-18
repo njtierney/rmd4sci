@@ -44,7 +44,7 @@ This was a popular idea, and it has had some interesting discussion and contribu
 
 ## Markdown as a new player to legibility
 
-In 2004, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), of [daring fireball](https://daringfireball.net/) created [Markdown](https://en.wikipedia.org/wiki/Markdown), a simple way to create text that rendered into a HTML webpage.
+In 2004, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), of [daring fireball](https://daringfireball.net/) created [Markdown](https://en.wikipedia.org/wiki/Markdown), a simple way to create text that rendered into an HTML webpage.
 
 ### A brief example of markdown
 
