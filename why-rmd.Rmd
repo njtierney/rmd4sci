@@ -1,6 +1,6 @@
 # Why RMarkdown
 
-The goal of this section is to briefly discuss why we want to learn rmarkdown, the benefits, and the barriers to using it.
+The goal of this section is to briefly discuss why we want to learn R Markdown, the benefits, and the barriers to using it.
 
 ## Overview
 
@@ -10,17 +10,17 @@ The goal of this section is to briefly discuss why we want to learn rmarkdown, t
 ## Questions
 
 * What is the value in a reproducible report?
-* What is markdown?
+* What is Markdown?
 * Can I combine my software and my writing?
 
 ## Objectives
 
-* [Learn how to use markdown](https://www.markdowntutorial.com/)
-* Think about why you want to use markdown
+* [Learn how to use Markdown](https://www.markdowntutorial.com/)
+* Think about why you want to use Markdown
 
 ## Your Turn {.exercise}
 
-1. **Why are we here** Form small groups of 2-4 with your neighbours and discuss how you expect learning rmarkdown might benefit you.
+1. **Why are we here** Form small groups of 2-4 with your neighbours and discuss how you expect learning R Markdown might benefit you.
 
 ## Reproducibility is a problem
 
@@ -44,7 +44,7 @@ This was a popular idea, and it has had some interesting discussion and contribu
 
 ## Markdown as a new player to legibility
 
-In 2004, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), of [daring fireball](https://daringfireball.net/) created a [markdown](https://en.wikipedia.org/wiki/Markdown), a simple way to create text that rendered into a HTML webpage.
+In 2004, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), of [daring fireball](https://daringfireball.net/) created [Markdown](https://en.wikipedia.org/wiki/Markdown), a simple way to create text that rendered into a HTML webpage.
 
 ### A brief example of markdown
 
@@ -95,7 +95,7 @@ __bold__, **bold**, _italic_, *italic*
 
 With very little marking up, we can create rich text, that **actually resembles** the text that we want to see.
 
-Some other nice features of markdown include:
+Some other nice features of Markdown include:
 
 |  feature        | markdown      | rendered     |
 |----------------:|--------------:|:-------------|
@@ -109,13 +109,13 @@ Some other nice features of markdown include:
 
 ## Your Turn {.exercise}
 
-1. **Learn to use markdown** In your small groups, spend five minutes working through this [brief online markdown tutorial](https://www.markdowntutorial.com/)
+1. **Learn to use Markdown** In your small groups, spend five minutes working through this [brief online Markdown tutorial](https://www.markdowntutorial.com/)
 
-## Rmarkdown helps complete the solution to the reproducibility problem
+## R Markdown helps complete the solution to the reproducibility problem
 
 So, how do we combine this with our R code, into a literate programming environment?
 
-`Rmarkdown` provides an environment where you can write your complete analysis, and marries your text, and code together into a rich document. You write your code as code chunks, put your text around that, and then hey presto, you have a document you can reproduce.
+`rmarkdown` provides an environment where you can write your complete analysis, and marries your text, and code together into a rich document. You write your code as code chunks, put your text around that, and then hey presto, you have a document you can reproduce.
 
 For example, look at the following report:
 
@@ -202,7 +202,7 @@ And what if someone wants to know _exactly_ how you did your analysis?
 
 This process isn't exactly sharable.
 
-But if you did it in rmarkdown?
+But if you did it in R Markdown?
 
 Just update the data, and render the document again, and get an updated document:
 
@@ -222,19 +222,19 @@ And we just pointed it to some different data. Then re-rendered it.
 
 That's it.
 
-That is why we use rmarkdown.
+That is why we use R Markdown.
 
 ## Summary
 
 In this section we've learned about:
 
 - What the value is in a reproducible report
-- What is markdown
+- What is Markdown
 - How to combine software and writing
-- How to use markdown
+- How to use Markdown
 
 ## Learning more
 
-- [rstudio's rmarkdown cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+- [rstudio's R Markdown cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
 
-- [Bookdown's section on markdown syntax](https://bookdown.org/yihui/bookdown/markdown-syntax.html)
+- [Bookdown's section on Markdown syntax](https://bookdown.org/yihui/bookdown/markdown-syntax.html)
