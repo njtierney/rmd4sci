@@ -231,7 +231,7 @@ In this section we've learned about:
 - What the value is in a reproducible report
 - What is Markdown
 - How to combine software and writing
-- How to use Markdown
+- How to use R Markdown
 
 ## Learning more
 
