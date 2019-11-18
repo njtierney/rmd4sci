@@ -190,11 +190,11 @@ Say you'd created your report by hand in microsoft word, and with a graphical us
 You would need to:
 
 1. Go back to the GUI, re run the analysis
-1. Import the results into excel
+1. Import the results into Excel
 1. Create your graph
-1. copy the graph into word
-1. copy the results of the coefficients into the text
-1. copy the results of the coefficient table into the text.
+1. Copy the graph into Word
+1. Copy the results of the coefficients into the text
+1. Copy the results of the coefficient table into the text.
 
 This is painful.
 
