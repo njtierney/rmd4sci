@@ -70,4 +70,4 @@ Additionally, not saving your history means that you won't be relying on things 
 
 ## Learning more
 
-- [rstudio IDE cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf)
+- [RStudio IDE cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf)
