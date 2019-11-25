@@ -33,7 +33,7 @@ This section is heavily influenced by [Jenny Bryan's great blog post on project 
 Sometimes this is the first line of an R Script or R markdown file.
 
 ```r
-setwd("c:/really/long/file/path/to/this/directory)
+setwd("c:/really/long/file/path/to/this/directory")
 ```
 
 #### Question {.question}
