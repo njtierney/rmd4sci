@@ -44,6 +44,7 @@ install.packages("here")
 install.packages("tidyverse")
 install.packages("broom")
 install.packages("fs")
+install.packages("usethis")
 ```
 
 ## A note on PDF
@@ -73,5 +74,10 @@ You should be able to run the following code on your machine
 ```{r library-test, eval = FALSE}
 library(rmarkdown)
 library(knitr)
+library(tinytex)
+library(here)
 library(tidyverse)
+library(broom)
+library(fs)
+library(usethis)
 ```
