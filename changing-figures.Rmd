@@ -37,7 +37,7 @@ For demonstration purposes, let's take a plot from earlier and show how it's out
 
 ### Your Turn {.exercise}
 
-1. Open exercise `ecercises/02-rmd-figures-chunks/02-rmd-figures-chunks.Rmd` Create three figures, each with the following attributes:
+1. Open exercise `exercises/02-rmd-figures-chunks/02-rmd-figures-chunks.Rmd` Create three figures, each with the following attributes:
     * 2x2
     * 10x10
     * 4x7

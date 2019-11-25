@@ -24,28 +24,28 @@ This book aims to teach the following:
 
 - Getting started with your own R Markdown document
 - Improve workflow:
-  - With rstudio projects
+  - With RStudio projects
   - Using keyboard shortcuts
 - Export your R Markdown document to PDF, HTML, and Microsoft Word
 - Better manage figures and tables
     - Reference figures and tables in text so that they dynamically update
     - Create captions for figures and tables
     - Change the size and type of figures
-    - Save the figures to disk when creating an rmarkdown document
+    - Save the figures to disk when creating an R Markdown document
 - Work with equations
-    - inline and display
-    - caption equations
-    - reference equations
+    - Inline and display
+    - Caption equations
+    - Reference equations
 - Manage bibliographies
-  - Cite articles in text
-  - generate bibliographies
-  - Change bibliography styles
-- Debug and handle common errors with rmarkdown
+    - Cite articles in text
+    - Generate bibliographies
+    - Change bibliography styles
+- Debug and handle common errors with R Markdown
 - Next steps in working with rmarkdown - how to extend yourself to other rmarkdown formats
     
 ## Why write this as a book?
 
-There are many great books on rmarkdown and it's various features, such as ["Rmarkdown: The definitive guide"](https://bookdown.org/yihui/rmarkdown/), ["bookdown: Authoring Books and Technical Documents with R Markdown"](https://bookdown.org/yihui/bookdown/), and ["Dynamic Documents with R and knitr, Second edition"](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963), and Yihui Xie's thesis, ["Dynamic Graphics and Reporting for Statistics"](https://lib.dr.iastate.edu/etd/13518/).
+There are many great books on R Markdown and it's various features, such as ["Rmarkdown: The definitive guide"](https://bookdown.org/yihui/rmarkdown/), ["bookdown: Authoring Books and Technical Documents with R Markdown"](https://bookdown.org/yihui/bookdown/), and ["Dynamic Documents with R and knitr, Second edition"](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963), and Yihui Xie's thesis, ["Dynamic Graphics and Reporting for Statistics"](https://lib.dr.iastate.edu/etd/13518/).
 
 > So why write a book?
 
@@ -53,27 +53,27 @@ Good question. The answer is that writing this as a book provides a way for me t
 
 ## How to use this book
 
-This book was written to provide course materials for a 3 hour course on rmarkdown.
+This book was written to provide course materials for a 3 hour course on R Markdown.
 
 We worked through the following sections in the book in 3 hours:
 
-- [Why use Rmarkdown](why-rmd)
+- [Why use R Markdown](why-rmd)
 - [Installation](installation)
-- [what is rstudio?](rstudio)
+- [what is RStudio?](rstudio)
 - [suggested workflow and hygiene](workflow)
-- [how to use rmarkdown](using-rmd)
-- [using rmarkdown with pdf, html, and word](pdf-html-word)
+- [how to use R Markdown](using-rmd)
+- [using R Markdown with pdf, html, and Word](pdf-html-word)
 - [what are some useful keyboard shortcuts](keyboard-shortcuts)
 - [Adding captions to tables and figures](figures-tables-captions)
 - [Changing figures](changing-figures)
 - [Adding mathematics](math)
-- [Citing Figures and Tables](cite-fig-tab-sec)
-- [Changing Citations and styles](citations-and-styles)
+- [Citing figures and tables](cite-fig-tab-sec)
+- [Changing citations and styles](citations-and-styles)
 
 With the remaining sections being used as extra material, or have since been written after the course:
 
-- [Fixing some common problems in rmarkdown](common-problems)
-- [What are some alternative outputs of rmarkdown?](alternative-outputs-and-exts)
+- [Fixing some common problems in R Markdown](common-problems)
+- [What are some alternative outputs of R Markdown?](alternative-outputs-and-exts)
 - [Where to go next?](next-steps)
 - [Suggested references](references)
 
