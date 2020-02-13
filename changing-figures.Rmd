@@ -28,7 +28,7 @@ There are many chunk options that control your output, but only a few that you r
 
 - `fig.align`: How do you want your figure aligned? Takes one of the following inputs: "default", "center", "left", or "right"? (**demo**)
 - `fig.cap`: Would you like a caption for your figure? It takes a character vector as input: "My Amazing Graph"
-- `fig.height` & `fig.width`: How tall and wide would you like your figure in inches? Takes one number (e.g., `7`, or `9`)
+- `fig.height` & `fig.width`: How tall and wide would you like your figure in inches? Each takes one number (e.g., 7, or 9) [Note: these numbers are not quoted]
 - `out.height` & `out.width`: The height and width of your plot in the final file. This can be handy if you like the current aspect ratio of your plot, but you want to shrink it by say 50% - which you would do with "50%". You can also include LaTeX output or HTML output. Say for example, ".8//linewidth" or "8cm" for LaTeX, or "300px" for HTML.
 
 For demonstration purposes, let's take a plot from earlier and show how it's output can change.
@@ -37,12 +37,13 @@ For demonstration purposes, let's take a plot from earlier and show how it's out
 
 ### Your Turn {.exercise}
 
-1. Open exercise `exercises/02-rmd-figures-chunks/02-rmd-figures-chunks.Rmd` Create three figures, each with the following attributes:
+1. Open exercise `exercises/02-rmd-figures-chunks/02-rmd-figures-chunks.Rmd` Create three figures, with the respective dimensions (`fig.height` and `fig.width`)
     * 2x2
     * 10x10
     * 4x7
-    * "center"
-    * "out.width = 50%"
+2. Now add to those figures, the following:
+    * `fig.align = "center"`
+    * `out.width = 50%`
 
 ## Setting global options
 
@@ -74,6 +75,15 @@ output:
     keep_md: true
 ---
 ```
+
+
+You'll notice that this creates some folders called "FILENAME_files" - you can control the specific name of the folder by setting `fig.path` like so:
+
+```r
+knitr::opts_chunk$set(fig.path = "figs")
+```
+
+Which would instead create a new folder aclled "figs".
 
 ## Your Turn {.exercise}
 

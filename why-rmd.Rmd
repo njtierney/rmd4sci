@@ -148,7 +148,7 @@ library(tidyverse)
 library(broom)
 ```
 
-`r ''```{r data-read-in, message = FALSE}
+`r ''````{r data-read-in, message = FALSE}
 data <- read_csv(here::here("data/oz_gapminder.csv"))
 ```
 
@@ -156,20 +156,20 @@ data <- read_csv(here::here("data/oz_gapminder.csv"))
 
 let's look at the lifespan
 
-`r ''```{r hist-life-exp}
+`r ''````{r hist-life-exp}
 hist(data$lifeExp)
 ```
 
 Let's fit a simple linear model of the effect of year on life expectancy
 
-`r ''```{r example-lm}
+`r ''````{r example-lm}
 fit <- lm(lifeExp ~ year, data = data)
 fit
 ```
 
 And let's look at the coefficient table:
 
-`r ''```{r coef-table}
+`r ''````{r coef-table}
 library(broom)
 fit_coef <- tidy(fit)
 knitr::kable(fit_coef,

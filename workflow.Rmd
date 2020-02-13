@@ -115,7 +115,7 @@ gapminder <- read_csv("data/gapminder.csv")
 
 ## Your Turn {.exercise}
 
-* (1-2 minutes) What folders are above the `health.csv` file in the following given string? `"/Users/miles/etc1010/week1/data/health.csv"`
+* (1-2 minutes) For the following directory path: `"/Users/miles/etc1010/week1/data/health.csv"` - what are the folders above the file, `health.csv`?
 
 * What would be the result of using the following code in `demo-gapminder.Rmd`, and then using the code, and then moving this to another location, say inside your C drive?
 
@@ -202,7 +202,7 @@ returns
 
 You can read the above `here` code as:
 
-> In the folder `data`, there is a file called health.csv, can you please give me the full path to that file? 
+> In the folder `data`, there is a file called `gapminder.csv`, can you please give me the full path to that file? 
 
 This is really handy for a few reasons:
 

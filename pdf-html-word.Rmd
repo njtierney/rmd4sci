@@ -24,7 +24,7 @@ Here are three ways to do this:
 1. You can control this in the "knit" button
 
 ```{r knit-screenshot, eval = TRUE, echo = FALSE}
-knitr::include_graphics("figs/rstudio-knit-button")
+knitr::include_graphics("figs/rstudio-knit-button.png")
 ```
 
 You might notice that depending on the option you select, this changes things in the YAML - which is another way to control which output you have:

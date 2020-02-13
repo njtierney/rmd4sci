@@ -91,7 +91,7 @@ To refer to a figure, you write the following in your text:
 ### Demo {.demo}
 
 ````markdown
-`r ''```{r gg-oz-plot, fig.cap = "Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"}
+`r ''````{r gg-oz-plot, fig.cap = "Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"}
 library(ggplot2)
 library(dplyr)
 gapminder %>%
@@ -130,7 +130,7 @@ To cite a table, you write the following:
 `Table \@ref(tab:chunk-name))`
 
 ````markdown
-`r ''```{r gg-oz-tab}
+`r ''````{r gg-oz-tab}
 gapminder %>%
   filter(country == "Australia") %>%
   knitr::kable(caption = "Raw gapminder data for Australia.")

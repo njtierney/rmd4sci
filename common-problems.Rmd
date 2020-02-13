@@ -146,7 +146,7 @@ This error message is pretty good, I needed to add a comma after my chunk name.
 So, go from:
 
 ````markdown
-`r ''```{r read-gapminder include = FALSE, echo = FALSE}
+`r ''````{r read-gapminder include = FALSE, echo = FALSE}
 gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 ```
 ````
@@ -154,7 +154,7 @@ gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 to 
 
 ````markdown
-`r ''```{r read-gapminder, include = FALSE, echo = FALSE}
+`r ''````{r read-gapminder, include = FALSE, echo = FALSE}
 gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 ```
 ````
@@ -209,7 +209,7 @@ What was the problem? Turns out I provided the option `FALSe` instead of `FALSE`
 Go from:
 
 ````markdown
-`r ''```{r read-gapminder include = FALSE, echo = FALSe}
+`r ''````{r read-gapminder include = FALSE, echo = FALSe}
 gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 ```
 ````
@@ -217,7 +217,7 @@ gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 to 
 
 ````markdown
-`r ''```{r read-gapminder, include = FALSE, echo = FALSE}
+`r ''````{r read-gapminder, include = FALSE, echo = FALSE}
 gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 ```
 ````

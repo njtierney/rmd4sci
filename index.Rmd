@@ -83,6 +83,20 @@ Course materials can be downloaded by using the following command from the `uset
 usethis::use_course("bit.ly/rmd4sci-materials")
 ```
 
+## Where has this course been taught?
+
+So far I have taught this rmarkdown for science course at the following locations:
+
+- 2018
+  - Melbourne, November for SSA Victoria
+- 2019
+  - Melbourne, April, for Monash University
+  - Canberra, July, for SSA Victoria
+  - Melbourne, November, for AIMOS2019
+  - Melbourne, December, for Plant Pathology Conference
+- 2020
+  - Seattle, February, for University of Washington
+
 
 ## Licence
 

@@ -214,7 +214,7 @@ What's great about this is that if your data changes upstream, then you don't ne
     - How many countries are there?
     - What was the lowest life expectancy in Australia's History?
     - How about the lowest GDP for Australia?
-    - Where does Australia rank in GDP in 1999?
+    - Where does Australia rank in GDP in 1997?
 
 <!-- # My philosophy on Rmarkdown -->
 
