@@ -4,7 +4,7 @@ In this section, the aim is to have everyone setup with R, RStudio, and RMarkdow
 
 ## Overview
 
-***Duration** 15 minutes
+* **Duration** 15 minutes
 
 ## Questions
 
@@ -57,7 +57,7 @@ Installing LaTeX [can be a pain](https://yihui.name/tinytex/pain/), but thankful
 tinytex::install_tinytex()
 ```
 
-If you get the following error, this is good! As it means that TeX has already been installed:
+If you get the following error, **this is good**! As it means that TeX has already been installed:
 
 ```
 Error: Detected an existing tlmgr at /usr/local/bin/tlmgr. It seems TeX Live has been installed (check tinytex::tinytex_root()). You have to uninstall it, or use install_tinytex(force = TRUE) if you are sure TinyTeX can override it (e.g., you are a PATH expert or installed TinyTeX previously).

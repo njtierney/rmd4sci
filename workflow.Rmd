@@ -70,7 +70,7 @@ This is painful. And when you do this all the time, it gets old, fast.
 So, this might all be a bit confusing if you don't know what a file path is. A file path is the machine-readable directions to where files on your computer live. So, the file path:
 
 ```
-/Users/njtierney/rmd4sci-materials/demo.R
+/Users/njtierney/Desktop/rmd4sci-materials/demo.R
 ```
 
 Describes the location of the file "demo.R". This could be visualised as:
@@ -115,7 +115,8 @@ gapminder <- read_csv("data/gapminder.csv")
 
 ## Your Turn {.exercise}
 
-* (1-2 minutes) For the following directory path: `"/Users/miles/etc1010/week1/data/health.csv"` - what are the folders above the file, `health.csv`?
+* (1-2 minutes) Imagine you see the following directory path: `"/Users/miles/etc1010/week1/data/health.csv"`
+what are the folders above the file, `health.csv`?
 
 * What would be the result of using the following code in `demo-gapminder.Rmd`, and then using the code, and then moving this to another location, say inside your C drive?
 
@@ -155,7 +156,7 @@ Let's open one together.
 
 ## Your Turn: Use your own rstudio project {.exercise}
 
-1. Run the following code to start a new rstudio project called "rmd4sci-canberra"
+1. In RStudio, and run the following code to start a new rstudio project called "rmd4sci-materials".
 
 ```r
 usethis::use_course("bit.ly/rmd4sci-materials")
@@ -199,6 +200,8 @@ returns
 ```
 [1] "/Users/njtierney/Desktop/rmd4sci-materials/data/gapminder.csv"
 ```
+
+(Note that these absolute file paths will indeed be different on my computer compared to yours - super neat!)
 
 You can read the above `here` code as:
 
@@ -259,11 +262,7 @@ And click "create project".
 knitr::include_graphics(here::here("figs", "rstudio-create-proj-4.png"))
 ```
 
-D!-- TODO: need to update image? -->
-
-oDne!
-
-## Summary
+D# Summary
 
 In this lesson we've:
 
