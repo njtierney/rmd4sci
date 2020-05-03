@@ -58,11 +58,27 @@ LaTeX is an amazing language, but understanding how to create the equations can 
 
 #### Fractions
 
+```
+$$
+\frac{1}{2}
+$$
+```
+
 $$
 \frac{1}{2}
 $$
 
 #### Sub and Super Scripts
+
+```
+$$
+Y = X_1 + X_2
+$$
+
+$$
+a^2 + b^2 = c^2
+$$
+```
 
 $$
 Y = X_1 + X_2
@@ -74,19 +90,48 @@ $$
 
 #### Square roots
 
+```
 $$
 \sqrt{p}
 $$
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+```
+
+$$
+\sqrt{p}
+$$
+
 $$
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 $$
 
 #### Summations
 
+```
 $$
 \sum_{i = 1}^{n}{(\bar{x} - x_i)^2}
 $$
+```
+
+$$
+\sum_{i = 1}^{n}{(\bar{x} - x_i)^2}
+$$
+
 #### Bayes Rule
+
+```
+$$
+Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}
+$$
+
+$$
+Pr(\theta | y) \propto Pr(y | \theta) Pr(\theta)
+$$
+```
+
 
 $$
 Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}
@@ -98,6 +143,7 @@ $$
 
 #### Linear Model
 
+```
 $$
 Y \sim X\beta_0 + X\beta_1 + \epsilon
 $$
@@ -105,7 +151,15 @@ $$
 $$
 \epsilon \sim N(0,\sigma^2)
 $$
+```
 
+$$
+Y \sim X\beta_0 + X\beta_1 + \epsilon
+$$
+
+$$
+\epsilon \sim N(0,\sigma^2)
+$$
 
 ## Exercise
 
