@@ -1,6 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
+*.rds
 .Ruserdata
 *_files
 *_cache
