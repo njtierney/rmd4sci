@@ -86,7 +86,7 @@ That is, the special `::` after `bookdown`, `bookdown::html_document2` read as "
 
 To refer to a figure, you write the following in your text:
 
-`Figure \@ref(fig:chunk-name))`
+`Figure \@ref(fig:chunk-name)`
 
 ### Demo {.demo}
 
@@ -127,7 +127,7 @@ Australia's life expectancy has increased a great deal over the past 50 years (S
 
 To cite a table, you write the following:
 
-`Table \@ref(tab:chunk-name))`
+`Table \@ref(tab:chunk-name)`
 
 ````markdown
 `r ''````{r gg-oz-tab}
@@ -153,7 +153,7 @@ gapminder %>%
 
 You can even reference a section in your report:
 
-`\@ref(slug))`
+`\@ref(slug)`
 
 However, in order to write this, you need to include `slug` in your markdown header, like so:
 
