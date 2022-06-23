@@ -260,6 +260,49 @@ There isn't one - you just get `\@ref(fig:figure-chunk-name)` printed.
 
 You need to make sure that you actually print the table or plot. If you create the plot and save it, but do not print it in the document, then you will not be able to reference the plot or table.
 
+## My references aren't using the citation style (CSL) that I suggested
+
+If you've got a YAML reference set up like so
+
+```
+---
+output: html_document
+bibliography: references.bib
+csl: vancouver.csl
+---
+```
+
+Make sure that your file, "vancouver.csl" is in the same location as the file that you are rendering.
+
+So if your file structure looks like:
+
+```
+- document.rmd
+- references.bib
+- vancouver.csl
+```
+
+Then that is great! But if, perhaps, your CSL file is like so:
+
+```
+- document.rmd
+\ bibliography
+ |
+ - references.bib
+ - vancouver.csl
+```
+
+Then you'll need to make sure you reference the full file path, like so:
+
+```
+---
+output: html_document
+bibliography: bibliography/references.bib
+csl: bibliography/vancouver.csl
+---
+```
+
+
 ## Your Turn {.exercise}
 
 1. Go to this repo [njtierney/rmd-errors](https://github.com/njtierney/rmd-errors), and give debugging some of these common rmarkdown errors a go.
