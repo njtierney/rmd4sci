@@ -302,6 +302,20 @@ csl: bibliography/vancouver.csl
 ---
 ```
 
+## I want to highlight inline R code but with `` `r ` ``, I am getting error!
+
+According to [RSudio official documentation](https://rmarkdown.rstudio.com/lesson-4.html) with `` `r ` `` you are able to evaluate the code inserted after `` r ``. So, your required highlighting is not possible in this way. Don't worry, there do exist a native method to do this!
+
+**Solution**
+
+Write `` `your_code`{.R} `` to get inline highlighting. For example, `pnorm()`{.R} is generated from `` `pnorm()`{.R} ``
+
+The same is applicable for other languages too! If you want to highlight `ls -alt` as a `bash`{.bash} command you can write `` `ls -alt`{.bash} `` to get `ls -alt`{.bash}
+
+**Remark**
+
+This works only when you are using Pandoc's highlighting which uses `highlight.js`.
+
 
 ## Your Turn {.exercise}
 
